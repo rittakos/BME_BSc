@@ -1,14 +1,15 @@
 # OOP
 
 # Table of Contents
-1. [Tervezési elvek](#Tervezési-elvek)
-2. [Example2](#example2)
-3. [Third Example](#third-example)
-4. [Fourth Example](#fourth-examplehttpwwwfourthexamplecom)
+1. [Alapfogalmak](#alapfogalmak)
+2. [Tervezési elvek](#tervezesi-elvek)
 
-## Tervezési elvek <a name="Tervezési-elvek" />
+## Alapfogalmak <a name="alapfogalmak" />
 
----
 __Class__: Típus
 
 __Object__: Példány
+
+--- 
+
+## Tervezési elvek <a name="tervezesi-elvek" />
