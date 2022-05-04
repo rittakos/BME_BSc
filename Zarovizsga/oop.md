@@ -24,7 +24,9 @@ __Encapsulation__:  Egységbezárás, egy osztály adattagjait nem lehet kívül
 
 __Inheritance__:  Leszármazás, a leszármazott osztály tudja használni őse viselkedését, nem az adatait
 
-<img src="inheritance.png" width="50"/>
+<p align="center">
+    <img src="inheritance.png" width="50"/>
+</p>
 
 
 __Polymorphism__: A hívó felől el van rejtve az objektum típusa, annyi ismert, hogy egy adott osztály leszármazottja
