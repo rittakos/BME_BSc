@@ -23,7 +23,9 @@ __Classification__:  Közös tulajdonság alapján történő csoportosítás
 __Encapsulation__:  Egységbezárás, egy osztály adattagjait nem lehet kívülről elérni, csak az erre a célra készített függvényeken keresztül
 
 __Inheritance__:  Leszármazás, a leszármazott osztály tudja használni őse viselkedését, nem az adatait
+
 <img src="inheritance.png" width="50"/>
+
 
 __Polymorphism__: A hívó felől el van rejtve az objektum típusa, annyi ismert, hogy egy adott osztály leszármazottja
 
