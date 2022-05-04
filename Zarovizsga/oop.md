@@ -4,7 +4,12 @@ A BME VIK Mérnökinformatikus BSc képzésének objektum orientált szoftverfej
 
 ## Tartalom
 1. [Alapfogalmak](#alapfogalmak)
-2. [Tervezési elvek](#tervezesi-elvek)
+2. [Kapcsolatok](#kapcsolatok)
+3. [Tervezési elvek](#tervezesi-elvek)
+   1. [SOLID elvek](#SOLID-elvek)
+      1. [Single Responsibility](#single-responsibility)
+   2. [Egyéb elvek](#egyeb-elvek)
+4. [xxx](#xxx)
 
 ## Alapfogalmak <a name="alapfogalmak" />
 
@@ -50,4 +55,53 @@ __Cohesion__: Annak mértéke, hogy egy adott egységen belül mennyir illenek (
 
 --- 
 
+## Kapcsolatok <a name="kapcsolatok" />
+
+Modulok vagy osztályok között előforduló kapcsolatok.
+
+__Dependency__: Két elem függőségét fejezi ki a nyíl irányába (függő felé mutat). Az egyik módosulása maga után vonhatja a másikét
+
+<p align="center">
+    <img src="dependency.png" width="200"/>
+</p>
+
+__Association__: Gyenge ismeretség a nyíl irányába
+
+<p align="center">
+    <img src="association.png" width="200"/>
+</p>
+
+__Aggregation__: Két objektum élettartalma között fellépő gyenge kapcsolat. Erősebb mint az Association de gyengébb mint a Composition
+
+<p align="center">
+    <img src="aggregation.png" width="200"/>
+</p>
+
+__Composition__: Két objektum élettartalma között fellépő erős kapcsolat. Az egyik megszűnése a másik megsemmisítését vnaj maga után
+
+<p align="center">
+    <img src="composition.png" width="200"/>
+</p>
+
+__Generalization/Inheritance__: Leszármazás. Az ős viselkedését örökli a leszármazott
+
+<p align="center">
+    <img src="inheritance2.png" width="200"/>
+</p>
+
+__Realization/Implementation__: Megvalósítás
+
+<p align="center">
+    <img src="implementation.png" width="200"/>
+</p>
+
+
 ## Tervezési elvek <a name="tervezesi-elvek" />
+
+Olyan tervezési irányelvek és minták amik betartása könnyebben fentarthatóvá és továbbfejleszthetővét teszik a kódot.
+
+### SOLID elvek <a name="SOLID-elvek" />
+
+#### Single Responsibility <a name="single-responsibility" />
+
+### Egyéb elvek <a name="egyeb-elvek" />
