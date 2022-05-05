@@ -166,10 +166,11 @@ Megoldás lehet:
 
 A SOLID öt fontos elvet jelöl, mindegyik betűje egyre utal. Segítenek csökkenteni a függőséget és növelik a kódbázis fenntarthatóságát.
 
+#### __Single Responsibility__
+
 <details open>
   <summary></summary>
 
-#### __Single Responsibility__
 "A class should have only one reason to change"
 
 Minden osztálynak pontosan egy felelőssége (feladata) legyen. Ha több van, azt szét kell osztani.
