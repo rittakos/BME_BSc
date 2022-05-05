@@ -152,7 +152,6 @@ __Realization/Implementation__: Megvalósítás
 Olyan tervezési irányelvek és minták amik betartása könnyebben fentarthatóvá és továbbfejleszthetővét teszik a kódot.
 
 <details>
-  <summary>Bővebben</summary>
 
 A folyamatosan változó követelmények lekövetéséhez remek eszköz. 
 
