@@ -228,9 +228,33 @@ A Liskov elv betartása sokszor nem triviális és átfogóbb vizsgálatokat ig�
 
 #### Interface Segregation Principle
 
+"Clients should not be forced to depend on methods they
+do not use"
+
+Az interface-eket szét kell osztani többm, kisebb és specifikusabb interface-re, hogy a felhasználó tudja csak azt használni, amire tényleg szüksége van.
+
+Ne merüljön fel függőség olyan részekkel, amikre valójában nincs is szükség.
+
+
+
+
 #### Dependency Inversion Principle
 
-    
+"Abstractions should not depend on details. Details should
+depend on abstractions."
+
+Magas szintű modulok ne függjenek alacsony szintűektől. Különben az alacsony szintű változások magas szintű változtatásokat igényelnek.
+
+Fordítsuk meg interface-ek segítségével a függőség irányát.
+
+Példa a rossz tervezésre:
+<p align="center">
+    <img src="dipwrong.png" width="100"/>
+</p>
+Az adatbázis vagy a GUI változtatása a logika módosítását vonja maga után. Megoldás:
+<p align="center">
+    <img src="dipgood.png" width="250"/>
+</p>
 
 </details>
 
