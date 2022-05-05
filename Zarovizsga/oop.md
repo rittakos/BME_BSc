@@ -29,6 +29,14 @@ A BME VIK Mérnökinformatikus BSc képzésének objektum orientált szoftverfej
       - [Single Choice Principle](#single-choice-principle)
       - [Tell, don’t ask](#tell-dont-ask)
       - [Law of Demeter](#law-of-demeter)
+  - [Tervezési minták](#tervezési-minták)
+  - [Heurisztikák](#heurisztikák)
+  - [Refaktorálás](#refaktorálás)
+  - [Clean-code elvek](#clean-code-elvek)
+  - [API tervezési elvek](#api-tervezési-elvek)
+  - [Elosztott objektumorientáltság](#elosztott-objektumorientáltság)
+  - [Konkurens és párhuzamos minták](#konkurens-és-párhuzamos-minták)
+  - [Immutable objektumorientáltság](#immutable-objektumorientáltság)
 
 </details>
 
@@ -386,5 +394,37 @@ Egy objektum függvénye, csupán az alábbi tulajdonú függvényeket hívja:
 Kerüljük a láncolt függvényhívásokat!
 
 </details>
+
+---
+
+## Tervezési minták
+
+---
+
+## Heurisztikák
+
+---
+
+## Refaktorálás
+
+---
+
+## Clean-code elvek
+
+---
+
+## API tervezési elvek
+
+---
+
+## Elosztott objektumorientáltság
+
+---
+
+## Konkurens és párhuzamos minták
+
+---
+
+## Immutable objektumorientáltság
 
 ---
