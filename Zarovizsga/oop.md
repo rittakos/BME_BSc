@@ -178,6 +178,8 @@ A szétválasztás több szinten történhet. Implementációs szinten ez két k
 
 Nem mindig egyértelmű, hogy egy osztály több okból változhat (több felelőssége van). Fontos elv a YAGNI (You Ain’t Gonna Need It), vagyis, hogy ha valami nem fordul elő, arra nem kell tervezni.
 
+</details>
+
 #### Open/Closed Principle
 "Software entities (classes, modules, functions etc.) should
 be open for extension, but closed for modification.
@@ -256,7 +258,7 @@ Az adatbázis vagy a GUI változtatása a logika módosítását vonja maga utá
     <img src="dipgood.png" width="250"/>
 </p>
 
-</details>
+
 
 
 
