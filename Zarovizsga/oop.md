@@ -13,7 +13,7 @@ A BME VIK Mérnökinformatikus BSc képzésének objektum orientált szoftverfej
   - [Kapcsolatok <a name="kapcsolatok" />](#kapcsolatok-a-namekapcsolatok-)
   - [Tervezési elvek <a name="tervezesi-elvek" />](#tervezési-elvek-a-nametervezesi-elvek-)
     - [SOLID elvek <a name="SOLID-elvek" />](#solid-elvek-a-namesolid-elvek-)
-      - [Single Responsibility](#single-responsibility)
+      - [__Single Responsibility__](#single-responsibility)
       - [Open/Closed Principle](#openclosed-principle)
       - [Liskov Substitution Principle](#liskov-substitution-principle)
       - [Interface Segregation Principle](#interface-segregation-principle)
@@ -169,7 +169,7 @@ A SOLID öt fontos elvet jelöl, mindegyik betűje egyre utal. Segítenek csökk
 <details open>
   <summary></summary>
 
-#### Single Responsibility
+#### __Single Responsibility__
 "A class should have only one reason to change"
 
 Minden osztálynak pontosan egy felelőssége (feladata) legyen. Ha több van, azt szét kell osztani.
