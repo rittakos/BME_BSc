@@ -9,16 +9,16 @@ A BME VIK Mérnökinformatikus BSc képzésének objektum orientált szoftverfej
 - [OOP](#oop)
   - [Tartalom](#tartalom)
   - [Kérdések](#kérdések)
-  - [Alapfogalmak <a name="alapfogalmak" />](#alapfogalmak-a-namealapfogalmak-)
-  - [Kapcsolatok <a name="kapcsolatok" />](#kapcsolatok-a-namekapcsolatok-)
-  - [Tervezési elvek <a name="tervezesi-elvek" />](#tervezési-elvek-a-nametervezesi-elvek-)
-    - [SOLID elvek <a name="SOLID-elvek" />](#solid-elvek-a-namesolid-elvek-)
+  - [Alapfogalmak](#alapfogalmak)
+  - [Kapcsolatok](#kapcsolatok)
+  - [Tervezési elvek](#tervezési-elvek)
+    - [SOLID elvek](#solid-elvek)
       - [Single Responsibility](#single-responsibility)
       - [Open/Closed Principle](#openclosed-principle)
       - [Liskov Substitution Principle](#liskov-substitution-principle)
       - [Interface Segregation Principle](#interface-segregation-principle)
       - [Dependency Inversion Principle](#dependency-inversion-principle)
-    - [Egyéb elvek <a name="egyeb-elvek" />](#egyéb-elvek-a-nameegyeb-elvek-)
+    - [Egyéb elvek](#egyéb-elvek)
 
 </details>
 
@@ -52,7 +52,7 @@ A BME VIK Mérnökinformatikus BSc képzésének objektum orientált szoftverfej
 
 --- 
 
-## Alapfogalmak <a name="alapfogalmak" />
+## Alapfogalmak
 
 Az alábbi fogalmak vázlatosan vannak definiálva. Alapos ismeretük elengedhetetlen a továbbiakban.
 
@@ -100,7 +100,7 @@ __Cohesion__: Annak mértéke, hogy egy adott egységen belül mennyir illenek (
 
 --- 
 
-## Kapcsolatok <a name="kapcsolatok" />
+## Kapcsolatok
 
 Modulok vagy osztályok között előforduló kapcsolatok.
 
@@ -147,11 +147,9 @@ __Realization/Implementation__: Megvalósítás
 
 ---
 
-## Tervezési elvek <a name="tervezesi-elvek" />
+## Tervezési elvek
 
 Olyan tervezési irányelvek és minták amik betartása könnyebben fentarthatóvá és továbbfejleszthetővét teszik a kódot.
-
-<>
 
 A folyamatosan változó követelmények lekövetéséhez remek eszköz. 
 
@@ -164,7 +162,7 @@ Megoldás lehet:
 - Függőségek csökkentése
 - A függőségek a ritkán változó, stabil részekhez kötődjenek
 
-### SOLID elvek <a name="SOLID-elvek" />
+### SOLID elvek
 
 A SOLID öt fontos elvet jelöl, mindegyik betűje egyre utal. Segítenek csökkenteni a függőséget és növelik a kódbázis fenntarthatóságát.
 
@@ -279,13 +277,11 @@ Az adatbázis vagy a GUI változtatása a logika módosítását vonja maga utá
 
 
 
-### Egyéb elvek <a name="egyeb-elvek" />
+### Egyéb elvek
 
 <details>
   <summary></summary>
 
 </details>
-
-<>
 
 ---
