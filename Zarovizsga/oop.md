@@ -149,10 +149,10 @@ __Realization/Implementation__: Megvalósítás
 
 ## Tervezési elvek <a name="tervezesi-elvek" />
 
-<details>
-  <summary></summary>
-
 Olyan tervezési irányelvek és minták amik betartása könnyebben fentarthatóvá és továbbfejleszthetővét teszik a kódot.
+
+<details>
+  <summary>Bővebben</summary>
 
 A folyamatosan változó követelmények lekövetéséhez remek eszköz. 
 
