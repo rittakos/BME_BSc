@@ -3,6 +3,9 @@
 A BME VIK Mérnökinformatikus BSc képzésének objektum orientált szoftverfejlesztés tárgyának jegyzete, záróvizsgához.
 
 ## Tartalom
+<details>
+  <summary></summary>
+
 1. [Alapfogalmak](#alapfogalmak)
 2. [Kapcsolatok](#kapcsolatok)
 3. [Tervezési elvek](#tervezesi-elvek)
@@ -11,9 +14,14 @@ A BME VIK Mérnökinformatikus BSc képzésének objektum orientált szoftverfej
    2. [Egyéb elvek](#egyeb-elvek)
 4. [xxx](#xxx)
 
+</details>
+
 ---
 
 ## Alapfogalmak <a name="alapfogalmak" />
+
+<details>
+  <summary></summary>
 
 Az alábbi fogalmak vázlatosan vannak definiálva. Alapos ismeretük elengedhetetlen a továbbiakban.
 
@@ -54,6 +62,7 @@ __Coupling__: Az összefüggések mértéke. Minél alacsonyabb annál jobb. Az 
 
 __Cohesion__: Annak mértéke, hogy egy adott egységen belül mennyir illenek (logikailag) egymáshoz a részek. Minél magasabb annál jobb
 
+</details>
 
 --- 
 
