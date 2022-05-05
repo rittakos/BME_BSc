@@ -294,7 +294,7 @@ Az adatbázis vagy a GUI változtatása a logika módosítását vonja maga utá
 <details>
   <summary></summary>
 
-    Az újtafelhasználható elemeket csak akkor szabad használni, ha a készítője kibocsátje, verziószámozza és karbantartja azt. Ezzel biztosítva, hogy minden módosítás és javítás a megfelelő módon jut el a felhasználóhoz, visszafele tartva a kompatibilitást.
+Az újtafelhasználható elemeket csak akkor szabad használni, ha a készítője kibocsátje, verziószámozza és karbantartja azt. Ezzel biztosítva, hogy minden módosítás és javítás a megfelelő módon jut el a felhasználóhoz, visszafele tartva a kompatibilitást.
 
 </details>
 
