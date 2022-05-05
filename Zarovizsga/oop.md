@@ -151,7 +151,7 @@ __Realization/Implementation__: Megvalósítás
 
 Olyan tervezési irányelvek és minták amik betartása könnyebben fentarthatóvá és továbbfejleszthetővét teszik a kódot.
 
-<details>
+<>
 
 A folyamatosan változó követelmények lekövetéséhez remek eszköz. 
 
@@ -286,6 +286,6 @@ Az adatbázis vagy a GUI változtatása a logika módosítását vonja maga utá
 
 </details>
 
-</details>
+<>
 
 ---
