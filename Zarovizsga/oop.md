@@ -3,27 +3,61 @@
 A BME VIK Mérnökinformatikus BSc képzésének objektum orientált szoftverfejlesztés tárgyának jegyzete, záróvizsgához.
 
 ## Tartalom
-<details>
+<details open>
   <summary></summary>
 
-1. [Alapfogalmak](#alapfogalmak)
-2. [Kapcsolatok](#kapcsolatok)
-3. [Tervezési elvek](#tervezesi-elvek)
-   1. [SOLID elvek](#SOLID-elvek)
-      1. [Single Responsibility](#single-responsibility)
-   2. [Egyéb elvek](#egyeb-elvek)
-4. [xxx](#xxx)
+- [OOP](#oop)
+  - [Tartalom](#tartalom)
+  - [Kérdések](#kérdések)
+  - [Alapfogalmak <a name="alapfogalmak" />](#alapfogalmak-a-namealapfogalmak-)
+  - [Kapcsolatok <a name="kapcsolatok" />](#kapcsolatok-a-namekapcsolatok-)
+  - [Tervezési elvek <a name="tervezesi-elvek" />](#tervezési-elvek-a-nametervezesi-elvek-)
+    - [SOLID elvek <a name="SOLID-elvek" />](#solid-elvek-a-namesolid-elvek-)
+      - [Single Responsibility](#single-responsibility)
+      - [Open/Closed Principle](#openclosed-principle)
+      - [Liskov Substitution Principle](#liskov-substitution-principle)
+      - [Interface Segregation Principle](#interface-segregation-principle)
+      - [Dependency Inversion Principle](#dependency-inversion-principle)
+    - [Egyéb elvek <a name="egyeb-elvek" />](#egyéb-elvek-a-nameegyeb-elvek-)
 
 </details>
 
 ---
 
-## Alapfogalmak <a name="alapfogalmak" />
+## Kérdések
 
-<details>
+<details open>
   <summary></summary>
 
+- Tervezés a követelmények változására tekintettel, OO tervezési elvek. Az egyes elvekre: Milyen problémát old meg az adott elv? Mi a megoldás lényege? Miért baj, ha megsértjük? Mikor lehet megsérteni?
+  
+        valasz
+
+- OO tervezési heurisztikák. Az egyes heurisztikákra: Milyen problémát old meg az adott heurisztika? Mi a megoldás lényege? Miért baj, ha megsértjük? Mikor lehet megsérteni? Hogyan kapcsolódik a refaktorálási mintákhoz és code-smell-ekhez?
+  
+- Refaktorálás fogalma, szabályai, előnyei és problémái. Milyen refaktorálási minták és code-smell-ek vannak? Hogyan kapcsolódnak egymáshoz? Hogyan kapcsolódnak az OO tervezési heurisztikákhoz?
+  
+- Clean-code elvek. Az egyes elvekre: Milyen problémát old meg az adott elv? Mi a megoldás lényege? Miért baj, ha megsértjük? Mikor lehet megsérteni?
+  
+- API tervezési elvek. Az egyes elvekre: Milyen problémát old meg az adott elv? Mi a megoldás lényege? Miért baj, ha megsértjük? Mikor lehet megsérteni?
+  
+- Elosztott objektumorientáltság. Milyen problémákat vet fel? Milyen megoldási lehetőségek vannak?
+  
+- Konkurens és párhuzamos minták. Az egyes mintákra: Milyen problémát old meg az adott minta? Mi a megoldás lényege? Hogyan kapcsolódik más mintákhoz?
+  
+- Immutable objektumorientáltság. Mik a módosíthatóság problémái? Mik a csak olvasható objektumok előnyei és hátrányai? Hogyan kell implementálni egy csak olvasható objektumot leíró osztályt?
+
+
+</details>
+
+--- 
+
+## Alapfogalmak <a name="alapfogalmak" />
+
 Az alábbi fogalmak vázlatosan vannak definiálva. Alapos ismeretük elengedhetetlen a továbbiakban.
+
+<details open>
+  <summary></summary>
 
 __Class__: Típus
 
@@ -70,6 +104,9 @@ __Cohesion__: Annak mértéke, hogy egy adott egységen belül mennyir illenek (
 
 Modulok vagy osztályok között előforduló kapcsolatok.
 
+<details open>
+  <summary></summary>
+
 __Dependency__: Két elem függőségét fejezi ki a nyíl irányába (függő felé mutat). Az egyik módosulása maga után vonhatja a másikét
 
 <p align="center">
@@ -106,16 +143,104 @@ __Realization/Implementation__: Megvalósítás
     <img src="implementation.png" width="200"/>
 </p>
 
+</details>
+
 ---
 
 ## Tervezési elvek <a name="tervezesi-elvek" />
 
 Olyan tervezési irányelvek és minták amik betartása könnyebben fentarthatóvá és továbbfejleszthetővét teszik a kódot.
 
+A folyamatosan változó követelmények lekövetéséhez remek eszköz. 
+
+Egy rosszul tervezett rendszer:
+- Nehzen lehet megváltoztatni, mert egy változtatás sok másik részre van hatással (rigidity)
+- A változtatás nem várt részekre hat (fragility)
+- Az egyes részeket nehezen lehet önállóan újrahasznosítani (immobility)
+
+Megoldás lehet:
+- Függőségek csökkentése
+- A függőségek a ritkán változó, stabil részekhez kötődjenek
+
 ### SOLID elvek <a name="SOLID-elvek" />
 
-#### Single Responsibility <a name="single-responsibility" />
+A SOLID öt fontos elvet jelöl, mindegyik betűje egyre utal. Segítenek csökkenteni a függőséget és növelik a kódbázis fenntarthatóságát.
+
+<details open>
+  <summary></summary>
+
+#### Single Responsibility
+"A class should have only one reason to change"
+
+Minden osztálynak pontosan egy felelőssége (feladata) legyen. Ha több van, azt szét kell osztani.
+
+A szétválasztás több szinten történhet. Implementációs szinten ez két külön álló osztályra bontást jelent. Ha ez nem megoldható, akkor lehet interface szinten végezni a szétválasztást, ekkor a megfelelő interface-eket létre kell hozni, amiket aztán megvalósít az osztályunk.
+
+Nem mindig egyértelmű, hogy egy osztály több okból változhat (több felelőssége van). Fontos elv a YAGNI (You Ain’t Gonna Need It), vagyis, hogy ha valami nem fordul elő, arra nem kell tervezni.
+
+#### Open/Closed Principle
+"Software entities (classes, modules, functions etc.) should
+be open for extension, but closed for modification.
+"
+
+Egy entitásnak nyíltnak kell lennie a kiegészítésre, de zártnak a módosításra.
+
+Az entitás viselkedését meg lehessen változtatni, hogy ezzel követni tudja a követelményeket.
+
+A kiegészítés ne vonja maga után a már létező forráskód módosulását.
+
+
+#### Liskov Substitution Principle
+
+"Subtypes must be substitutable for their base types"
+
+A leszármazottakat be kell tudni helyettesíteni az őseik helyére, anélkül, hogy ezt a felhasználó észrevenné.
+
+Leszármazás:
+- Ami igaz az ősre, az igaz a leszármazottaira is
+- Az őse általánosabb a leszármazottnál
+- A leszármazott specifkusabb az ősnél
+- Bárhol ahol az ős használható, használható a leszármazott
+
+Megsértése típusellenőrzést vonhat maga után és általában az Open/Closed Principle megsértéséhez is vezet.
+
+__Soha ne használjunk leszármazást adat újrahasznosítási céllal! Használjuk a viselkedés újrahasznosítására!__
+
+
+Függvény Előfeltételek: 
+- Feltételei a függvényhívásnak
+- pl.: fügvény paramétereinek értékkészlete
+
+Függvény Utófeltételek:
+- A függvényhívás után fennálló feltételek
+- pl.: fügvény visszatérésének értékkészlete
+
+Osztály Invariánsok (invariants):
+- Kényszerek, amiket az osztálynak minden állapotban be kell tartania
+- Az osztály saját metódusaival biztosítja őket
+
+Leszármazott függvény előfeltétele nem lehet erősebb őse előfeltételénél és utófeltétele nem lehet gyengébb őse utófeltételénél! Invariánsok erősíthetőek, de nem gyengíthetőek a leszármazottakban!
+
+"Expect no more, provide no less. / Demand no more, promise no less."
+
+A Liskov elv betartása sokszor nem triviális és átfogóbb vizsgálatokat igényelhet.
+
+
+#### Interface Segregation Principle
+
+#### Dependency Inversion Principle
+
+    
+
+</details>
+
+
 
 ### Egyéb elvek <a name="egyeb-elvek" />
+
+<details>
+  <summary></summary>
+
+</details>
 
 ---
