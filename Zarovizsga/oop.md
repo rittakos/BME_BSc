@@ -19,6 +19,16 @@ A BME VIK Mérnökinformatikus BSc képzésének objektum orientált szoftverfej
       - [Interface Segregation Principle](#interface-segregation-principle)
       - [Dependency Inversion Principle](#dependency-inversion-principle)
     - [Egyéb elvek](#egyéb-elvek)
+      - [Release Reuse Equivalency Principle](#release-reuse-equivalency-principle)
+      - [Common Closure Principle](#common-closure-principle)
+      - [Common Reuse Principle](#common-reuse-principle)
+      - [Acyclic Dependencies Principle](#acyclic-dependencies-principle)
+      - [Stable Dependencies Principle](#stable-dependencies-principle)
+      - [Stable Abstractions Principle](#stable-abstractions-principle)
+      - [Don’t Repeat Yourself](#dont-repeat-yourself)
+      - [Single Choice Principle](#single-choice-principle)
+      - [Tell, don’t ask](#tell-dont-ask)
+      - [Law of Demeter](#law-of-demeter)
 
 </details>
 
@@ -279,8 +289,101 @@ Az adatbázis vagy a GUI változtatása a logika módosítását vonja maga utá
 
 ### Egyéb elvek
 
+#### Release Reuse Equivalency Principle
+
 <details>
   <summary></summary>
+
+    Az újtafelhasználható elemeket csak akkor szabad használni, ha a készítője kibocsátje, verziószámozza és karbantartja azt. Ezzel biztosítva, hogy minden módosítás és javítás a megfelelő módon jut el a felhasználóhoz, visszafele tartva a kompatibilitást.
+
+</details>
+
+#### Common Closure Principle
+
+<details>
+  <summary></summary>
+
+Azok az osztályok amik együtt változnak összetartoznak. Ezt szervezés szintjén is jelezni kell. Ezek az osztályok tartozzanak egy package-be.
+
+</details>
+
+#### Common Reuse Principle
+
+<details>
+  <summary></summary>
+
+Azok az osztályok amik nincsenek együtt fölhasználva, külön legyenek csoportosítva. Csak az jusson el a felhasználhoz, amire tényleg szüksége van. 
+
+</details>
+
+#### Acyclic Dependencies Principle
+
+<details>
+  <summary></summary>
+
+Package-k között ne legyen körkörös függőség! Mindenféle függőséget próbáljunk minimalizálni.
+
+</details>
+
+#### Stable Dependencies Principle
+
+<details>
+  <summary></summary>
+
+A stabil részektől függjenek a kevésbé stabilak és ne fordítva.
+
+</details>
+
+#### Stable Abstractions Principle
+
+<details>
+  <summary></summary>
+
+A stabil package-k legyenek abstract-ok. Így könnyebben kiegészíthetőek.
+
+</details>
+
+#### Don’t Repeat Yourself
+
+<details>
+  <summary></summary>
+
+Kerüljük az ismétlést és duplikációt. Minden adatnak és tudásnak legyen meg a jól meghatározott helye és felelőse. Ha duplikálnánk valamit gondoljuk végig nem lenne-e jobb kiemelni.
+
+</details>
+
+#### Single Choice Principle
+
+<details>
+  <summary></summary>
+
+Ha különböző alternatívák támogatása szükséges, akkor ezt pontosan egy, jól meghatározott helyen tegyük.
+
+</details>
+
+#### Tell, don’t ask
+
+<details>
+  <summary></summary>
+
+Egy függvény hívásakor nem a hívó felelőssége a hívott identitás állapotának vizsgálata, hanem a függvényé.
+
+</details>
+
+#### Law of Demeter
+
+<details>
+  <summary></summary>
+
+"Don’t talk to strangers!"
+
+Egy objektum függvénye, csupán az alábbi tulajdonú függvényeket hívja:
+- Saját objektum egyéb függvényeit
+- Saját objektum adattagjainak publikus függvényeit
+- A függvény paramétereinek függvényeit
+- A függvény által létrehozott objektumok függvényeit
+
+Kerüljük a láncolt függvényhívásokat!
 
 </details>
 
