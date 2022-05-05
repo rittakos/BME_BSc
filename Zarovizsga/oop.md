@@ -11,6 +11,8 @@ A BME VIK Mérnökinformatikus BSc képzésének objektum orientált szoftverfej
    2. [Egyéb elvek](#egyeb-elvek)
 4. [xxx](#xxx)
 
+---
+
 ## Alapfogalmak <a name="alapfogalmak" />
 
 Az alábbi fogalmak vázlatosan vannak definiálva. Alapos ismeretük elengedhetetlen a továbbiakban.
@@ -95,6 +97,7 @@ __Realization/Implementation__: Megvalósítás
     <img src="implementation.png" width="200"/>
 </p>
 
+---
 
 ## Tervezési elvek <a name="tervezesi-elvek" />
 
@@ -105,3 +108,5 @@ Olyan tervezési irányelvek és minták amik betartása könnyebben fentarthat�
 #### Single Responsibility <a name="single-responsibility" />
 
 ### Egyéb elvek <a name="egyeb-elvek" />
+
+---
