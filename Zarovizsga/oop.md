@@ -168,7 +168,7 @@ A SOLID öt fontos elvet jelöl, mindegyik betűje egyre utal. Segítenek csökk
 
 #### __Single Responsibility__
 
-<details open>
+<details>
   <summary></summary>
 
 "A class should have only one reason to change"
@@ -182,6 +182,10 @@ Nem mindig egyértelmű, hogy egy osztály több okból változhat (több felel�
 </details>
 
 #### Open/Closed Principle
+
+<details>
+  <summary></summary>
+
 "Software entities (classes, modules, functions etc.) should
 be open for extension, but closed for modification.
 "
@@ -192,8 +196,12 @@ Az entitás viselkedését meg lehessen változtatni, hogy ezzel követni tudja 
 
 A kiegészítés ne vonja maga után a már létező forráskód módosulását.
 
+</details>
 
 #### Liskov Substitution Principle
+
+<details>
+  <summary></summary>
 
 "Subtypes must be substitutable for their base types"
 
@@ -228,8 +236,12 @@ Leszármazott függvény előfeltétele nem lehet erősebb őse előfeltételén
 
 A Liskov elv betartása sokszor nem triviális és átfogóbb vizsgálatokat igényelhet.
 
+</details>
 
 #### Interface Segregation Principle
+
+<details>
+  <summary></summary>
 
 "Clients should not be forced to depend on methods they
 do not use"
@@ -239,9 +251,10 @@ Az interface-eket szét kell osztani többm, kisebb és specifikusabb interface-
 Ne merüljön fel függőség olyan részekkel, amikre valójában nincs is szükség.
 
 
-
-
 #### Dependency Inversion Principle
+
+<details>
+  <summary></summary>
 
 "Abstractions should not depend on details. Details should
 depend on abstractions."
@@ -259,7 +272,7 @@ Az adatbázis vagy a GUI változtatása a logika módosítását vonja maga utá
     <img src="dipgood.png" width="250"/>
 </p>
 
-
+</details>
 
 
 
