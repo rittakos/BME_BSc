@@ -13,7 +13,7 @@ A BME VIK Mérnökinformatikus BSc képzésének objektum orientált szoftverfej
   - [Kapcsolatok <a name="kapcsolatok" />](#kapcsolatok-a-namekapcsolatok-)
   - [Tervezési elvek <a name="tervezesi-elvek" />](#tervezési-elvek-a-nametervezesi-elvek-)
     - [SOLID elvek <a name="SOLID-elvek" />](#solid-elvek-a-namesolid-elvek-)
-      - [__Single Responsibility__](#single-responsibility)
+      - [Single Responsibility](#single-responsibility)
       - [Open/Closed Principle](#openclosed-principle)
       - [Liskov Substitution Principle](#liskov-substitution-principle)
       - [Interface Segregation Principle](#interface-segregation-principle)
@@ -166,7 +166,7 @@ Megoldás lehet:
 
 A SOLID öt fontos elvet jelöl, mindegyik betűje egyre utal. Segítenek csökkenteni a függőséget és növelik a kódbázis fenntarthatóságát.
 
-#### __Single Responsibility__
+#### Single Responsibility
 
 <details>
   <summary></summary>
@@ -250,6 +250,7 @@ Az interface-eket szét kell osztani többm, kisebb és specifikusabb interface-
 
 Ne merüljön fel függőség olyan részekkel, amikre valójában nincs is szükség.
 
+</details>
 
 #### Dependency Inversion Principle
 
