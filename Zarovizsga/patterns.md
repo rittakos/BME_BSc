@@ -1,6 +1,6 @@
 # Tervezési Minták
 
-[Főoldal](#oop.md)
+[Főoldal](oop.md)
 <details>
   <summary></summary>
 
@@ -56,6 +56,10 @@ Cél:
 
 Példa: Olyan grafikus alkalmazás, amely lehetővé teszi összetett grafikus objektumok létrehozását
 
+<p align="center">
+    <img src="PatternImages/composite.png" />
+</p>
+
 </details>
 
 ## Observer
@@ -70,6 +74,10 @@ Cél:
 Példa: MVC vagy Document-View
 
 Működés: Egy osztály eltárolja azokat az Observer-eket (interface), amiket értesíteni kell. Ezek értesítésére késpes az osztály. A különböző observer-ek ismerik a megfelelő adatszerkezeti osztályokat és le tudják kérni valamint módosítani azokat.
+
+<p align="center">
+    <img src="PatternImages/observer.png" />
+</p>
 
 </details>
 
@@ -126,7 +134,9 @@ instance->doSomething();
 Cél: 
 - Algoritmusok egységbe zárása, egyszerűen ki lehessen őket cserélni
 
-Példa:
+<p align="center">
+    <img src="PatternImages/strategy.png" />
+</p>
 
 </details>
 
@@ -142,6 +152,10 @@ Példa: Jogosultságok korlátozása, erőforrás igényes műveletek csak akkor
 
 Magyarázat: A Proxy és az Objektum közös őssel rendelkezik, amit ismer a cliens. A cliens a proxy függvényein keresztül módosítja (akár törli és létrehozza) és lekérdezi a valódi objektumot
 
+<p align="center">
+    <img src="PatternImages/proxy.png" />
+</p>
+
 </details>
 
 ## Abstract Factory
@@ -153,6 +167,13 @@ Cél:
 - Interfészt biztosít ahhoz, hogy egymással összefüggő objektumok családjait hozzuk létre konkrét osztály specifikálása nélkül
 - Létrehozás egy interfészen keresztül történik, nem függ a létrehozott objektumok konkrét típusától.
 
+<p align="center">
+    <img src="PatternImages/abstract_factory.png" />
+</p>
+
+<p align="center">
+    <img src="PatternImages/abstract_factory2.png" />
+</p>
 
 
 Példa: 
@@ -168,6 +189,10 @@ Példa:
 Cél:
 - Interfészt definiál objektum létrehozására, de a leszármazott osztályra hagyja a konkrét osztály eldöntését
 
+<p align="center">
+    <img src="PatternImages/factory_method.png" />
+</p>
+
 </details>
 
 ## Adpater
@@ -181,7 +206,15 @@ Cél:
 
 Object Adapter: Megoldás delegációval
 
+<p align="center">
+    <img src="PatternImages/adapter1.png" />
+</p>
+
 Class Adapter: Megoldás leszármazással
+
+<p align="center">
+    <img src="PatternImages/adapter2.png" />
+</p>
 
 </details>
 
@@ -195,6 +228,10 @@ Cél:
 - Célszrű elmenti az objektun állapotát Undo parancshoz
 
 Egy memento objektum készül az aktuális állapotból
+
+<p align="center">
+    <img src="PatternImages/memento.png" />
+</p>
 
 </details>
 

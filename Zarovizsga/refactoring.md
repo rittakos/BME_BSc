@@ -1,6 +1,6 @@
 # Refaktorálás
 
-[Főoldal](#oop.md)
+[Főoldal](oop.md)
 <details>
   <summary></summary>
 

@@ -1,6 +1,6 @@
 # Clean-code elvek
 
-[Főoldal](#oop.md)
+[Főoldal](oop.md)
 <details>
   <summary></summary>
 

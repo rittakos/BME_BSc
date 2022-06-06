@@ -1,6 +1,6 @@
 # Tervezési elvek
 
-[Főoldal](#oop.md)
+[Főoldal](oop.md)
 <details>
   <summary></summary>
 
@@ -75,11 +75,13 @@ A SOLID öt fontos elvet jelöl, mindegyik betűje egyre utal. Segítenek csökk
 
 "A class should have only one reason to change"
 
-Minden osztálynak pontosan egy felelőssége (feladata) legyen. Ha több van, azt szét kell osztani.
+Minden osztálynak pontosan egy felelőssége (oka a változásra) legyen. Ha több van, azt szét kell osztani.
 
 A szétválasztás több szinten történhet. Implementációs szinten ez két külön álló osztályra bontást jelent. Ha ez nem megoldható, akkor lehet interface szinten végezni a szétválasztást, ekkor a megfelelő interface-eket létre kell hozni, amiket aztán megvalósít az osztályunk.
 
 Nem mindig egyértelmű, hogy egy osztály több okból változhat (több felelőssége van). Fontos elv a YAGNI (You Ain’t Gonna Need It), vagyis, hogy ha valami nem fordul elő, arra nem kell tervezni.
+
+Ne sértsük meg!!
 
 </details>
 
@@ -97,6 +99,9 @@ Egy entitásnak nyíltnak kell lennie a kiegészítésre, de zártnak a módosí
 Az entitás viselkedését meg lehessen változtatni, hogy ezzel követni tudja a követelményeket.
 
 A kiegészítés ne vonja maga után a már létező forráskód módosulását.
+
+Megsérthető:
+- [Factory Method](patterns.md/#factory-method)
 
 </details>
 
@@ -118,6 +123,8 @@ Leszármazás:
 Megsértése típusellenőrzést vonhat maga után és általában az Open/Closed Principle megsértéséhez is vezet.
 
 __Soha ne használjunk leszármazást adat újrahasznosítási céllal! Használjuk a viselkedés újrahasznosítására!__
+
+Ne sértsük meg!!
 
 
 Függvény Előfeltételek: 
@@ -148,9 +155,11 @@ A Liskov elv betartása sokszor nem triviális és átfogóbb vizsgálatokat ig�
 "Clients should not be forced to depend on methods they
 do not use"
 
-Az interface-eket szét kell osztani többm, kisebb és specifikusabb interface-re, hogy a felhasználó tudja csak azt használni, amire tényleg szüksége van.
+Az interface-eket szét kell osztani több, kisebb és specifikusabb interface-re, hogy a felhasználó tudja csak azt használni, amire tényleg szüksége van.
 
 Ne merüljön fel függőség olyan részekkel, amikre valójában nincs is szükség.
+
+Ne sértsük meg!!
 
 </details>
 
@@ -175,6 +184,8 @@ Az adatbázis vagy a GUI változtatása a logika módosítását vonja maga utá
     <img src="PrincipleImages/dipgood.png" width="250"/>
 </p>
 
+Ne sértsük meg!!
+
 </details>
 
 
@@ -186,7 +197,9 @@ Az adatbázis vagy a GUI változtatása a logika módosítását vonja maga utá
 <details>
   <summary></summary>
 
-Az újtafelhasználható elemeket csak akkor szabad használni, ha a készítője kibocsátje, verziószámozza és karbantartja azt. Ezzel biztosítva, hogy minden módosítás és javítás a megfelelő módon jut el a felhasználóhoz, visszafele tartva a kompatibilitást.
+Az újtafelhasználható elemeket csak akkor szabad használni, ha a készítője kibocsátja, verziószámozza és karbantartja azt. Ezzel biztosítva, hogy minden módosítás és javítás a megfelelő módon jut el a felhasználóhoz, visszafele tartva a kompatibilitást.
+
+Ne sértsük meg!
 
 </details>
 
