@@ -44,7 +44,7 @@
     - [Stable Dependencies Principle](#stable-dependencies-principle)
     - [Stable Abstractions Principle](#stable-abstractions-principle)
     - [Don’t Repeat Yourself](#dont-repeat-yourself)
-    - [Single Choice Principle](#single-choice-principle)
+    - [Single Choice Principle/Single Point Control](#single-choice-principlesingle-point-control)
     - [Tell, don’t ask](#tell-dont-ask)
     - [Law of Demeter](#law-of-demeter)
 
@@ -81,6 +81,8 @@ A szétválasztás több szinten történhet. Implementációs szinten ez két k
 
 Nem mindig egyértelmű, hogy egy osztály több okból változhat (több felelőssége van). Fontos elv a YAGNI (You Ain’t Gonna Need It), vagyis, hogy ha valami nem fordul elő, arra nem kell tervezni.
 
+Megsértése esetén bármely felelősség változása, a többi felelősség változtatását vonaj maga után.
+
 Ne sértsük meg!!
 
 </details>
@@ -100,8 +102,11 @@ Az entitás viselkedését meg lehessen változtatni, hogy ezzel követni tudja 
 
 A kiegészítés ne vonja maga után a már létező forráskód módosulását.
 
+Új szereplő megjelenése nagyobb módosítást vonhat maga után.
+
 Megsérthető:
 - [Factory Method](patterns.md/#factory-method)
+- [Single Choice Principle](#single-choice-principlesingle-point-control)
 
 </details>
 
@@ -159,6 +164,8 @@ Az interface-eket szét kell osztani több, kisebb és specifikusabb interface-r
 
 Ne merüljön fel függőség olyan részekkel, amikre valójában nincs is szükség.
 
+Megsértése általában a [SRP](#single-responsibility) sértését is jelenti.
+
 Ne sértsük meg!!
 
 </details>
@@ -199,6 +206,8 @@ Ne sértsük meg!!
 
 Az újtafelhasználható elemeket csak akkor szabad használni, ha a készítője kibocsátja, verziószámozza és karbantartja azt. Ezzel biztosítva, hogy minden módosítás és javítás a megfelelő módon jut el a felhasználóhoz, visszafele tartva a kompatibilitást.
 
+Megsértése esetén nem fogják használni az elemet.
+
 Ne sértsük meg!
 
 </details>
@@ -210,6 +219,10 @@ Ne sértsük meg!
 
 Azok az osztályok amik együtt változnak összetartoznak. Ezt szervezés szintjén is jelezni kell. Ezek az osztályok tartozzanak egy package-be.
 
+Megsértése nem kívánt függőségeket okoz.
+
+Ne sértsük meg!!
+
 </details>
 
 ### Common Reuse Principle
@@ -217,7 +230,13 @@ Azok az osztályok amik együtt változnak összetartoznak. Ezt szervezés szint
 <details>
   <summary></summary>
 
+"Az együtt változó osztályok ugyanabba a csomagba kerüljenek"
+
 Azok az osztályok amik nincsenek együtt fölhasználva, külön legyenek csoportosítva. Csak az jusson el a felhasználhoz, amire tényleg szüksége van. 
+
+Megsértése esetén a változás kiterjedt, nem lokalizált.
+
+Ne sértsük meg!
 
 </details>
 
@@ -228,6 +247,10 @@ Azok az osztályok amik nincsenek együtt fölhasználva, külön legyenek csopo
 
 Package-k között ne legyen körkörös függőség! Mindenféle függőséget próbáljunk minimalizálni.
 
+Megsértése esetén, egy package módosítása a többi újravizsgálatát eredményezi.
+
+Ne sértsük meg!
+
 </details>
 
 ### Stable Dependencies Principle
@@ -236,6 +259,10 @@ Package-k között ne legyen körkörös függőség! Mindenféle függőséget 
   <summary></summary>
 
 A stabil részektől függjenek a kevésbé stabilak és ne fordítva.
+
+Megsértése esetén a gyakran változó instabil részek a stabil részek változtatását igénylik.
+
+Ne sértsük meg!
 
 </details>
 
@@ -246,6 +273,8 @@ A stabil részektől függjenek a kevésbé stabilak és ne fordítva.
 
 A stabil package-k legyenek abstract-ok. Így könnyebben kiegészíthetőek.
 
+Ne sértük meg!
+
 </details>
 
 ### Don’t Repeat Yourself
@@ -255,14 +284,20 @@ A stabil package-k legyenek abstract-ok. Így könnyebben kiegészíthetőek.
 
 Kerüljük az ismétlést és duplikációt. Minden adatnak és tudásnak legyen meg a jól meghatározott helye és felelőse. Ha duplikálnánk valamit gondoljuk végig nem lenne-e jobb kiemelni.
 
+Megsértése nem kívánt módosításokat vonhat maga után.
+
+Ne sértsük meg!
+
 </details>
 
-### Single Choice Principle
+### Single Choice Principle/Single Point Control
 
 <details>
   <summary></summary>
 
 Ha különböző alternatívák támogatása szükséges, akkor ezt pontosan egy, jól meghatározott helyen tegyük.
+
+Megsértése a [DRY](#dont-repeat-yourself) és [OCP](#openclosed-principle) megsértését jelenti. Ha sérül az OCP(típusellenőrzés), fontos, hogy az egy jól meghatároztt helyen sérüljön.
 
 </details>
 
@@ -272,6 +307,10 @@ Ha különböző alternatívák támogatása szükséges, akkor ezt pontosan egy
   <summary></summary>
 
 Egy függvény hívásakor nem a hívó felelőssége a hívott identitás állapotának vizsgálata, hanem a függvényé.
+
+Megsértése a [DRY](#dont-repeat-yourself) megsértéséhez vezethet.
+
+Ne sértsük meg!
 
 </details>
 
@@ -288,6 +327,9 @@ Egy objektum függvénye, csupán az alábbi tulajdonú függvényeket hívja:
 - A függvény paramétereinek függvényeit
 - A függvény által létrehozott objektumok függvényeit
 
-Kerüljük a láncolt függvényhívásokat!
+Kerüljük a láncolt függvényhívásokat! Delegáljuk a többi hívást a következő függvénynek.
+
+Megsértés:
+- Ha nagyon sok a delegáló függvény, akkor a sok karbantartás helyett sértsük meg. (miután ellőnőriztük jó a tervezés)
 
 </details>
