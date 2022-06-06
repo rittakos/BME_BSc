@@ -2,7 +2,7 @@
 
 A BME VIK Mérnökinformatikus BSc képzésének objektum orientált szoftverfejlesztés tárgyának jegyzete, záróvizsgához.
 
-<details open>
+<details>
   <summary></summary>
 
 [Fogalmak](terms.md)

@@ -1,7 +1,7 @@
 # API tervezési elvek
 
 [Főoldal](#oop.md)
-<details open>
+<details>
   <summary></summary>
 
 [Fogalmak](terms.md)

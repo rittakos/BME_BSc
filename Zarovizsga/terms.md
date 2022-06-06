@@ -1,7 +1,7 @@
 # Fogalmak
 
 [Főoldal](#oop.md)
-<details open>
+<details>
   <summary></summary>
 
 [Minták](patterns.md)

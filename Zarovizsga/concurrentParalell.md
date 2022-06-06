@@ -1,7 +1,7 @@
 # Konkurens és párhuzamos minták
 
 [Főoldal](#oop.md)
-<details open>
+<details>
   <summary></summary>
 
 [Fogalmak](terms.md)

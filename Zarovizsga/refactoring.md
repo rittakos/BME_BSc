@@ -1,7 +1,7 @@
 # Refaktorálás
 
 [Főoldal](#oop.md)
-<details open>
+<details>
   <summary></summary>
 
 [Fogalmak](terms.md)
