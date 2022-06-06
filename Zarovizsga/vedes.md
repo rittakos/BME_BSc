@@ -28,10 +28,9 @@ Két megválaszolandó kérdés merült fel a bírálat során. Az egyik az oszt
 
 ## Labirintus: 7.dia
  
-Az algoritmus rekurzívan pakol le utakat véletlenszerűen szomszédos cellák között, 
-ha nincs már szomszéd, ahol még nem járt akkor visszalép amiddig nem talál megfelelő szomszédot.
-Az eredmény, egy tökéletes labirintus, vagyi minden pontjából mindegyikbe, pontosan egy úton lehet eljutni.
-Szintén rekurzívan keresi a megoldást is.
+Az algoritmus a Kruskal algoritmus módosított változata. Ennek lényege, hogy egy súlyozott gráfban keresi a legkisebb súlyú feszítőfát. Ez annyban módosul, hogy a gráf nem súlyoztt, hanem véletlenszerűen választjuk ki az éleket. A megoldás menete, hogy választunk egy élet, amiről megnézzük, hogy a két vége között van-e már ut, ha nincs bevesszük az élet a megoldásba, ha van eldobjuk. A labirintus úgy van megfeleltetve egy gráfnak, hogy a mezők élek az utak pedig a csúcsok. Kezdetben a szomszédos csúcsok között van él. A végeredményben szereplő élek helyén lesznek utak, ahonnan pedig elvettük az éleket ott falak lesznek.
+
+A megoldás a start mezőből indított mélységi kereséssek adható meg.
 
 1. Létrehozzuk a labirintust, egy n*m mátrix amelyiknek minden cellája tudja:
 	- koordinátáját a mátrixban
@@ -54,3 +53,17 @@ Szintén rekurzívan keresi a megoldást is.
 
 
 ## Osztályok részletesebb leírása: 8.dia
+
+Új grafikus objektum létrehozásához használható, a Renderer APIban létrehozott shader és textura osztály. Ezek meghívják a megfelelő platform megfelelő függvényeit. Ezen kívül az új objektumért felelős osztálynak a GameObject-ből kell leszármaznia. Az más geometria leírásához nem készültek el a wrapper osztályok, ezeket OpenGL parancsokkal lehet megoldani.
+
+Az osztályok négy nagyobb egységbe sorolhatóak be. Ezek a Motor, a játék, a labirintus és a platform függő kódok.
+
+## 9. dia
+
+A játék logikájáért és megjelenéséért felelős osztályok a motor beli osztályok leszármazottjai. Ezeken kívül a játék még használhatja RendererAPI-t, a labirintust és új parancsot rendelhet bemenetkehez. A GraphicsProfram leszármazott LabyrinthGame példányosításával jön létre a játék.
+
+A labirintusért felelős rész áll egy osztályból aminek példányosításával létrehozható egy labirintus. Ez használ egy data, egy generáló és egy megjelenítő osztályt. A megjelenítő osztály platform függő és ő hozza létre az ütköző objektumokat is.
+
+A platform függő rész a motorbeli interface-ek konkrét megvalósításait tartalmazza. Ilyen a rendererAPI-t megvalósító OpenGL Renderer API, a Window osztály és részben a TexturedRectangle osztály, ami tartalmaz olyan OpenGL hívásokat, amikhez még nem készült wrapper. Az inputok windows-os kezelése is itt valósul meg.
+
+A motor leginkább alaplogikákat és interface-eket tartalmaz. Ilyen a fő ciklus, ami frissíti az adatszerkezeteket és kirajzolja amit kell. A inputok általános kezelése is itt történik. A GameObject minden olyan objektum őse, amit szeretnénk használni a játékhoz.
