@@ -25,6 +25,29 @@
 </details>
 
 
+## Tartalom
+<details open>
+  <summary></summary>
+
+- [OOP](#fogalmak)
+  - [Tartalom](#tartalom)
+  - [Kérdések](#kérdések)
+  - [Fogalmak](#fogalmak)
+  - [Tervezési elvek](#tervezési-elvek)
+  - [Tervezési minták](#tervezési-minták)
+  - [Heurisztikák](#heurisztikák)
+  - [Refaktorálás](#refaktorálás)
+  - [Clean-code elvek](#clean-code-elvek)
+  - [API tervezési elvek](#api-tervezési-elvek)
+  - [Elosztott objektumorientáltság](#elosztott-objektumorientáltság)
+  - [Konkurens és párhuzamos minták](#konkurens-és-párhuzamos-minták)
+  - [Immutable objektumorientáltság](#immutable-objektumorientáltság)
+
+</details>
+
+---
+
+
 ## Alapfogalmak
 
 Az alábbi fogalmak vázlatosan vannak definiálva. Alapos ismeretük elengedhetetlen a továbbiakban.
@@ -59,6 +82,9 @@ __Abstract method__: Nem rendelkezik implementációval
 __Abstract class__: Olyan osztály amit nem lehet példányosítani. Általában van abstract függvénye
 
 __Interface__: Egy olyan függvényhalmaz amik nincsenek implementálva. Az interface-t megvalósító osztályoknak kell ezeket implementálni. Egyes nyelvekben nincs külön interface, helyette abstract osztályok és függvények (tisztán virtuális függvény) használhatóak
+
+__Utility Class__: Mindenki számára hasznos,
+de senkihez sem hozzárendelhető funkciókat tartalmaznak (matematikai osztályok)
 
 __Interface of a class__: Egy osztály publikus függvényeinek halmaza
 

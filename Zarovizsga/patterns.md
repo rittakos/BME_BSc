@@ -40,6 +40,11 @@
   - [Adpater](#adpater)
   - [Memento](#memento)
   - [Visitor](#visitor)
+  - [Pull modell](#pull-modell)
+  - [Push modell](#push-modell)
+  - [Facade minta](#facade-minta)
+  - [Mediátor minta](#mediátor-minta)
+  - [Dekorátor minta](#dekorátor-minta)
 
 </details>
 
@@ -240,7 +245,101 @@ Egy memento objektum készül az aktuális állapotból
 <details>
   <summary></summary>
 
-Cél: 
-- h
+Tehát a visitor „meglátogatja” az alakzatokat, az alakzatok pedig „elfogadják a látogatást”. A ShapeVisitor összes függvényét egyébként lehetne visit()-nek is nevezni, mert a paraméter típusa alapján is történhet a függvény kiválasztása – de ez OOP szempontból lényegtelen.
+
+```
+class ShapeVisitor {
+    public:
+        virtual void visit_rectangle(Rectangle & r) = 0;
+        virtual void visit_circle(Circle & r) = 0;
+};
+ 
+class Shape {
+    public:
+        virtual void accept_visitor(ShapeVisitor &sv) = 0;
+};
+ 
+class Container {
+    public:
+        virtual void visit_all(ShapeVisitor &sv) {
+            for (...)
+                shapes[i]->accept_visitor(sv);
+        }
+}
+```
+
+A visitor tervezési minta hátránya, hogy új típus bevezetését nehezíti meg. Eddig egy új művelet hozzáadásához kellett módosítani az összes alakzatot – most azt nem kell. Mert most új típusú alakzat hozzáadásához kell módosítani az összes visitort – eddig azt nem kellett.
+
+</details>
+
+## Pull modell
+
+<details>
+  <summary></summary>
+
+Minta, a grafika és modell kapcsolatára.
+
+Jellemzői:
+- grafika folyamatosan lekérdezi a modell állapotát
+- a grafikát bizonyos időnként újra rajzoljuk, támaszkodva a modell aktuális állapotára
+- lehetnek felesleges vagy nem elég frissítések
+
+<p align="center">
+    <img src="PatternImages/pull.png" />
+</p>
+
+</details>
+
+## Push modell
+
+<details>
+  <summary></summary>
+
+Minta, a grafika és modell kapcsolatára.
+
+Jellemzői:
+- modell értesíti a grafikát amennyiben valami változott
+-  csak akkor rajzolunk újra, amikor ténylegesen szükséges
+- lehetnek felesleges vagy nem elég frissítések
+
+<p align="center">
+    <img src="PatternImages/push.png" />
+</p>
+
+</details>
+
+
+## Facade minta
+
+<details>
+  <summary></summary>
+
+Valaki egy könnyebb vagy leegyszerűsített interfészt szeretne egy alatta lévő megvalósítási objektumhoz.
+
+<p align="center">
+    <img src="PatternImages/facade.png" />
+</p>
+
+</details>
+
+## Mediátor minta
+
+<details>
+  <summary></summary>
+
+Megszabja, miképp viselkedjen objektumok egy csoportja.Azáltal segíti a laza csatolást, hogy megelőzi, hogy az objektumok egymásra közvetlenül hivatkozzanak.
+
+</details>
+
+## Dekorátor minta
+
+<details>
+  <summary></summary>
+
+Lehetővé teszi adott objektumokhoz más viselkedések hozzáadását akár statikusan, akár dinamikusan anélkül, hogy hatással lenne az azonos osztályból származó többi objektumra.
+
+<p align="center">
+    <img src="PatternImages/decorator.png" />
+</p>
 
 </details>

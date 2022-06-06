@@ -47,6 +47,7 @@
     - [Single Choice Principle/Single Point Control](#single-choice-principlesingle-point-control)
     - [Tell, don’t ask](#tell-dont-ask)
     - [Law of Demeter](#law-of-demeter)
+    - [YAGNI](#yagni)
 
 </details>
 
@@ -331,5 +332,17 @@ Kerüljük a láncolt függvényhívásokat! Delegáljuk a többi hívást a kö
 
 Megsértés:
 - Ha nagyon sok a delegáló függvény, akkor a sok karbantartás helyett sértsük meg. (miután ellőnőriztük jó a tervezés)
+
+</details>
+
+
+### YAGNI
+
+<details>
+  <summary></summary>
+
+Amire nincs szükség, az nem kell.
+
+Fontos elv a YAGNI (You Ain’t Gonna Need It), vagyis, hogy ha valami nem fordul elő, arra nem kell tervezni.
 
 </details>
