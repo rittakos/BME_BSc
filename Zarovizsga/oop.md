@@ -30,16 +30,6 @@ A BME VIK Mérnökinformatikus BSc képzésének objektum orientált szoftverfej
       - [Tell, don’t ask](#tell-dont-ask)
       - [Law of Demeter](#law-of-demeter)
   - [Tervezési minták](#tervezési-minták)
-      - [Composite](#composite)
-      - [Observer](#observer)
-      - [Singleton](#singleton)
-      - [Strategy](#strategy)
-      - [Proxy](#proxy)
-      - [Abstract Factory](#abstract-factory)
-      - [Factory Method](#factory-method)
-      - [Adpater](#adpater)
-      - [Memento](#memento)
-      - [Visitor](#visitor)
   - [Heurisztikák](#heurisztikák)
   - [Refaktorálás](#refaktorálás)
   - [Clean-code elvek](#clean-code-elvek)
@@ -102,7 +92,7 @@ __Encapsulation__:  Egységbezárás, egy osztály adattagjait nem lehet kívül
 __Inheritance__:  Leszármazás, a leszármazott osztály tudja használni őse viselkedését, nem az adatait
 
 <p align="center">
-    <img src="inheritance.png" width="50"/>
+    <img src="ConnectionImages/inheritance.png" width="50"/>
 </p>
 
 
@@ -138,37 +128,37 @@ Modulok vagy osztályok között előforduló kapcsolatok.
 __Dependency__: Két elem függőségét fejezi ki a nyíl irányába (függő felé mutat). Az egyik módosulása maga után vonhatja a másikét
 
 <p align="center">
-    <img src="dependency.png" width="200"/>
+    <img src="ConnectionImages/dependency.png" width="200"/>
 </p>
 
 __Association__: Gyenge ismeretség a nyíl irányába
 
 <p align="center">
-    <img src="association.png" width="200"/>
+    <img src="ConnectionImages/association.png" width="200"/>
 </p>
 
 __Aggregation__: Két objektum élettartalma között fellépő gyenge kapcsolat. Erősebb mint az Association de gyengébb mint a Composition
 
 <p align="center">
-    <img src="aggregation.png" width="200"/>
+    <img src="ConnectionImages/aggregation.png" width="200"/>
 </p>
 
 __Composition__: Két objektum élettartalma között fellépő erős kapcsolat. Az egyik megszűnése a másik megsemmisítését vnaj maga után
 
 <p align="center">
-    <img src="composition.png" width="200"/>
+    <img src="ConnectionImages/composition.png" width="200"/>
 </p>
 
 __Generalization/Inheritance__: Leszármazás. Az ős viselkedését örökli a leszármazott
 
 <p align="center">
-    <img src="inheritance2.png" width="200"/>
+    <img src="ConnectionImages/inheritance2.png" width="200"/>
 </p>
 
 __Realization/Implementation__: Megvalósítás
 
 <p align="center">
-    <img src="implementation.png" width="200"/>
+    <img src="ConnectionImages/implementation.png" width="200"/>
 </p>
 
 </details>
@@ -294,11 +284,11 @@ Fordítsuk meg interface-ek segítségével a függőség irányát.
 
 Példa a rossz tervezésre:
 <p align="center">
-    <img src="dipwrong.png" width="100"/>
+    <img src="PrincipleImages/dipwrong.png" width="100"/>
 </p>
 Az adatbázis vagy a GUI változtatása a logika módosítását vonja maga után. Megoldás:
 <p align="center">
-    <img src="dipgood.png" width="250"/>
+    <img src="PrincipleImages/dipgood.png" width="250"/>
 </p>
 
 </details>
@@ -407,170 +397,9 @@ Kerüljük a láncolt függvényhívásokat!
 
 ---
 
-## Tervezési minták
+## Tervezési minták 
+[Minták](#patterns/#tervezési-minták)
 
-#### Composite
-
-<details>
-  <summary></summary>
-
-Cél:
-- Rész-egész viszonyban lévő objektumokat fastruktórába rendez
-- A kliensek számára lehetővé teszi, hogy az egyszerű és összetett(kompozit) objektumokat egységesen kezelje egy interface-en keresztül
-
-Példa: Olyan grafikus alkalmazás, amely lehetővé teszi összetett grafikus objektumok létrehozását
-
-</details>
-
-#### Observer
-
-<details>
-  <summary></summary>
-
-Cél:
-- Egy objektum állapotának megváltozásáról értesít más objektumokat
-- Nincsen függőség, maguk az osztályok között (csak az observer-ekkel)
-
-Példa: MVC vagy Document-View
-
-Működés: Egy osztály eltárolja azokat az Observer-eket (interface), amiket értesíteni kell. Ezek értesítésére késpes az osztály. A különböző observer-ek ismerik a megfelelő adatszerkezeti osztályokat és le tudják kérni valamint módosítani azokat.
-
-</details>
-
-#### Singleton
-
-<details>
-  <summary></summary>
-
-Cél:
-- Biztosítja, hogy egy osztályból 1 példány legyen, és azt globálisan el lehessen érni
-
-Magyarázat:
-
-```
-class Singleton
-{ 
-private:
-    static Singleton* instance; 
- protected:   
-    Singleton() { } 
-
-public: 
-    Singleton(Singleton &other) = delete;
-    void operator=(const Singleton &) = delete;
-    static Singleton *GetInstance();
-
-    void doSomething() {}
- }
-
-Singleton* Singleton::instance= nullptr;
-
-Singleton *Singleton::GetInstance(c) 
-{ 
-    if(instance == nullptr)
-    { 
-        instance = new Singleton(); 
-    } 
-    return instance; 
-}
-```
-
-```
-Singleton* instance = Singleton::GetInstance();
-instance->doSomething();
-```
-
-</details>
-
-#### Strategy
-
-<details>
-  <summary></summary>
-
-Cél: 
-- Algoritmusok egységbe zárása, egyszerűen ki lehessen őket cserélni
-
-Példa:
-
-</details>
-
-#### Proxy
-
-<details>
-  <summary></summary>
-
-Cél:
-- Objektum helyett egy transzparens helyettesítő objektumot használ, mely szabályozza a hozzáférést
-
-Példa: Jogosultságok korlátozása, erőforrás igényes műveletek csak akkor legyenek végrehajtva ha muszály
-
-Magyarázat: A Proxy és az Objektum közös őssel rendelkezik, amit ismer a cliens. A cliens a proxy függvényein keresztül módosítja (akár törli és létrehozza) és lekérdezi a valódi objektumot
-
-</details>
-
-#### Abstract Factory
-
-<details>
-  <summary></summary>
-
-Cél:
-- Interfészt biztosít ahhoz, hogy egymással összefüggő objektumok családjait hozzuk létre konkrét osztály specifikálása nélkül
-- Létrehozás egy interfészen keresztül történik, nem függ a létrehozott objektumok konkrét típusától.
-
-
-
-Példa: 
-- Ablakos rendszerek, GUI vezérlőelemek
-
-</details>
-
-#### Factory Method
-
-<details>
-  <summary></summary>
-
-Cél:
-- Interfészt definiál objektum létrehozására, de a leszármazott osztályra hagyja a konkrét osztály eldöntését
-
-</details>
-
-#### Adpater
-
-<details>
-  <summary></summary>
-
-Cél:
-- Osztály interfészét olyanná változtatja, amilyet a kliens vár
-- Lehetővé teszi egyébként inkompatibilis osztályok együttműködését
-
-Object Adapter: Megoldás delegációval
-
-Class Adapter: Megoldás leszármazással
-
-</details>
-
-#### Memento
-
-<details>
-  <summary></summary>
-
-Cél: 
-- Egységbezárás megsértése nélkül a külvilág számára elérhetővé tenni az objektum belső állapotát
-- Célszrű elmenti az objektun állapotát Undo parancshoz
-
-Egy memento objektum készül az aktuális állapotból
-
-</details>
-
-#### Visitor
-
-<details>
-  <summary></summary>
-
-Cél: 
-- h
-
-</details>
 
 ---
 
