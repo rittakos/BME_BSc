@@ -398,7 +398,7 @@ Kerüljük a láncolt függvényhívásokat!
 ---
 
 ## Tervezési minták 
-[Minták](#patterns/#tervezési-minták)
+[Minták](patterns.md/#tervezési-minták)
 
 
 ---
