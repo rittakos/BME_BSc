@@ -50,6 +50,7 @@
     - [Tell, don’t ask](#tell-dont-ask)
     - [Law of Demeter](#law-of-demeter)
     - [YAGNI](#yagni)
+    - [Null object](#null-object)
 
 </details>
 
@@ -347,5 +348,14 @@ Megsértés:
 Amire nincs szükség, az nem kell.
 
 Fontos elv a YAGNI (You Ain’t Gonna Need It), vagyis, hogy ha valami nem fordul elő, arra nem kell tervezni.
+
+</details>
+
+
+### Null object
+
+<details>
+  <summary></summary>
+
 
 </details>

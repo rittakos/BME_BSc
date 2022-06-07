@@ -47,6 +47,7 @@
   - [Facade minta](#facade-minta)
   - [Mediátor minta](#mediátor-minta)
   - [Dekorátor minta](#dekorátor-minta)
+  - [Bridge](#bridge)
 
 </details>
 
@@ -343,5 +344,13 @@ Lehetővé teszi adott objektumokhoz más viselkedések hozzáadását akár sta
 <p align="center">
     <img src="PatternImages/decorator.png" />
 </p>
+
+</details>
+
+
+## Bridge
+
+<details>
+  <summary></summary>
 
 </details>
