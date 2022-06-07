@@ -66,7 +66,7 @@ __Inheritance__:  Leszármazás, a leszármazott osztály tudja használni őse 
 </p>
 
 
-__Polymorphism__: A hívó felől el van rejtve az objektum típusa, annyi ismert, hogy egy adott osztály leszármazottja
+__Polymorphism__: A hívó felől el van rejtve az objektum típusa, annyi ismert, hogy egy adott osztály leszármazottja. Ha egy kliens az ősön keresztül hív meg egy virtuális függvényt, akkor valójában a leszármazottban felülírt változat fog lefutni, úgy, hogy a kliens nem ismeri a hívott objektum pontos típusát.
 
 __Visibility__: Láthatóság
 

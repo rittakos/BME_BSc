@@ -48,6 +48,10 @@
   - [Mediátor minta](#mediátor-minta)
   - [Dekorátor minta](#dekorátor-minta)
   - [Bridge](#bridge)
+  - [Flyweight](#flyweight)
+  - [State](#state)
+  - [Null Object](#null-object)
+  - [Template Method](#template-method)
 
 </details>
 
@@ -330,7 +334,7 @@ Valaki egy könnyebb vagy leegyszerűsített interfészt szeretne egy alatta lé
 <details>
   <summary></summary>
 
-Megszabja, miképp viselkedjen objektumok egy csoportja.Azáltal segíti a laza csatolást, hogy megelőzi, hogy az objektumok egymásra közvetlenül hivatkozzanak.
+Megszabja, miképp viselkedjen objektumok egy csoportja. Azáltal segíti a laza csatolást, hogy megelőzi, hogy az objektumok egymásra közvetlenül hivatkozzanak.
 
 </details>
 
@@ -352,5 +356,37 @@ Lehetővé teszi adott objektumokhoz más viselkedések hozzáadását akár sta
 
 <details>
   <summary></summary>
+
+</details>
+
+## Flyweight
+
+<details>
+  <summary></summary>
+
+</details>
+
+
+## State
+
+<details>
+  <summary></summary>
+
+</details>
+
+
+## Null Object
+
+<details>
+  <summary></summary>
+
+
+</details>
+
+## Template Method
+
+<details>
+  <summary></summary>
+
 
 </details>
