@@ -25,6 +25,8 @@ A BME VIK Mérnökinformatikus BSc képzésének objektum orientált szoftverfej
 
 [Immutable objektumorientáltság](immutable.md)
 
+[C++ Idiómák](idioms.md)
+
 </details>
 
 ## Tartalom

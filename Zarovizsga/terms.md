@@ -22,6 +22,8 @@
 
 [Immutable objektumorientáltság](immutable.md)
 
+[C++ Idiómák](idioms.md)
+
 </details>
 
 
@@ -29,19 +31,12 @@
 <details open>
   <summary></summary>
 
-- [OOP](#fogalmak)
+- [Fogalmak](#fogalmak)
   - [Tartalom](#tartalom)
-  - [Kérdések](#kérdések)
-  - [Fogalmak](#fogalmak)
-  - [Tervezési elvek](#tervezési-elvek)
-  - [Tervezési minták](#tervezési-minták)
-  - [Heurisztikák](#heurisztikák)
-  - [Refaktorálás](#refaktorálás)
-  - [Clean-code elvek](#clean-code-elvek)
-  - [API tervezési elvek](#api-tervezési-elvek)
-  - [Elosztott objektumorientáltság](#elosztott-objektumorientáltság)
-  - [Konkurens és párhuzamos minták](#konkurens-és-párhuzamos-minták)
-  - [Immutable objektumorientáltság](#immutable-objektumorientáltság)
+  - [Alapfogalmak](#alapfogalmak)
+  - [Kapcsolatok](#kapcsolatok)
+  - [Duck Typing](#duck-typing)
+  - [Heterogén kollekció](#heterogén-kollekció)
 
 </details>
 

@@ -22,6 +22,8 @@
 
 [Immutable objektumorientáltság](immutable.md)
 
+[C++ Idiómák](idioms.md)
+
 </details>
 
 ## Tartalom

@@ -22,4 +22,6 @@ Immutable objektumorientáltság
 
 [Konkurens és párhuzamos minták](concurrentParalell.md)
 
+[C++ Idiómák](idioms.md)
+
 </details>
