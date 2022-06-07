@@ -149,4 +149,4 @@ Problémák:
 - adott függvény hívása csak egyes típusokon
 
 Megoldás:
-- [visitor minta](patterns.md/#visitor-pattern), sérül az [OCP](principles.md/#open-closed-principle)
+- [visitor minta](patterns.md/#visitor), sérül az [OCP](principles.md/#open/closed-principle)

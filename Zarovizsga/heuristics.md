@@ -309,7 +309,7 @@ Megsértése sérti a [YAGNI](principles.md/#yagni) elvet. Fölöslegesen bonyol
 
 Megsértése estén a gyakran változó nézet vagy új nézet bevezetése a modell változtatását igényli.
 
-Megoldás lehet [Push](patterns.md/push-modell) vagy [Pull](patterns.md/pull-modell) modell.
+Megoldás lehet [Push](patterns.md/#push-modell) vagy [Pull](patterns.md/#pull-modell) modell.
 
 </details>
 
@@ -496,7 +496,7 @@ Ha csak formailag azonosak interface-ek akkor különüljenek el.
 [Lásd.](#egy-osztály-ne-függjön-az-őt-használó-osztályoktól-beleértve-a-leszármazottjait-is)
 
 Megsértése sérti:
-- [OCP](principles.md/#open-closed-principle): új leszármazott bevezetésekor módosul az ős is
+- [OCP](principles.md/#openclosed-principle): új leszármazott bevezetésekor módosul az ős is
 
 Megoldás:
 - [polimorfizmus](terms.md/#alapfogalmak)
@@ -563,7 +563,7 @@ Megsérthető:
   <summary></summary>
 
 Megsértése sérti:
-- típusellenőrzés történik ami sérti a [OCP](principles.md/#open-closed-principle)-t
+- típusellenőrzés történik ami sérti a [OCP](principles.md/#openclosed-principle)-t
 
 Megoldás:
 - polimorfizmus
@@ -580,7 +580,7 @@ Megsérthető:
   <summary></summary>
 
 Megsértése sérti:
-- [OCP](principles.md/#open-closed-principle) sérül
+- [OCP](principles.md/#openclosed-principle) sérül
 
 Megoldás:
 - [polimorfizmus](terms.md/#alapfogalmak)
@@ -593,7 +593,7 @@ Megoldás:
   <summary></summary>
 
 Megsértése sérti:
-- [OCP](principles.md/#open-closed-principle) sérül
+- [OCP](principles.md/#openclosed-principle) sérül
 - [TDA](principles.md/#tell-dont-ask) sérül
 
 Megoldás:
