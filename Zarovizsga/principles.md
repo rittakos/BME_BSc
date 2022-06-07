@@ -108,6 +108,7 @@ A kiegészítés ne vonja maga után a már létező forráskód módosulását.
 Megsérthető:
 - [Factory Method](patterns.md/#factory-method)
 - [Single Choice Principle](#single-choice-principlesingle-point-control)
+- [Visitor](patterns.md/#visitor-pattern)
 
 </details>
 

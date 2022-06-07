@@ -134,3 +134,19 @@ __Realization/Implementation__: Megvalósítás
 <p align="center">
     <img src="ConnectionImages/implementation.png" width="200"/>
 </p>
+
+
+## Duck Typing
+
+-  ha valami úgy mozog, mint egy kacsa, és úgy hápog, mint egy kacsa, akkor az egy kacsa
+-  erősen típusos nyelvekben nem (nem szépen) megvalósítható
+-  c++ban a templetek a paramétereire előírt kényszerek ugyancsak duck typing-ot követnek
+
+## Heterogén kollekció
+
+Problémák:
+- leszármazott egyedi függvényének meghívása
+- adott függvény hívása csak egyes típusokon
+
+Megoldás:
+- [visitor minta](patterns.md/#visitor-pattern), sérül az [OCP](principles.md/#open-closed-principle)
