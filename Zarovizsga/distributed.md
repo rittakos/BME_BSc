@@ -43,6 +43,14 @@
     - [Bináris sorosítás](#bináris-sorosítás)
     - [Szöveges sorosítás](#szöveges-sorosítás)
     - [Hogyan kezeljük a memóriát?](#hogyan-kezeljük-a-memóriát)
+    - [Hogyan szolgálunk ki több klienst …](#hogyan-szolgálunk-ki-több-klienst-)
+    - [Hány objektum példány kell a szerverből?](#hány-objektum-példány-kell-a-szerverből)
+    - [Hogyan őrizzük meg az állapotot a hívások között?](#hogyan-őrizzük-meg-az-állapotot-a-hívások-között)
+    - [Hogyan kommunikáljunk úgy, ha valamelyik oldal nem elérhető?](#hogyan-kommunikáljunk-úgy-ha-valamelyik-oldal-nem-elérhető)
+    - [Hogyan kezeljük a szinkron hívásokat?](#hogyan-kezeljük-a-szinkron-hívásokat)
+    - [Hogyan kezeljük az aszinkron hívásokat?](#hogyan-kezeljük-az-aszinkron-hívásokat)
+    - [Aszinkron üzenetek: kliens-szerver](#aszinkron-üzenetek-kliens-szerver)
+    - [Aszinkron események: publish-subscribe](#aszinkron-események-publish-subscribe)
   - [Technológiák elosztott kommunikáció megvalósításához](#technológiák-elosztott-kommunikáció-megvalósításához)
   - [SOAP webszolgáltatások](#soap-webszolgáltatások)
   - [REST szolgáltatások](#rest-szolgáltatások)
@@ -138,6 +146,65 @@ Ha van akkor a Garbage Collector. Egyébként:
 - kliens oldalon a bemenő paramétereket tipikusan a kliens foglalja, és ő is szabadítja fel. Az eredmény objektumot a proxy foglalja le és a kliensnek kell felszabadítania
 - szerver oldalon az adapter foglalja le a memóriaterületet. Az eredményt a szerver oldal foglalja és adapternek kell felszabadítania
 
+### Hogyan szolgálunk ki több klienst …
+- egy szálú szerver esetén?
+  
+      az egy szálú szervernek az a legnagyobb előnye, hogy nem léphetnek fel konkurencia problémák, így nem is kell bonyolult többszálúsággal és konkurenciával foglalkozni. Lehet blokkoló vagyis a kéréseknek várakoznia. Lehet nem blokkoló, ami callback függvényt használ
+- többszálú szerver esetén?
+
+      Lehet, hogy minden kliens önálló szálat kap. Vagy a másik megoldás a Thread pool, ilyenkor a szervernek van egy fix készlete a kiszolgáló szálakból
+
+
+### Hány objektum példány kell a szerverből?
+- egy
+
+      minden klienskérést ez szolgál ki
+- kliensenként egy
+  
+      kliensspecifikus állapotot is tud tárolni
+- Object pool
+  
+      ezekhez rendeljük hozzá a beérkező kéréseket, kliens specifikus állapot nem tárolható hozzájuk a szerver memóriájában
+
+### Hogyan őrizzük meg az állapotot a hívások között?
+- szerver memóriájában
+  
+      minden kliens saját szerverobjektummal rendelkezik
+- minden hívásban átküldjük
+  
+      elküldi a teljes állapotot a hívással együtt
+- adatbázisban
+  
+      kliensnek azonosítani kell tudnia magát, hogy a szerver tudja, információ kell
+
+
+### Hogyan kommunikáljunk úgy, ha valamelyik oldal nem elérhető?
+- Szinkron hívások esetén nem tudunk kommunikálni. Aszinkron esetben ha van egy köztes szereplő, aki tudja tárolni a kéréseket, akkor megoldható a szétcsatolt kommunikáció
+
+### Hogyan kezeljük a szinkron hívásokat?
+Egy folyamatosan fennálló kapcsolatra van szükség. A kliens elküldi ezen keresztül a kérését, majd blokkolva vár a szerver válaszára. A szerver kiszolgálhatja a kérést szinkron és aszinkron módon is
+
+### Hogyan kezeljük az aszinkron hívásokat?
+Történhet úgy, mint a szinkron esetben, csak a kliens nem várakozik blokkolva. Egy callback híváson keresztül értesül az eredményről, vagy periodikusan poll-ozza a szervert. Ha van megbízható köztes szereplő, a kliens és a szerver nem ismeri egymást közvetlenül, hanem szétcsatolva, valamilyen üzenetsoron keresztül kommunikálnak
+
+### Aszinkron üzenetek: kliens-szerver
+- a kliensek üzeneteket küldenek a köztes szereplő által fenntartott üzenetsorba
+- a szerver ebből a sorból veszi ki egyesével az üzeneteket
+- a szerverből több példány is futhat, de ezek a példányok általában egyformák, ugyanazt a feladatot végzik, mindössze csak a skálázhatóság miatt van belőlük több példány
+- egy üzenetet csak egy szerverpéldány dolgozhat fel
+
+<p align="center">
+    <img src="DistributedImages/kliensszerver.png" />
+</p>
+
+### Aszinkron események: publish-subscribe
+- ez a modell eseményeken alapul, tipikusan egy termelőnk van, ami eseményeket generál
+- ezeket a köztes, megbízható fél egy topic-ban gyűjti, és a fogadók feliratkozhatnak a topic-ban érkező eseményekre
+- itt minden eseményt, minden feliratkozó megkap
+
+<p align="center">
+    <img src="DistributedImages/publishsubscribe.png" />
+</p>
 
 </details>
 
