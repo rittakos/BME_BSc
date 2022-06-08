@@ -117,6 +117,9 @@ Rossz kód:
 
 ## Kifejező nevek írása
 
+<details>
+  <summary></summary>
+
 ### Az osztálynevek főnév jellegűek legyenek!
 
 <details>
@@ -176,6 +179,8 @@ Rossz kód:
 
 ### Kerüljük az értelmetlen kontextust!
 
+</details>
+
 ## Függvényekkel kapcsolatos clean code szabályok
 
 <details>
@@ -219,6 +224,9 @@ Rossz kód:
 </details>
 
 ## Kommentek írása és elhagyása
+
+<details>
+  <summary></summary>
 
 ### Kommentek használata
 
@@ -301,7 +309,12 @@ Rossz kód:
 
 - jó
 
+</details>
+
 ## Publikus API dokumentálása
+
+<details>
+  <summary></summary>
 
 - nagyon fontos
 - kommentezzük a publikus tagokat
@@ -318,7 +331,12 @@ Rossz kód:
 - példakód
 - hatékonyság
 
+</details>
+
 ## Kivételek definiálása és kezelése
+
+<details>
+  <summary></summary>
 
 ### Hibakódok helyett használjunk kivételeket!
 
@@ -343,7 +361,12 @@ Rossz kód:
 
 ### Bejövő paraméterek ellenőrzése
 
+</details>
+
 ## Objektumok és adatstruktúrák
+
+<details>
+  <summary></summary>
 
 | Procedurális fejlesztés     | Objektumorientált fejlesztés           |
 |:---------------------------:|:--------------------------------------:|
@@ -360,3 +383,5 @@ Rossz kód:
 - komplex alkalmazás estén keveredhetnek=
 - adatbázisok és hálózati kommunikáció esetén az adatok dominálnak
 - üzleti logikát érdemes objektumorientált stílusban fejleszteni
+
+</details>
