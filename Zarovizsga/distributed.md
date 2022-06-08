@@ -94,9 +94,14 @@ Problémák:
 
 ### Hogyan definiáljuk a szerver interfészét, ha …
 - ugyanaz a programnyelv?
-    nincs gond 
+  
+      nincs gond 
 - különböző a programnyelv?
-    programnyelvektől független interfész leíróra van szükség
+- 
+      programnyelvektől független interfész leíróra van szükség
+
+
+
 </details>
 
 ## Technológiák elosztott kommunikáció megvalósításához
