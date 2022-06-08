@@ -37,6 +37,12 @@
     - [Távoli hívás](#távoli-hívás)
   - [Felmerülő kérdések](#felmerülő-kérdések)
     - [Hogyan definiáljuk a szerver interfészét, ha …](#hogyan-definiáljuk-a-szerver-interfészét-ha-)
+    - [A kliens hogyan találja meg a szervert, ha …](#a-kliens-hogyan-találja-meg-a-szervert-ha-)
+    - [Hogyan implementáljuk a proxy-t?](#hogyan-implementáljuk-a-proxy-t)
+    - [Hogyan sorosítsuk az adatokat?](#hogyan-sorosítsuk-az-adatokat)
+    - [Bináris sorosítás](#bináris-sorosítás)
+    - [Szöveges sorosítás](#szöveges-sorosítás)
+    - [Hogyan kezeljük a memóriát?](#hogyan-kezeljük-a-memóriát)
   - [Technológiák elosztott kommunikáció megvalósításához](#technológiák-elosztott-kommunikáció-megvalósításához)
   - [SOAP webszolgáltatások](#soap-webszolgáltatások)
   - [REST szolgáltatások](#rest-szolgáltatások)
@@ -97,9 +103,40 @@ Problémák:
   
       nincs gond 
 - különböző a programnyelv?
-- 
+ 
       programnyelvektől független interfész leíróra van szükség
 
+### A kliens hogyan találja meg a szervert, ha …
+- a kliens tudja, hol van a szerver?
+
+      a kliens tárolja a szerver címét
+- a kliens csak egy logikai nevet ismer a szerverből?
+  
+      kell fordítani fizikai címmé, ezt egy naming service végzi
+- a kliens csak egy interfészt ismer?
+  
+      olyan szervert keres, amely ezt az interfészt implementálja. Trading service az, amely egy interfész specifikációt fizikai címmé képez le
+
+### Hogyan implementáljuk a proxy-t? 
+- proxy feladatai:
+  - szerver megkeresése
+  - kapcsolat felépítése
+  - input paraméterek és a visszaérkező eredmény sorosítása
+- [Proxy](patterns.md/#proxy) vagy [Adapter](patterns.md/#adapter) minta
+
+### Hogyan sorosítsuk az adatokat?
+A keretrendszer elvégzi (pl json vagy xml).
+
+### Bináris sorosítás
+Gyors és hatékony, kliens és a szerver között bináris kompatibilitást feltételez. Akkor használjuk, ha a kliens és a szerver ugyanazon a programnyelven készült
+
+### Szöveges sorosítás
+Emberileg is olvashatók(XML, JSON). Lassú és nem túl hatékony, de jó kompatibilitást biztosít  programnyelvek között és időtálló
+
+### Hogyan kezeljük a memóriát?
+Ha van akkor a Garbage Collector. Egyébként:
+- kliens oldalon a bemenő paramétereket tipikusan a kliens foglalja, és ő is szabadítja fel. Az eredmény objektumot a proxy foglalja le és a kliensnek kell felszabadítania
+- szerver oldalon az adapter foglalja le a memóriaterületet. Az eredményt a szerver oldal foglalja és adapternek kell felszabadítania
 
 
 </details>
