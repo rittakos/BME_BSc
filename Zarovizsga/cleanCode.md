@@ -178,6 +178,9 @@ Rossz kód:
 
 ## Függvényekkel kapcsolatos clean code szabályok
 
+<details>
+  <summary></summary>
+
 ### A függvények legyenek rövidek
 
 <details>
@@ -210,6 +213,8 @@ Rossz kód:
   <summary></summary>
 
 - csináljon valamit, vagy válaszoljon egy kérdésre
+
+</details>
 
 </details>
 

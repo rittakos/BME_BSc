@@ -6,3 +6,8 @@ TODO:
 - [ ] [state](patterns.md/#state) minta
 - [ ] [template method](patterns.md/#template-method) minta
 - [ ] [hungarian notation](cleanCode.md/#kerüljük-a-névkódolást)
+- [ ] [API design](APIDesign.md)
+- [ ] [concurrent parallell patterns](concurrentParalell.md)
+- [ ] [distributed](distributed.md)
+- [ ] [immutable](immutable.md)
+- [ ] [idioms](idioms.md)
