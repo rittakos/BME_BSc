@@ -343,12 +343,10 @@ Rossz kód:
 | Procedurális fejlesztés     | Objektumorientált fejlesztés           |
 | --------------------------- |:--------------------------------------:|
 | a fókuszban az adat áll     | a fókuszban a viselkedés áll           |
-| viselkedést függvényekben implementáljuk, paraméterként kapják az adatokat      | adatreprezentáció el van rejtve     |
-| könnyű új függvényt hozzáadni anélkül, hogy változtatnánk az adatstruktúrán
- | könnyű megváltoztatni a belső adatreprezentációt anélkül, hogy a külső interfész változna      |
-| nehéz megváltoztatni az adatstruktúrát, mert az minden függvényre hatással lehet
-| nehéz megváltoztatni a publikus interfészt, mert az egész öröklési hierarchiára, és minden hívóra kihathat|
-|stabil, ritkán változó adatstruktúrát kíván|stabil viselkedést kíván, a működés kibővítését leszármazással és delegációval valósítjuk meg|
+| viselkedést függvényekben implementáljuk, paraméterként kapják az adatokat | adatreprezentáció el van rejtve|*
+| könnyű új függvényt hozzáadni anélkül, hogy változtatnánk az adatstruktúrán | könnyű megváltoztatni a belső adatreprezentációt anélkül, hogy a külső interfész változna |
+| nehéz megváltoztatni az adatstruktúrát, mert az minden függvényre hatással lehet | nehéz megváltoztatni a publikus interfészt, mert az egész öröklési hierarchiára, és minden hívóra kihathat|
+| stabil, ritkán változó adatstruktúrát kíván | stabil viselkedést kíván, a működés kibővítését leszármazással és delegációval valósítjuk meg|
 
 ### Procedurális fejlesztés vs objektumorientált fejlesztés választása
 
