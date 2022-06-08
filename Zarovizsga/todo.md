@@ -5,3 +5,4 @@ TODO:
 - [ ] [Flyweight](patterns.md/#flyweight) minta
 - [ ] [state](patterns.md/#state) minta
 - [ ] [template method](patterns.md/#template-method) minta
+- [ ] [hungarian notation](cleanCode.md/#kerüljük-a-névkódolást)
