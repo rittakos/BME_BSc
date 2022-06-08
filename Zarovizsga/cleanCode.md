@@ -341,7 +341,7 @@ Rossz kód:
 ## Objektumok és adatstruktúrák
 
 | Procedurális fejlesztés     | Objektumorientált fejlesztés           |
-| --------------------------- |:--------------------------------------:|
+|:---------------------------:|:--------------------------------------:|
 | a fókuszban az adat áll     | a fókuszban a viselkedés áll           |
 | viselkedést függvényekben implementáljuk, paraméterként kapják az adatokat | adatreprezentáció el van rejtve|*
 | könnyű új függvényt hozzáadni anélkül, hogy változtatnánk az adatstruktúrán | könnyű megváltoztatni a belső adatreprezentációt anélkül, hogy a külső interfész változna |
