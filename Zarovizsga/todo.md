@@ -12,4 +12,4 @@ TODO:
 - [ ] [immutable](immutable.md)
 - [ ] [idioms](idioms.md)
 - [ ] [tdd](APIDesign.md/#4-definiáljuk-az-api-t)
-- [ ] [dependency injection]
+- [ ] [dependency injection] ra kell keresni
