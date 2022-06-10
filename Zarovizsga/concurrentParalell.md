@@ -79,13 +79,16 @@ egy lokális, vagy egy távoli objektummal kommunikál. A kérések feldolgozás
 
 Szálak közötti szinkronizációra nyújtanak megoldást.
 
-csoportjai:
+<details>
+
+
+</details>
 
 
 ## Kontextus minták
 
 <details>
-  <summary></summary>
+  <summary>## Kontextus minták</summary>
 
 
 
