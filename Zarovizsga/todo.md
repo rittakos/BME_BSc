@@ -13,3 +13,4 @@ TODO:
 - [ ] [idioms](idioms.md)
 - [ ] [tdd](APIDesign.md/#4-definiáljuk-az-api-t)
 - [ ] [dependency injection] ra kell keresni
+- [ ] lust inicializálás, rá kell keresni
