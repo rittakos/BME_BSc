@@ -143,7 +143,7 @@ Részletesebben:
 
 - adjuk meg a pontos osztályokat és függvényeket, amiket használni lehet
 - kívülről könnyen használható legyen
-- unit tesztek, test driven development
+- unit tesztek, [test driven development](terms.md/#test-driven-development)
 
 ### 5. Ellenőriztessük másokkal
 

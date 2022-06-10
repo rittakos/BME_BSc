@@ -158,7 +158,7 @@ Rossz kód:
 <details>
   <summary></summary>
 
-- kerülendő a hungarian notation
+- kerülendő a [hungarian notation](terms.md/#hungarian-notation)
 - ne használjunk prefixeket és suffixeket
 - megsérthető ha indokolt
 

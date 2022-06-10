@@ -1,16 +1,17 @@
 TODO:
 - [ ] [Null Object](patterns.md/#null-object)
 - [ ] [Bridege minta](patterns.md/#bridge)
-- [ ] [Link clean code kommentekre](refactoring.md/#comments)
+- [x] [Link clean code kommentekre](refactoring.md/#comments)
 - [ ] [Flyweight](patterns.md/#flyweight) minta
 - [ ] [state](patterns.md/#state) minta
 - [ ] [template method](patterns.md/#template-method) minta
-- [ ] [hungarian notation](cleanCode.md/#kerüljük-a-névkódolást)
-- [ ] [API design](APIDesign.md)
-- [ ] [concurrent parallell patterns](concurrentParalell.md)
-- [ ] [distributed](distributed.md)
-- [ ] [immutable](immutable.md)
+- [x] [hungarian notation](cleanCode.md/#kerüljük-a-névkódolást)
+- [x] [API design](APIDesign.md)
+- [x] [concurrent parallell patterns](concurrentParalell.md)
+- [x] [distributed](distributed.md)
+- [x] [immutable](immutable.md)
 - [ ] [idioms](idioms.md)
-- [ ] [tdd](APIDesign.md/#4-definiáljuk-az-api-t)
+- [x] [tdd](APIDesign.md/#4-definiáljuk-az-api-t)
 - [ ] [dependency injection] ra kell keresni
 - [ ] lust inicializálás, rá kell keresni
+- [ ] peldakodok hozzaadasa

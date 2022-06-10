@@ -37,6 +37,9 @@
   - [Kapcsolatok](#kapcsolatok)
   - [Duck Typing](#duck-typing)
   - [Heterogén kollekció](#heterogén-kollekció)
+  - [Egyéb fogalmak](#egyéb-fogalmak)
+    - [Hungarian notation](#hungarian-notation)
+    - [Test Driven Development](#test-driven-development)
 
 </details>
 
@@ -145,3 +148,17 @@ Problémák:
 
 Megoldás:
 - [visitor minta](patterns.md/#visitor), sérül az [OCP](principles.md/#open/closed-principle)
+
+## Egyéb fogalmak
+
+### Hungarian notation
+
+Az objektumok neve utal a típusukra és tervezett használatukra.
+
+```
+bDone: boolean
+```
+
+### Test Driven Development
+
+Először a teszt készül el és utána úgy történik a fejlesztés, hogy az eredményben a teszt ne bukjon.
