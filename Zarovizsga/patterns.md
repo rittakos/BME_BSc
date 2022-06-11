@@ -61,7 +61,7 @@
 ## Composite
 
 <details>
-  <summary></summary>
+  <summary>Composite</summary>
 
 Cél:
 - Rész-egész viszonyban lévő objektumokat fastruktórába rendez
@@ -106,7 +106,7 @@ Működés: Egy osztály eltárolja azokat az Observer-eket (interface), amiket 
 Cél:
 - Biztosítja, hogy egy osztályból 1 példány legyen, és azt globálisan el lehessen érni
 
-Magyarázat:
+[C++ példa.](PatternCodes/singleton.cpp)
 
 ```
 class Singleton
@@ -150,6 +150,8 @@ instance->doSomething();
 
 Cél: 
 - Algoritmusok egységbe zárása, egyszerűen ki lehessen őket cserélni
+
+[C++ példa.](PatternCodes/strategy.cpp)
 
 <p align="center">
     <img src="PatternImages/strategy.png" />
