@@ -69,6 +69,8 @@ Cél:
 
 Példa: Olyan grafikus alkalmazás, amely lehetővé teszi összetett grafikus objektumok létrehozását
 
+[C++ példa.](PatternCodes/composite.cpp)
+
 <p align="center">
     <img src="PatternImages/composite.png" />
 </p>
@@ -87,6 +89,8 @@ Cél:
 Példa: MVC vagy Document-View
 
 Működés: Egy osztály eltárolja azokat az Observer-eket (interface), amiket értesíteni kell. Ezek értesítésére késpes az osztály. A különböző observer-ek ismerik a megfelelő adatszerkezeti osztályokat és le tudják kérni valamint módosítani azokat.
+
+[C++ példa.](PatternCodes/WeatherStation_-_observer)
 
 <p align="center">
     <img src="PatternImages/observer.png" />
