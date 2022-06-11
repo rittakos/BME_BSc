@@ -138,7 +138,10 @@ Használata:
 
 ## Immutable objektumok implementálása
 
-Az immutable objektum implementálása hosszabb.
+Az immutable objektum implementálása hosszabb mutable verziójuknál.
+
+[C++ példa.](ImmutableCodes/immutable.cpp)
+Ki lehet egészíteni egy [Builderrel](patterns.md/#builder), a kényelmesebb használathoz.
 
 
 ## Immutable objektumok hátrányai 

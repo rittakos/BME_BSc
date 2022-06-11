@@ -52,6 +52,7 @@
   - [State](#state)
   - [Null Object](#null-object)
   - [Template Method](#template-method)
+  - [Builder](#builder)
 
 </details>
 
@@ -384,6 +385,14 @@ Lehetővé teszi adott objektumokhoz más viselkedések hozzáadását akár sta
 </details>
 
 ## Template Method
+
+<details>
+  <summary></summary>
+
+
+</details>
+
+## Builder
 
 <details>
   <summary></summary>

@@ -15,3 +15,4 @@ TODO:
 - [ ] [dependency injection] ra kell keresni
 - [ ] lust inicializálás, rá kell keresni
 - [ ] peldakodok hozzaadasa
+- [ ] [builder](patterns.md/#builder)
