@@ -392,9 +392,12 @@ Különválasztjuk az absztrakciót az implementációjától, hogy a kettőt f�
 
 ## Null Object
 
+Ne kelljen mindig ellenőrizni, hogy egy referencia (pointer) null-e. Ezek helyett használjunk semleges működésű objektumoket, ezek a Null Object-ek.
+
 <details>
   <summary></summary>
 
+[C++ példa.](PatternCodes/nullObject.cpp)
 
 </details>
 
