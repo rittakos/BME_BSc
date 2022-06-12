@@ -361,8 +361,16 @@ Lehetővé teszi adott objektumokhoz más viselkedések hozzáadását akár sta
 
 ## Bridge
 
+Különválasztjuk az absztrakciót az implementációjától, hogy a kettőt függetlenül lehessen variálni.
+
 <details>
   <summary></summary>
+
+<p align="center">
+    <img src="PatternImages/bridge.png" />
+</p>
+
+[C++ példa.](PatternCodes/bridge.cpp)
 
 </details>
 
