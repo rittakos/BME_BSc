@@ -585,6 +585,9 @@ Megsértése sérti:
 Megoldás:
 - [polimorfizmus](terms.md/#alapfogalmak)
 
+Megsérthető:
+- [Tag Dispatch](idioms.md/#tag-dispatch)
+
 </details>
 
 ### Ne készítsünk függvényeket a típusok, illetve a képességek megkülönböztetésére, használjunk helyettük polimorfizmust!
