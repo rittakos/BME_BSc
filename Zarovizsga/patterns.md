@@ -388,8 +388,14 @@ Például egy szövegszerkesztő esetén kiszervezzük az azonos karakterek köz
 
 ## State
 
+A state minta lehetővé teszi egy objektum számára, hogy megváltoztassa a működését, ha a belső állapota változik.
+
 <details>
   <summary></summary>
+
+<p align="center">
+    <img src="PatternImages/state.png" />
+</p>
 
 </details>
 
