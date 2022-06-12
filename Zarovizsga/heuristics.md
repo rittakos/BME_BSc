@@ -666,6 +666,7 @@ Megoldás:
 
 <details>
   <summary></summary>
+  
 Megsértésekor:
 - nem a megfelelő absztrakciós szinten modellezünk
 - objektumokat próbálunk meg modellezni ahelyett, hogy osztályokat terveznénk
