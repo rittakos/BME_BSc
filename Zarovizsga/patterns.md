@@ -376,8 +376,12 @@ Különválasztjuk az absztrakciót az implementációjától, hogy a kettőt f�
 
 ## Flyweight
 
+A pehelysúlyú objektum egy olyan objektum, amely minimalizálja memória használatot azzal, hogy annyi adatot oszt meg, amennyi csak lehetséges más hasonló objektumokkal. Ez a nagyszámú objektumok használatának az a módja, mikor egy egyszerű ismételt reprezentáció használna fel nem elfogadható mennyiségű memóriát. Gyakran az objektum állapotának egyes részei megoszthatók, gyakorlatilag külső adat struktúrákban tároljuk őket, és csak ideiglenesen adjuk át a pehelysúlyú objektumoknak a felhasználás során.
+
 <details>
   <summary></summary>
+
+Például egy szövegszerkesztő esetén kiszervezzük az azonos karakterek közös tulajdonságait egy osztályba, amit aztán minden előfordulás ismere és tud használni.
 
 </details>
 
