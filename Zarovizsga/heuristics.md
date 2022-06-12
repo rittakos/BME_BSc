@@ -406,7 +406,7 @@ Megsérthető:
 
 ### A tartalmazott objektumok ne beszélgessenek egymással közvetlenül!
 
-details>
+<details>
   <summary></summary>
 
 Megsértése felesleges függőségeket okoz.
