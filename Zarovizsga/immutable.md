@@ -116,7 +116,7 @@ Használata:
 - változik az objektumok identitása, ugyanis az objektumok hash-kódja belső állapothoz kötött
 
 ### Hiba esetén korrupt belső állapot
--a belső állapot inkonzisztensé válhat kivétel keletkezése során
+- a belső állapot inkonzisztensé válhat kivétel keletkezése során
 
 ### Időbeli csatolás
 - nem mindegy, hogy melyik függvényt melyik függvény után hívunk, mert a hívások más sorrendben történő intézésének más lesz az eredménye

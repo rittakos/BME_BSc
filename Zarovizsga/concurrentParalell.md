@@ -63,6 +63,7 @@
     - [Asynchronous completion token (ACT)](#asynchronous-completion-token-act)
     - [Cancellation token](#cancellation-token)
     - [Future/Task/Deferred](#futuretaskdeferred)
+    - [Reactor](#reactor)
     - [Proactor](#proactor)
     - [Reactor vs Proactor minta](#reactor-vs-proactor-minta)
   - [Konkurencia minták](#konkurencia-minták)
@@ -216,7 +217,7 @@ public class Fifo<T> {
 
 ### Strategized locking
 - célja, hogy az alkalmazás egyszálú és többszálú működésben is hatékony legyen
-- az előbb tanult jelzéseket a [Strategy](patterns.md/#strategy) tervezési minta segítségével dinamikusan cserélhetővé tesszük, és implementálunk belőlük egy nullobject változatot is, amely a többszálú rézeket üres műveletként implementálja
+- az előbb tanult jelzéseket a [Strategy](patterns.md/#strategy) tervezési minta segítségével dinamikusan cserélhetővé tesszük, és implementálunk belőlük egy nullobject változatot is, amely a többszálú részeket üres műveletként implementálja
 
 ### Thread-safe interface
 - egyes programnyelvekben és könyvtárakban hogyha a jelzéseket rosszul használjuk, akkor a rekurzív függvényhívások deadlock-hoz vezethetnek
@@ -262,7 +263,7 @@ időnként ránéz erre, hogy kezdeményezték-e már a művelet végrehajtásá
 - a future vagy task objektumot az aszinkron művelet adja vissza eredményként, ez az aszinkron művelet végrehajtásáról egy csak olvasható képet ad
 - le lehet tőle kérdezni, hogy fut-e még művelet, végzett-e már, vagy esetleg valaki visszavonta-e
 
-Reactor
+### Reactor
 - nem blokkoló, szinkron eseményfeldolgozást tesz lehetővé
 - az események kívülről aszinkron módon érkeznek, vagyis a kliens nem blokkolódik
 - az esemény feldolgozása egy szálon történik

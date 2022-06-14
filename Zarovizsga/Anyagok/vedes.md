@@ -1,5 +1,7 @@
 # Vedés
 
+[Előadás](vedes.pptx)
+
 ## Bevezető: 1.dia
 
 A feladatom egy játékmotor készítése volt aminek OpenGL könyvtár képezi az alapját
