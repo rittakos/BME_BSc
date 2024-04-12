@@ -1,0 +1,587 @@
+
+<!-- saved from url=(0136)http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+
+<meta name="Generator" content="Microsoft Word 97">
+<title>Downfall game</title>
+</head>
+<body>
+
+<b><font size="7"><p align="CENTER"></p>
+<p align="CENTER">&nbsp;</p>
+<p align="CENTER">Downfall game</p>
+</font><i><font size="7"><p align="CENTER"></p>
+<p align="CENTER">&nbsp;</p>
+<p align="CENTER">The UML based analysis, design and construction of a system following the Unified Development Process</p>
+<p align="CENTER"></p>
+</font></i><p align="CENTER"><font size="7">Case study</font></p><font size="7">
+<p align="CENTER"></p>
+<p align="CENTER">written by</p>
+<p align="CENTER">Balázs Goldschmidt</p>
+<p align="CENTER">Szabolcs Szigeti</p>
+<p align="CENTER">dr. Zoltán László</p>
+</font></b><ol><b><font size="7">
+
+<p align="JUSTIFY"></p></font><li><font size="7"><a name="_Toc465577932"></a></font><a name="_Toc465577932"><font face="Arial" size="4">Project definition</font></a></li><p></p><font face="Arial" size="4">
+</font></b><ol><b><font face="Arial" size="4">
+
+<p align="JUSTIFY"></p></font><li><font face="Arial" size="4"><a name="_Toc465577933"></a></font><a name="_Toc465577933"><i><font face="Arial">Introduction</font></i></a></li><p></p><i><font face="Arial">
+</font></i></b><p align="JUSTIFY">In this document we describe the analysis, design, and (partial) construction of a simple system, the implementation of a popular game, <i>Downfall</i>.</p>
+<p align="JUSTIFY">We shall use the notation and semantics of the Unified Modelling Language, and we shall follow the Unified Development Process. For the analysis and design, and the drawing of figures we used Rational Rose 98 Enterprise Edition as a CASE tool.</p>
+<p align="JUSTIFY"></p><li><a name="_Toc465577934"><b><i><font face="Arial">Description</font></i></b></a></li><p></p><b><i><font face="Arial">
+</font></i></b><p align="JUSTIFY">The downfall game is played by two players. There are two sides of the game board. One player sees only one side.</p>
+<p align="JUSTIFY">Each side contains a container, a collector and a number of wheels. Initially each container contains a number of balls, different colour for each side (player). The balls are numbered from 1. The number of balls and wheels are configurable.</p>
+<p align="JUSTIFY">The container, wheels and collector are connected to each other in a way that ball may fall from the container to the wheels, and from the wheels to the collector if the wheels are turned to such position. Wheels are turned by the player. Wheels on the two sides are locked to each other, so when one wheel is turned on one side, the locked wheel will also turn on the other side. There is an offset in the angles of the locked wheels.</p>
+<p align="JUSTIFY">The objective of the game is to transfer the balls from the container to the collector via the wheels. Based on the game type the initial order of the balls is ascending, descending or random. The balls have to be transferred in ascending order into the collector. The player to transfer all the balls in the right order wins. If the order is wrong the game is lost and the other player wins.</p>
+<p align="JUSTIFY">A player may not turn a wheel that was turned by the other player in the last step, except when it is the last wheel to the collector containing the last ball of either colour.</p>
+<p align="JUSTIFY">The players may turn one wheel at a time alternately.</p>
+<p align="JUSTIFY"></p><li><a name="_Toc465577935"><b><i><font face="Arial">Glossary:</font></i></b></a></li><p></p></ol><b><i><font face="Arial">
+</font></i></b>
+<table cellspacing="0" border="0" cellpadding="4" width="636">
+<tbody><tr><td width="22%" valign="TOP">
+<b></b><p><b>Player</b></p></td>
+<td width="78%" valign="TOP">
+<p>human or computer who plays the Downfall game</p></td>
+</tr>
+<tr><td width="22%" valign="TOP">
+<b></b><p><b>Game Board</b></p></td>
+<td width="78%" valign="TOP">
+<p>object on screen which contains a container, wheels and a collector for both of its sides.</p></td>
+</tr>
+<tr><td width="22%" valign="TOP">
+<b></b><p><b>Balls</b></p></td>
+<td width="78%" valign="TOP">
+<p>a coloured and numbered object. Containers, wheels and collectors may hold one or more balls in their slots. Every player has different colours.</p></td>
+</tr>
+<tr><td width="22%" valign="TOP">
+<b></b><p><b>Container</b></p></td>
+<td width="78%" valign="TOP">
+<p>an object which contains a number of balls. It can transfer balls to the firs wheel on its side.</p></td>
+</tr>
+<tr><td width="22%" valign="TOP">
+<b></b><p><b>Wheel</b></p></td>
+<td width="78%" valign="TOP">
+<p>an object with several slots. Each slot can hold one ball. The wheel may be turned by a player, so different slots are connected to other wheels, containers or collectors.</p></td>
+</tr>
+<tr><td width="22%" valign="TOP">
+<b></b><p><b>Collector</b></p></td>
+<td width="78%" valign="TOP">
+<p>an object that can receive balls from the last wheel on the board. Balls are transferred to the collector during the play.</p></td>
+</tr>
+<tr><td width="22%" valign="TOP">
+<b></b><p><b>Game Type</b></p></td>
+<td width="78%" valign="TOP">
+<p>Different initial set ups of the Downfall game.</p></td>
+</tr>
+<tr><td width="22%" valign="TOP">
+<b></b><p><b>Configuration</b></p></td>
+<td width="78%" valign="TOP">
+<p>Set up of the game parameters. Configuration contains the geometry of the game board, the number and position of the wheels, game type, etc.</p></td>
+</tr>
+</tbody></table>
+
+<p align="JUSTIFY"></p><li><a name="_Toc465577936"><b><font face="Arial" size="4">Analysis phase I</font></b></a></li><p></p><b><font face="Arial" size="4">
+</font></b><ol><b><font face="Arial" size="4">
+
+<p align="JUSTIFY"></p></font><li><font face="Arial" size="4"><a name="_Toc465577937"></a></font><a name="_Toc465577937"><i><font face="Arial">Use cases</font></i></a></li><p></p><i><font face="Arial">
+</font></i></b><p align="JUSTIFY"><img src="./Downfall game_files/image1.gif" width="376" height="336"></p>
+<b><p align="CENTER"><a name="_Toc465577959">Figure 1: System use case diagram</a></p>
+</b><ol><b>
+
+<p align="JUSTIFY"></p></b><li><b><a name="_Toc465577938"></a></b><a name="_Toc465577938"><font face="Arial">Join game</font></a></li><p></p>
+<table cellspacing="0" border="0" cellpadding="4" width="636">
+<tbody><tr><td width="16%" valign="TOP">
+<p align="JUSTIFY">Use case:</p></td>
+<td width="84%" valign="TOP">
+<b></b><p><b>Join game</b></p></td>
+</tr>
+<tr><td width="16%" valign="TOP">
+<p align="JUSTIFY">Actors:</p></td>
+<td width="84%" valign="TOP">
+<p>Player1, Player2</p></td>
+</tr>
+<tr><td width="16%" valign="TOP">
+<p align="JUSTIFY">Description:</p></td>
+<td width="84%" valign="TOP">
+<p>The players join the game. There has to be exactly two players in each game. </p>
+<p>The first player initiates the game. She enters her name, and sets some parameters, like the order of the balls, the number of players, wheels and balls, etc.</p>
+<p>Then several players (their number set by the first player) can join the game, giving their names.</p>
+<p>After every player logged in, the play initialises itself (the wheels, axles, the balls in the storage, etc.), and then it starts.</p></td>
+</tr>
+</tbody></table>
+
+<p align="JUSTIFY"></p>
+<p align="JUSTIFY">&nbsp;</p>
+<p align="JUSTIFY"><img src="./Downfall game_files/image2.gif" width="544" height="412"></p>
+<b><p align="CENTER"><a name="_Toc465577960">Figure 2: Use case Join game</a></p>
+<p align="JUSTIFY"></p></b><li><b><a name="_Toc465577939"></a></b><a name="_Toc465577939"><font face="Arial">Play game</font></a></li><p></p></ol><font face="Arial">
+</font>
+<table border="" cellspacing="1" cellpadding="4" width="636">
+<tbody><tr><td width="15%" valign="TOP">
+<p align="JUSTIFY">Use case:</p></td>
+<td width="85%" valign="TOP">
+<b></b><p><b>Play game</b></p></td>
+</tr>
+<tr><td width="15%" valign="TOP">
+<p align="JUSTIFY">Actors:</p></td>
+<td width="85%" valign="TOP">
+<p>Player1, Player2</p></td>
+</tr>
+<tr><td width="15%" valign="TOP">
+<p align="JUSTIFY">Description:</p></td>
+<td width="85%" valign="TOP">
+<p>This use case defines what happens during the game. All the players have their turn, when they turn their wheel, and thus make the balls to fall down. The players turn after each other in the order they logged in.</p>
+<p>To turn a wheel they indicate which wheel they want to turn, and by how much degree. The chosen wheel can be turned by as many times, as wished.</p>
+<p> The balls have to arrive in the order set by the first player, and the order as they arrive should be watched to indicate that the player has won or lost the game, if necessary.</p></td>
+</tr>
+</tbody></table>
+
+<p align="JUSTIFY">&nbsp;</p>
+<b><p align="CENTER"><img src="./Downfall game_files/image3.gif" width="353" height="289"></p>
+<p align="CENTER"><a name="_Toc465577961">Figure 3: Use case Play game</a></p>
+<p align="JUSTIFY"></p><li><a name="_Toc465577940"><i><font face="Arial">The Conceptual Model</font></i></a></li><p></p></b></ol><b><i><font face="Arial">
+</font></i></b></ol><b><i><font face="Arial">
+
+</font></i></b><p align="JUSTIFY">First we have to identify the domain objects. At this phase we only focus on the second use case. The identified objects are the following: </p>
+
+<ul>
+<b><font face="Courier New"><p align="JUSTIFY"></p></font></b><font face="Courier New"></font><li><font face="Courier New"><b>GameBoard</b></font>: it consists of several containers, and it sends the actors messages to the wheels.</li><p></p>
+<b><font face="Courier New"><p align="JUSTIFY"></p></font></b><font face="Courier New"></font><li><font face="Courier New"><b>Container</b></font>: the parent class of <font face="Courier New">Wheel</font>s, <font face="Courier New">Storage</font>s and <font face="Courier New">Collector</font>s. Its main purpose is to hold the balls (it has slots for that), to know how much balls it has. It has to know at what angle its balls are, to know with which other <font face="Courier New">Container</font>s it is connected, at what angle, and by what means (as either a donor, i.e. able to hand over balls; or an acceptor, i.e. able to receive balls).</li><p></p>
+<b><p align="JUSTIFY"></p></b><li><b>Wheel</b>: one of the most important classes in the system. It is a child class of <font face="Courier New">Container</font>, and can serve as both donor and acceptor. It can be tied (or locked) to another wheel (on the other side of the gameboard) - called its ‘partner’ - so that they may turn together.</li><p></p>
+<b><font face="Courier New"><p align="JUSTIFY"></p></font></b><font face="Courier New"></font><li><font face="Courier New"><b>Storage</b></font>: also the child of <font face="Courier New">Container</font> has to store the balls at the beginning, and to give them over the <font face="Courier New">Container</font> it is connected to at certain circumstances.</li><p></p>
+<b><font face="Courier New"><p align="JUSTIFY"></p></font></b><font face="Courier New"></font><li><font face="Courier New"><b>Collector</b></font>: child of  <font face="Courier New">Container</font> is the final container of the balls. It has to know by what order the balls were given to it, and if the order is wrong, or the order is right and the last ball of both colours is ended, it sends a message to the GameBoard, to end the game, and announce the winner.</li><p></p>
+<b><font face="Courier New"><p align="JUSTIFY"></p></font></b><font face="Courier New"></font><li><font face="Courier New"><b>Ball</b></font>: the object passed around during the game between containers is just a simple class, holding the information about the ball’s number and colour.</li><p></p></ul>
+
+<p align="JUSTIFY">Thinking about it, it turned out we need an association class between wheels locked to each other, for the gameboard should not know to what other wheels a given wheel is locked to. Furthermore, it is neither simple, nor elegant, nor object-oriented to make the gameboard ask the wheels for their partners. Thus we needed a new class for holding this information. This class is the <b><font face="Courier New">Axle</font></b>. The gameboard now knows only about the axles (not the wheels), it turns only axles, and if an axle is turned, then the axle announces it among its wheels. The <font face="Courier New">Axle</font> has the responsibility to know its wheels, to turn them, and to know the ratio how much a degree should turn the wheel during turning, and to what direction.</p>
+<p align="JUSTIFY">&nbsp;</p>
+<b><p align="CENTER"><a name="_Toc465577962"><img src="./Downfall game_files/image4.gif" width="619" height="518">Figure 4: The Conceptual Object Model</a></p>
+</b><ol><b>
+</b><ol><b>
+
+<p align="JUSTIFY"></p><li><a name="_Toc465577941"><i><font face="Arial">The associations</font></i></a></li><p></p><i><font face="Arial">
+</font></i></b><p align="JUSTIFY">As can be seen in figure 4, the <b><font face="Courier New">GameBoard</font></b> class has several composite classes: some <font face="Courier New">Axle</font>s, four <font face="Courier New">Storage</font>s, and two <font face="Courier New">Collector</font>s. There is but exactly one <font face="Courier New">GameBoard</font> object in the system. It takes care of its composites.</p>
+<p align="JUSTIFY">The <b><font face="Courier New">Container</font></b> classes (<font face="Courier New">Wheel</font>, <font face="Courier New">Storage</font>, and<font face="Courier New"> Collector</font>) have several <i>donors</i> and <i>acceptors</i>. A <i>donor</i> is a <font face="Courier New">Container</font> able to give away (offer) balls, an <i>acceptor</i> is a <font face="Courier New">Container</font> able to receive balls. The common feature of <font face="Courier New">Container</font>s (as their name indicates) is that they can contain several balls. They take care of the holding and the transport of the balls.</p>
+<p align="JUSTIFY">Furthermore the <b><font face="Courier New">Wheel</font></b> class has several (at least one) partners. It is connected with its partners, through an <font face="Courier New">Axle</font> object. The <font face="Courier New">Axle</font> has them turned. In the original game there was only one partner for each wheel, but at this phase we wanted to extend the system to be capable of multi-player games, not just dual-player ones.</p>
+<p align="JUSTIFY">The <b><font face="Courier New">Axle</font></b> has several <font face="Courier New">Wheel</font>s, and it is connected to the <font face="Courier New">Gameboard</font>.</p>
+<p align="JUSTIFY"></p><li><a name="_Toc465577942"><b><i><font face="Arial">The dynamic behaviour</font></i></b></a></li><p></p></ol><b><i><font face="Arial">
+</font></i></b></ol><b><i><font face="Arial">
+
+</font></i></b><p align="JUSTIFY">The most important design problem is how the balls are transferred between the containers. The following diagrams and descriptions are our solution.</p>
+<p align="JUSTIFY"><img src="./Downfall game_files/image5.gif" width="544" height="268"></p>
+<b><p align="CENTER"><a name="_Toc465577963">Figure 5: Dynamic behaviour when turning an axle</a></p>
+</b><p align="JUSTIFY">The gameboard turns the appropriate axle. Then the axle knows the wheels it has, and sends them a <font face="Courier New">TurnTo</font> message, indicating them that they should turn a certain angle. It is possible that the wheels are turned by different angles. For instance if the gameboard makes the axle to turn by <font face="Symbol">j</font>
+ degree, the axle can have the wheels turned by 0.5<font face="Symbol">j</font>
+, -2.71<font face="Symbol">j</font>
+, etc. degrees.</p>
+<p align="JUSTIFY"><img src="./Downfall game_files/image6.gif" width="651" height="326"></p>
+<b><p align="CENTER"><a name="_Toc465577964">Figure 6: The dynamic behaviour of the wheels</a></p>
+</b><p align="JUSTIFY">When an axle is turned, it notifies all its wheels to turn. (Previously we mentioned, that it may mean more than a simple one-to-one ratio.) </p>
+<p align="JUSTIFY">When a wheel has to turn a certain degree, during the turn it checks if there are donors or acceptors. If it finds one, and is able to receive or give a ball, it asks the neighbour if it is ready to transfer a ball, and if so, then the ball is transferred. </p>
+<p align="JUSTIFY">In the messages used in this transaction the caller must identify itself, for this is the simplest way to indicate where the ball may arrive from or can be given to. The caller could give the angle of the direction as well, but than some transformations should be made, and we should have some assumptions about the geometry of the game (for example either wheel should give or subtract 180 degrees off the angle). </p>
+<p align="JUSTIFY">Our solution, however, has some problems too. That way the called container has to find the angle where the caller may give or receive the ball. But it is a minor implementation problem, which can have both elegant and efficient solutions.</p>
+<p align="JUSTIFY"></p>
+<p align="JUSTIFY">&nbsp;</p>
+<ol>
+
+<p align="JUSTIFY"></p><li><a name="_Toc465577943"><b><font face="Arial" size="4">Design Phase I</font></b></a></li><p></p><b><font face="Arial" size="4">
+</font></b><ol><b><font face="Arial" size="4">
+
+<p align="JUSTIFY"></p></font><li><font face="Arial" size="4"><a name="_Toc465577944"></a></font><a name="_Toc465577944"><i><font face="Arial">Assigning operations and attributes</font></i></a></li><p></p><i><font face="Arial">
+</font></i></b><p align="JUSTIFY"><img src="./Downfall game_files/image7.gif" width="631" height="567"></p>
+<b><p align="CENTER"><a name="_Toc465577965">Figure 7: The Design Class Diagram</a></p>
+</b><p align="JUSTIFY">In this phase new classes can emerge, and we have to identify the methods and attributes of the classes. </p>
+<p align="JUSTIFY">The new class is the <b><font face="Courier New">GameType</font></b>. This class is responsible for the rules of the game. The <font face="Courier New">GameBoard</font> has several <font face="Courier New">GameType</font>s, representing the possible sets of rules. The storage and the collector uses them, to determine the state of the balls at the beginning, and whether the game has ended, respectively.</p>
+<p align="JUSTIFY">This new class has to know the initial order of the balls, as they should be placed in the storage, and the final order of the balls, when they arrive in the collector. </p>
+<p align="JUSTIFY">The concept of having a separate class holding the rules can be find among Gamma’s <i>Design Patterns</i>, it is the Strategy Pattern. If we have to add a new rule or mode to the game we only have to add a new <font face="Courier New">GameType</font> object or subclass, and do not have to modify the other classes.</p>
+<p align="JUSTIFY">We have also defined the operations and attributes for our classes. They are the following:</p>
+<b><font face="Courier New" size="2"><p align="JUSTIFY">GameBoard</p>
+</font></b><i><u><font size="2"><p align="JUSTIFY">Protected Attributes:</p>
+</font></u></i><font face="Courier New" size="2"><p align="JUSTIFY">GameParameters GameParameters</p>
+</font><font size="2"><p align="JUSTIFY">Stores game parameters (number of axles, game type, etc.)</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY">Player CurrPlayer</p>
+</font><font size="2"><p align="JUSTIFY">The current player. Game board is drawn based on this.</p>
+<p align="JUSTIFY"></p>
+<i><u><p align="JUSTIFY">Public Operations:</p>
+</u></i></font><font face="Courier New" size="2"><p align="JUSTIFY">void NewGame ()</p>
+</font><font size="2"><p align="JUSTIFY">Start a new game. Initialize game objects.</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY">void GameOver (Boolean WinOrLoose)</p>
+</font><font size="2"><p align="JUSTIFY">Collector calls Game Over, if the game is finished. The winner player is indicated.</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY">void ConfigureGame ()</p>
+</font><font size="2"><p align="JUSTIFY">Configure game parameters.</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY">Boolean TurnWheel (int WheelNo, int Angle)</p>
+</font><font size="2"><p align="JUSTIFY">User input to turn the wheel to Angle. Returns False if not successful.</p>
+<p align="JUSTIFY"></p>
+<p align="JUSTIFY">&nbsp;</p>
+</font><b><font face="Courier New" size="2"><p align="JUSTIFY">Container</p>
+</font></b><i><u><font size="2"><p align="JUSTIFY">Protected Attributes:</p>
+</font></u></i><font face="Courier New" size="2"><p align="JUSTIFY">int PosX</p>
+</font><font size="2"><p align="JUSTIFY">X position of the object on the screen.</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY">int PosY</p>
+</font><font size="2"><p align="JUSTIFY">Y position of the object on the screen.</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY">int NSlots</p>
+</font><font size="2"><p align="JUSTIFY">Number of slots in this object</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY">int[NSlots] SlotAngle</p>
+</font><font size="2"><p align="JUSTIFY">The vector of all slots, having the exact angle the slot is placed at.</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY">int[NSlots] SlotSize</p>
+</font><font size="2"><p align="JUSTIFY">This vector shows for each slot how much balls it can contain.</p>
+<p align="JUSTIFY"></p>
+<i><u><p align="JUSTIFY">Public Operations:</p>
+</u></i></font><font face="Courier New" size="2"><p align="JUSTIFY">Boolean Receive (Ball BallNumber, Container donor)</p>
+</font><font size="2"><p align="JUSTIFY">Check if  the Container is able to receive a ball at Angle. If it is, it accepts the ball indicated by BallNumber and returns True. Otherwise it returns False.</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY">void AddSlot (Integer Angle = 0, Integer Size = 1)</p>
+</font><font size="2"><p align="JUSTIFY">Add a slot to the container. The slot is at Angle, and able to hold Size balls.</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY">Ball Offer (Container acceptor)</p>
+</font><font size="2"><p align="JUSTIFY">Accept a ball at an agle. If the neighbour (donor) is able to transfer a ball at angle, it returns the BallNumber. Otherwise it returns zero.</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY">void Draw ()</p>
+</font><font size="2"><p align="JUSTIFY">Draw the object on the sceen.</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY">void AddDonor (Container Donor, Integer Angle)</p>
+</font><font size="2"><p align="JUSTIFY">Add a donor at angle. If there is a ball at an slot, which is set to this angle,  ball transfer from donor is initiated.</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY">void AddAcceptor (Container Acceptor, Integer Angle)</p>
+</font><font size="2"><p align="JUSTIFY">Add an acceptor at angle. If there is a ball at an slot, which is set to this angle,  ball transfer to acceptor is initiated.</p>
+<p align="JUSTIFY"></p>
+<p align="JUSTIFY">&nbsp;</p>
+</font><b><font face="Courier New" size="2"><p align="JUSTIFY">Wheel</p>
+</font></b><i><u><font size="2"><p align="JUSTIFY">Protected Attributes:</p>
+</font></u></i><font face="Courier New" size="2"><p align="JUSTIFY">int Radius</p>
+</font><font size="2"><p align="JUSTIFY">		the radius of the wheel. Necessary when drawing.</p>
+</font><p align="JUSTIFY"><font size="2">	</font><font face="Courier New" size="2">int Angle</font></p><font face="Courier New" size="2">
+</font><p align="JUSTIFY"><font face="Courier New" size="2">	</font><font size="2">	the angle of relative displacement at the moment.</font></p><font size="2">
+<p align="JUSTIFY"></p>
+<i><u><p align="JUSTIFY">Public Operations:</p>
+</u></i></font><font face="Courier New" size="2"><p align="JUSTIFY">void TurnTo (Integer Angle = 0)</p>
+</font><font size="2"><p align="JUSTIFY">Turn wheel to angle. If slots are turned to neighbor angles, Receive and Offer messages are triggered.</p>
+<p align="JUSTIFY"></p>
+<i><u><p align="JUSTIFY">Protected Operations:</p>
+</u></i></font><font face="Courier New" size="2"><p align="JUSTIFY">Container TurnTill (Integer angle)</p>
+</font><font size="2"><p align="JUSTIFY">The wheel turns itself until either it reaches the specified angle, or it finds a neighbour being capable to receive a ball from or to give a ball to.</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY">void SetBall (Container Donor, Ball Ball)</p>
+</font><font size="2"><p align="JUSTIFY">Inserts the ball into the slot that is at the angle of the donor</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY">void DeleteBall (Ball ball)</p>
+</font><font size="2"><p align="JUSTIFY">Deletes the given ball from the slot it has it</p>
+<p align="JUSTIFY"></p>
+<p align="JUSTIFY">&nbsp;</p>
+</font><b><font face="Courier New" size="2"><p align="JUSTIFY">Storage</p>
+</font></b><i><u><font size="2"><p align="JUSTIFY">Public Operations:</p>
+</font></u></i><font face="Courier New" size="2"><p align="JUSTIFY">void InitializeGame (GameType GameType)</p>
+</font><font size="2"><p align="JUSTIFY">Initialize game based on GameType. The order of Balls in storage is set up based on this.</p>
+<p align="JUSTIFY"></p>
+<p align="JUSTIFY">&nbsp;</p>
+</font><b><font face="Courier New" size="2"><p align="JUSTIFY">Collector</p>
+</font></b><i><u><font size="2"><p align="JUSTIFY">Protected Attributes:</p>
+</font></u></i><font face="Courier New" size="2"><p align="JUSTIFY">GameType GameType</p>
+</font><font size="2"><p align="JUSTIFY">The type of game. Collector decides when to end the game based on this.</p>
+<p align="JUSTIFY"></p>
+<i><u><p align="JUSTIFY">Public Operations:</p>
+</u></i></font><font face="Courier New" size="2"><p align="JUSTIFY">void SetGameType ()</p>
+</font><font size="2"><p align="JUSTIFY">Sets the GameType.</p>
+<p align="JUSTIFY"></p>
+<i><u><p align="JUSTIFY">Protected Operations:</p>
+</u></i></font><font face="Courier New" size="2"><p align="JUSTIFY">Boolean IsEnded ()</p>
+</font><font size="2"><p align="JUSTIFY">Checks whether the game has ended. </p>
+<p align="JUSTIFY">Returns true if yes, false if not.</p>
+<p align="JUSTIFY"></p>
+<p align="JUSTIFY">&nbsp;</p>
+</font><b><font face="Courier New" size="2"><p align="JUSTIFY">Axle</p>
+</font></b><i><u><font size="2"><p align="JUSTIFY">Public Operations:</p>
+</font></u></i><font face="Courier New" size="2"><p align="JUSTIFY">void TurnTo ()</p>
+</font><font size="2"><p align="JUSTIFY">Turns all its wheels with the given angle</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY">void AddWheel ()</p>
+</font><font size="2"><p align="JUSTIFY">Adds a new wheel to the axle.</p>
+<p align="JUSTIFY"></p>
+<p align="JUSTIFY">&nbsp;</p>
+</font><b><font face="Courier New" size="2"><p align="JUSTIFY">Ball</p>
+</font></b><i><u><font size="2"><p align="JUSTIFY">Private Attributes:</p>
+</font></u></i><font face="Courier New" size="2"><p align="JUSTIFY">int number</p>
+<p align="JUSTIFY">int colour</p>
+</font><font size="2"><p align="JUSTIFY"></p>
+<p align="JUSTIFY">&nbsp;</p>
+<i><u><p align="JUSTIFY">Public Operations:</p>
+</u></i></font><font face="Courier New" size="2"><p align="JUSTIFY">void getNumber ()</p>
+</font><p align="JUSTIFY"><font face="Courier New" size="2">	</font><font size="2">Returns the ball’s number.</font></p><font size="2">
+</font><font face="Courier New" size="2"><p align="JUSTIFY">void getColour ()</p>
+</font><font size="2"><p align="JUSTIFY">	Returns the ball’s colour.</p>
+</font><b><font face="Courier New" size="2"><p align="JUSTIFY">GameType</p>
+</font></b><i><u><font size="2"><p align="JUSTIFY">Public Operations:</p>
+</font></u></i><font face="Courier New" size="2"><p align="JUSTIFY">NextBall (ball : Ball) : Enumeration</p>
+</font><font size="2"><p align="JUSTIFY">Checks if the ball given is in the correct order, and if the game has ended.</p>
+<p align="JUSTIFY">The returned value means either the game can continue, or the game is lost to the given player, or the game is won by the given player.</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY">GetBalls () : Ball[]</p>
+</font><font size="2"><p align="JUSTIFY">Returns a vector of balls, the storage must be filled with.</p>
+<p align="JUSTIFY">&nbsp;</p>
+<p align="JUSTIFY"></p></font><li><font size="2"><a name="_Toc465577945"></a></font><a name="_Toc465577945"><b><i><font face="Arial">Dynamic behaviour</font></i></b></a></li><p></p></ol><b><i><font face="Arial">
+
+</font></i></b><p align="JUSTIFY"><img src="./Downfall game_files/image8.gif" width="612" height="546"></p>
+<b><p align="CENTER"><a name="_Toc465577966">Figure 8: Elaborated dynamic behaviour</a></p>
+</b><p align="JUSTIFY">In the sequence diagram shown on figure 8 one can see the design idea behind the previously described dynamic behaviour. </p>
+<p align="JUSTIFY">When a wheel has to turn a certain angle, it does it in small steps. Each step is the minimal turn of the wheel to the point when a slot is adjacent to a neighbour. After each step the adjacent slot is examined whether the neighbour is a donor or an acceptor, and depending on it the slot has to carry a ball or must be empty. </p>
+<p align="JUSTIFY">If the neighbour is a donor, and the slot is empty, then the neighbour is asked to <font face="Courier New">offer</font> a ball. The donor checks if it can give a ball to the given container. If yes, it returns a ball, and deletes it from its slot (while the caller registers this ball to the slot). If not, it returns a null. </p>
+<p align="JUSTIFY">If the neighbour is an acceptor, and the slot has a ball to transfer, the wheel sends a <font face="Courier New">receive</font> message, containing the ball and the wheels identifier. The acceptor checks if it has a slot adjacent to the wheel, and if this slot is empty. If yes it receives the ball, and returns true, otherwise it returns false. In the former case the caller deletes the ball from its slot.</p>
+<p align="JUSTIFY"><img src="./Downfall game_files/image9.gif" width="620" height="279"></p>
+<b><p align="CENTER"><a name="_Toc465577967">Figure 9: A collector is the acceptor</a></p>
+</b><p align="JUSTIFY">There is a special case of ball transferring, when the acceptor is a collector. In this situation (see figure 9) the collector has to determine whether the balls are arriving in proper order. The knowledge for that is stored in the <font face="Courier New">GameType</font> class. The collector tells the gametype what ball it has just accepted. The gametype then decides what to do. If everything is normal (the ball was not the last, and arrived in proper order), it returns an OK, otherwise it indicates if the game is lost or won.</p>
+<p align="JUSTIFY"></p><li><a name="_Toc465577946"><b><font face="Arial" size="4">Construction phase I</font></b></a></li><p></p><b><font face="Arial" size="4">
+</font><ol><font face="Arial" size="4">
+
+<p align="JUSTIFY"></p></font><li><font face="Arial" size="4"><a name="_Toc465577947"></a></font><a name="_Toc465577947"><i><font face="Arial">The skeleton model</font></i></a></li><p></p></ol><i><font face="Arial">
+
+</font></i></b><p align="JUSTIFY">After the first design we have to implement and test the systems ready parts. For this purpose we use the skeleton model. It is a very basic system architecture, where no method is really implemented, but merely the consecutive method calls. Every method has to write out its name, and the messages it wants to send, and sends them. If there is a decision point in the method, it asks us, what the result is, and then continues.</p>
+<p align="JUSTIFY">The architecture used for skeleton can be seen on figure 10.</p>
+<p align="JUSTIFY"><img src="./Downfall game_files/image10.gif" width="644" height="488"></p>
+<b><p align="CENTER"><a name="_Toc465577968">Figure 10: The skeleton architecture</a></p>
+</b><p align="JUSTIFY">We have a <font face="Courier New">GameBoard</font>, four <font face="Courier New">Wheel</font>s (<i>wheel1a, …, wheel2b</i>), two <font face="Courier New">Axle</font>s (<i>axle1, axle2</i>), a <font face="Courier New">Collector</font>, a <font face="Courier New">Storage</font>, and two <font face="Courier New">GameType</font>s (<i>type1, type2</i>).</p>
+<p align="JUSTIFY">The axles have two wheels each (<i>axle1</i> has <i>wheel1a</i>, <i>wheel1b</i>; <i>axle2</i> has <i>wheel2a</i>, <i>wheel2b</i>). <i>Wheel1a</i> is connected to the <i>storage</i> and to <i>wheel2a</i>, <i>wheel2a</i> is connected to the <i>collector</i> too.</p>
+<p align="JUSTIFY">There is only one ball in <i>storage</i>. <i>Type2</i> does not know anything, it will ask us if needed.</p>
+<p align="JUSTIFY">The <i>Main</i> object initiates every turn, and acts on behalf of the players. </p>
+<p align="JUSTIFY">We show now two more diagrams (figure 11 and 12), that represent a possible run of the skeleton system. Now we have but two players, and the second does not have any balls.</p>
+<p align="CENTER"><img src="./Downfall game_files/image11.gif" width="659" height="500"></p>
+<b><p align="CENTER"><a name="_Toc465577969">Figure 11: The first player’s turn</a></p>
+</b><p align="JUSTIFY">The first player begins. <i>Main</i> sends a <font face="Courier New">TurnWheel</font> message to the <i>board</i>, to turn <i>axle1</i>. The <i>board</i> delegates the message. <i>Axle1</i> sends a <font face="Courier New">TurnTo</font> message to its wheels, <i>wheel1a</i> and <i>wheel1b</i>. The latter has no neighbours, thus it merely turns to the given angle, and waits. The former has two neighbours. It reaches first <i>storage</i>, and sends an <font face="Courier New">Offer</font> message, the <i>storage</i> returns a ball. Then it turns towards <i>wheel2a</i>, and sends a <font face="Courier New">Receive</font> message, but <i>wheel2a</i> has no slot adjacent to <i>wheel1a</i>, thus no ball is transferred. The first turn ends.</p>
+<p align="CENTER"><img src="./Downfall game_files/image12.gif" width="644" height="488"></p>
+<b><p align="CENTER"><a name="_Toc465577970">Figure 12: The second player’s turn</a></p>
+</b><p align="JUSTIFY">In the second turn <i>Main</i> again sends a <font face="Courier New">TurnWheel</font> message to <i>board</i>, but now it has to turn <i>axle2</i>. Similar actions are performed, as before: <i>board</i> sends <font face="Courier New">TurnTo</font> to <i>axle2</i>, which delegates it to <i>wheel2a</i> and <i>wheel2b</i>. <i>Wheel2b</i> has no neighbour, so it does nothing. <i>Wheel2a</i> first reaches <i>wheel1a</i>, and receives a ball. Then it turns to the <i>collector</i>, and makes it to receive the ball. The <i>collector</i> gives the ball to <i>type2</i>, which answers that the game has ended. Thus the <i>collector</i> sends a <font face="Courier New">GameOver</font> message to the <i>board</i>.</p>
+<p align="JUSTIFY"></p><li><a name="_Toc465577948"><b><font face="Arial" size="4">Analysis phase II</font></b></a></li><p></p><b><font face="Arial" size="4">
+</font></b><p align="JUSTIFY">In the previous phases we analysed the second use case (<i>Play game</i>), designed the model of the game, and even built a skeleton implementation to show its inner work. Now we have to analyse the first use case and the input-output features of the game.</p>
+<ol>
+
+<p align="JUSTIFY"></p><li><a name="_Toc465577949"><b><i><font face="Arial">The new classes</font></i></b></a></li><p></p><b><i><font face="Arial">
+</font></i></b><p align="JUSTIFY">First we have to decide how to show the states of the wheels, storages, collectors and balls to the players. Then we have to think about the input from the actors. </p>
+<p align="JUSTIFY">We could include the responsibility of visualisation into the <font face="Courier New">Container</font> classes, but it would cause some problems later on. For instance if we want to change the look-and-feel of the game, or if we want the game to be network capable (using CORBA for example), we would have to change the model classes. Instead of this approach we can create separate <font face="Courier New">ContainerView</font> classes. Here is the class diagram for it:</p>
+<p align="CENTER"><img src="./Downfall game_files/image13.gif" width="429" height="202"></p>
+<b><p align="CENTER"><a name="_Toc465577971">Figure 13: The ContainerView classes</a></p>
+</b><p align="JUSTIFY">The <b><font face="Courier New">ContainerView</font></b> class has the responsibility of drawing to the display, according to the states of the classes it represents. It has three subclasses, each representing a certain <font face="Courier New">Container</font> class. They have to draw their image differently, this is why we need these subclasses. </p>
+<p align="JUSTIFY">We need new classes to handle the user inputs as well. For this purpose we created the <b><font face="Courier New">WheelInput</font></b> and <b><font face="Courier New">LoginInput</font></b> classes. The former has the responsibility to take care of the players intentions of turning the wheel. The latter has the responsibility to perform the necessary input tasks at the beginning of the game. </p>
+<p align="JUSTIFY">The last new class is a singleton. There will be only one of it, its the main coordinator, called <b><font face="Courier New">Main</font></b>. It acts between the inputs and the <font face="Courier New">GameBoard</font>. Thus the gameboard does not have to take care of the inputs, the creation of the object at initialisation, etc.</p>
+<p align="JUSTIFY"></p><li><a name="_Toc465577950"><b><i><font face="Arial">The new associations</font></i></b></a></li><p></p><b><i><font face="Arial">
+</font></i></b><p align="JUSTIFY">The associations between the models and the views can be seen on figure 14.</p>
+<p align="JUSTIFY"><img src="./Downfall game_files/image14.gif" width="546" height="528"></p>
+<b><p align="CENTER"><a name="_Toc465577972">Figure 14: Associations among models and views</a></p>
+</b><p align="JUSTIFY">The figure shows a simple <i>Observer Pattern</i>. The <font face="Courier New">Container</font>s only know the <font face="Courier New">ContainerView</font> superclass, which can be informed about a change of state. Its subclasses know the subclasses of the <font face="Courier New">Container</font> superclass, but not in the other direction, and thus their implementation can change without notifying (i.e. changing) the <font face="Courier New">Container</font> classes.</p>
+<p align="JUSTIFY">Every <font face="Courier New">ContainerView</font> needs to know what balls its model class has, in order to draw them appropriately. This is why the <font face="Courier New">ContainerView</font>s know the <font face="Courier New">Ball</font> class.</p>
+<p align="JUSTIFY">In the next figure can be seen the creation of the views and models, and their signup to each other. </p>
+<p align="CENTER"><img src="./Downfall game_files/image15.gif" width="544" height="419"></p>
+<b><p align="CENTER"><a name="_Toc465577973">Figure 15: The creation of the models and views</a></p>
+</b><p align="JUSTIFY">The Main creates a Container and a View, and then it adds the view to the container. The container signs up at the view, which in turn asks for the non-changing parameters, like number, size, and angle of slots, etc.</p>
+<p align="JUSTIFY"></p><li><a name="_Toc465577951"><b><i><font face="Arial">The dynamic behaviour</font></i></b></a></li><p></p></ol><b><i><font face="Arial">
+
+</font></i></b><p align="JUSTIFY">Now that the models have their views, and vice versa, we can look at the dynamic behaviour of these objects. First we show how a wheel behaves, if it is turned.</p>
+<p align="JUSTIFY"><img src="./Downfall game_files/image16.gif" width="642" height="584"></p>
+<b><p align="CENTER"><a name="_Toc465577974">Figure 16: Turning a wheel with view</a></p>
+</b><p align="JUSTIFY">There is only a slight change to the behaviour described in the previous phase. After a change happens, the wheel notifies its view, and the view asks it about the new angle, and the balls it has currently.</p>
+<p align="JUSTIFY">The next figure shows what happens after an <i>Offer</i> method (the same applies to <i>Receive</i>).</p>
+<p align="JUSTIFY"><img src="./Downfall game_files/image17.gif" width="553" height="346"></p>
+<b><p align="CENTER"><a name="_Toc465577975">Figure 17: The model and view after an offer</a></p>
+</b><p align="JUSTIFY">If  a wheel wants a ball from a donor, it sends the <i>Offer</i> method. Then the donor notifies its view if there was a change, which in turn asks for the changed values (<i>GetAngle</i> is only called if the view is a <font face="Courier New">WheelView</font>).</p>
+<p align="JUSTIFY">A possible initialisation can happen as on figure 18. The main object first asks the players for certain parameters, like names, the number of players, and the type of the game (it is described in use case <i>Join Game</i>).</p>
+<p align="JUSTIFY">After these information are known, the main creates the wheels, storages, collectors, axles and the gameboard, and assigns them to each other, as needed. With these the creation of the static architecture of the current game is finished.  </p>
+<p align="JUSTIFY">On figure 19 the next steps can be seen.</p>
+<p align="JUSTIFY"><img src="./Downfall game_files/image18.gif" width="660" height="661"></p>
+<b><p align="CENTER"><a name="_Toc465577976">Figure 18: Initialisation I</a></p>
+</b><p align="JUSTIFY"><img src="./Downfall game_files/image19.gif" width="655" height="462"></p>
+<b><p align="CENTER"><a name="_Toc465577977">Figure 19: Initialisation II</a></p>
+</b><p align="JUSTIFY">After the static form is created, the main configures the game with the parameters it got from the first player. The gameboard initialises each storage and collector with appropriate <font face="Courier New">GameType</font> objects. Now the game may start. </p>
+<p align="JUSTIFY">The main notifies the first player (a WheelInput object), that it is its turn. Then the input lets the main know the wheel-number and the angle, by which to turn the wheel. It can give as many angle as it wishes. If there is no need to turn, it sends an EndTurn message. During each turn the gameboard is sent a message to turn a wheel by an angle, and if a game over happens, it is indicated to the main object at once (but it is a minor issue).</p>
+<p align="JUSTIFY">The state chart showing the main’s states is the following:</p>
+<p align="CENTER"><img src="./Downfall game_files/image20.gif" width="664" height="416"></p>
+<b><p align="CENTER"><a name="_Toc465577978">Figure 20: The state chart of the Main object</a></p>
+</b><p align="JUSTIFY">&nbsp;</p>
+<p align="JUSTIFY"></p><li><a name="_Toc465577952"><b><font face="Arial" size="4">Design phase II</font></b></a></li><p></p><b><font face="Arial" size="4">
+</font><ol><font face="Arial" size="4">
+
+<p align="JUSTIFY"></p></font><li><font face="Arial" size="4"><a name="_Toc465577953"></a></font><a name="_Toc465577953"><i><font face="Arial">Assigning new operations and attributes</font></i></a></li><p></p></ol><i><font face="Arial">
+
+</font></i></b><p align="JUSTIFY">To achieve the behaviour described above we need to define the new methods and attributes for the old and new classes.</p>
+<p align="JUSTIFY"><img src="./Downfall game_files/image21.gif" width="529" height="498"></p>
+<b><p align="CENTER"><a name="_Toc465577979">Figure 21: The attributes and methods of the classes in package GUI</a></p>
+</b><p align="JUSTIFY">They are the following:</p>
+<b><font face="Courier New" size="2"><p align="JUSTIFY">WheelView</p>
+</font></b><font size="2"><p align="JUSTIFY">Derived from ContainerView</p>
+<i><u><p align="JUSTIFY">Private Attributes:</p>
+</u></i></font><font face="Courier New" size="2"><p align="JUSTIFY">Radius : Integer</p>
+</font><font size="2"><p align="JUSTIFY">The radius of the wheel</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY">CurrentAngle : Integer</p>
+</font><font size="2"><p align="JUSTIFY">		The current displacement of the wheel</p>
+<p align="JUSTIFY"></p>
+</font><b><font face="Courier New" size="2"><p align="JUSTIFY">ContainerView</p>
+</font></b><font size="2"><p align="JUSTIFY">This class is the parent of the view classes, that represent the containers towards to players.</p>
+<i><u><p align="JUSTIFY">Private Attributes:</p>
+</u></i></font><font face="Courier New" size="2"><p align="JUSTIFY">PosX : Integer</p>
+</font><font size="2"><p align="JUSTIFY">The x coordinate of the object</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY">PosY : Integer</p>
+</font><font size="2"><p align="JUSTIFY">The Y coordinate of the object</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY">SlotAngle : Integer[NSlots]</p>
+</font><font size="2"><p align="JUSTIFY">the angles of the slots</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY">SlotSize : Integer[NSlots]</p>
+</font><font size="2"><p align="JUSTIFY">The size of each slot</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY">NSlots : Integer</p>
+</font><font size="2"><p align="JUSTIFY">The number of the slots</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY">NeighbourAngle : Integer[NNeighbours]</p>
+</font><font size="2"><p align="JUSTIFY">The angles where the neighbours are</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY">NNeighbours : Integer</p>
+</font><font size="2"><p align="JUSTIFY">The number of neighbours</p>
+<p align="JUSTIFY"></p>
+<i><u><p align="JUSTIFY">Public Operations:</p>
+</u></i></font><font face="Courier New" size="2"><p align="JUSTIFY">Notify () : void</p>
+</font><font size="2"><p align="JUSTIFY">the model calls this method if it changed.</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY">AddModel (model : Container) : </p>
+</font><font size="2"><p align="JUSTIFY">With this method we can add a model to the view. If it is notified about some change, it can ask the model for its parameters, and redraw itself.</p>
+<p align="JUSTIFY"></p>
+<p align="JUSTIFY">&nbsp;</p>
+</font><b><font face="Courier New" size="2"><p align="JUSTIFY">StorageView</p>
+</font></b><font size="2"><p align="JUSTIFY">Derived from ContainerView</p>
+<p align="JUSTIFY"></p>
+</font><b><font face="Courier New" size="2"><p align="JUSTIFY">CollectorView</p>
+</font></b><font size="2"><p align="JUSTIFY">Derived from ContainerView</p>
+<p align="JUSTIFY"></p>
+</font><b><font face="Courier New" size="2"><p align="JUSTIFY">WheelInput</p>
+</font></b><i><u><font size="2"><p align="JUSTIFY">Public Operations:</p>
+</font></u></i><font face="Courier New" size="2"><p align="JUSTIFY">	YourTurn() : void</p>
+</font><font size="2"><p align="JUSTIFY">		It indicates to the WheelInput object, that it is now up to it, to turn a wheel.</p>
+<p align="JUSTIFY"></p>
+</font><b><font face="Courier New" size="2"><p align="JUSTIFY">LoginInput</p>
+</font></b><i><u><font size="2"><p align="JUSTIFY">Public Operations:</p>
+</font></u></i><font face="Courier New" size="2"><p align="JUSTIFY">GetName () : String</p>
+</font><p align="JUSTIFY"><font face="Courier New" size="2">	</font><font size="2">Returns the name of the player</font></p><font size="2">
+</font><font face="Courier New" size="2"><p align="JUSTIFY">GetType () : GameType</p>
+</font><p align="JUSTIFY"><font face="Courier New" size="2">	</font><font size="2">Return the type of the game</font></p><font size="2">
+<p align="JUSTIFY"></p>
+</font><p align="JUSTIFY">The <font face="Courier New">Main</font> object is not part of any package, but it has several methods too.</p>
+<b><font face="Courier New" size="2"><p align="JUSTIFY">Main</p>
+</font></b><i><u><font size="2"><p align="JUSTIFY">Public Operations:</p>
+</font></u></i><font face="Courier New" size="2"><p align="JUSTIFY">WheelNumber (wheel Integer) : void</p>
+</font><font size="2"><p align="JUSTIFY">	Indicates the next wheel (axle) to be turned</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY">TurnAngle (angle Integer) : void</p>
+</font><font size="2"></font><p align="JUSTIFY"><font size="2">	Indicates that the selected wheel must be turned by </font><font face="Courier New" size="2">angle</font><font size="2"> degrees</font></p><font size="2">
+</font><font face="Courier New" size="2"><p align="JUSTIFY">EndTurn () : void</p>
+</font><font size="2"><p align="JUSTIFY">Indicates, that the current player has passed on the right to turn</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY">GameOver (Boolean) : void</p>
+</font><font size="2"><p align="JUSTIFY">The gameboard notifies the main object, that the game is over. True means the current player won; false means the current player lost.</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY"></p>
+</font><p align="JUSTIFY">The classes defined in Phase I have the following new methods and attributes:</p>
+<b><font face="Courier New" size="2"><p align="JUSTIFY">Container</p>
+</font></b><i><u><font size="2"><p align="JUSTIFY">Public Operations:</p>
+</font></u></i><font face="Courier New" size="2"><p align="JUSTIFY">GetBalls () : Ball[NSlotNumber][]</p>
+</font><p align="JUSTIFY"><font face="Courier New" size="2">		</font><font size="2">Returns a two dimensional matrix of the slots and the balls they have.</font></p><font size="2">
+</font><font face="Courier New" size="2"><p align="JUSTIFY">GetParameters () : Integer[]</p>
+</font><font size="2"><p align="JUSTIFY">This method is invoked after a view has been signed up, and returns the non changing parameters (number of slots, their size, their angle, etc).</p>
+</font><font face="Courier New" size="2"><p align="JUSTIFY">AddView (ContainerView) : void</p>
+</font><font size="2"><p align="JUSTIFY">With this method we can attach a view to the Container, and if some change in its state occurs, the view can be notified.</p>
+<p align="JUSTIFY"></p>
+</font><b><font face="Courier New" size="2"><p align="JUSTIFY">Wheel</p>
+</font></b><i><u><font size="2"><p align="JUSTIFY">Public Operations:</p>
+</font></u></i><font face="Courier New" size="2"><p align="JUSTIFY">GetAngle () : Integer</p>
+</font><font size="2"><p align="JUSTIFY">	Returns the current angle.</p>
+</font><p align="JUSTIFY">&nbsp;</p>
+<p align="JUSTIFY"></p><li><a name="_Toc465577954"><b><font face="Arial" size="4">Construction phase II</font></b></a></li><p></p><b><font face="Arial" size="4">
+</font><ol><font face="Arial" size="4">
+
+<p align="JUSTIFY"></p></font><li><font face="Arial" size="4"><a name="_Toc465577955"></a></font><a name="_Toc465577955"><i><font face="Arial">The prototype model</font></i></a></li><p></p></ol><i><font face="Arial">
+
+</font></i></b><p align="JUSTIFY">After we described every method and attribute, we show the prototype model of the system. It is fully functional, it only lacks the Graphical User Interface. The <font face="Courier New">ContainerView</font> classes now only print what changes occurred, and the <font face="Courier New">WheelInput</font> class accepts only keyboard messages.</p>
+<p align="JUSTIFY"><img src="./Downfall game_files/image22.gif" width="797" height="530"></p>
+<b><p align="CENTER"><a name="_Toc465577980">Figure 22: The half prototype object diagram</a></p>
+</b><p align="JUSTIFY">On figure 22 we only have shown the half of the system, the objects of player one. Every object should be duplicated, except gameboard and main. </p>
+<p align="JUSTIFY">The views in this model print the following to the screen.</p>
+<p align="JUSTIFY">The StorageView at the left side prints the colour and number of balls it has.</p>
+<p align="JUSTIFY">The CollectorView prints to the right side the colour and number of balls it has.</p>
+<p align="JUSTIFY">The WheelView is given a number at initialisation, and it prints at the column indicated by that number the number of the wheel, the angle of its displacement, and then line by line the slot numbers, and the colour and number of balls for every slot. </p>
+<p align="JUSTIFY">For instance:</p>
+<b><font face="Courier New" size="1"><p>12345678901234567890123456789012345678901234567890123456789012345678901234567890</p>
+<p>+----------+----------+----------+----------+----------+----------+-----------+</p>
+
+<p>                      W2: 48<font face="Symbol">°</font>
+</p>
+<p>                      s1: </p>
+<p>                      s2: red2</p>
+<p>           </p>
+<p>           W1: 25<font face="Symbol">°</font>
+</p>
+<p>           s1:</p>
+</font></b><p align="JUSTIFY">Here the red ball number two was transferred to wheel2 form wheel1</p>
+<b><font face="Courier New" size="1"><p>red 13</p>
+<p>           W1: 150<font face="Symbol">°</font>
+</p>
+<p>           s1: red5 </p>
+
+</font></b><p align="JUSTIFY">Here the red number 5 ball was transferred from the red storage to wheel1</p>
+<b><font face="Courier New" size="1"><p>                                                                  green 1234</p>
+
+<p>                                                        W5: 130<font face="Symbol">°</font>
+</p>
+<p>                                                        s1: </p>
+<p>                                                        s2: green5</p>
+<p>                                                        s3: </p>
+<p>                                                        s4: red4</p>
+<p>                                                        s5:</p>
+
+</font></b><p align="JUSTIFY">Here the fourth green ball was transferred from wheel5 to the storage.</p>
+<b><font face="Courier New" size="1"><p>                      W2: 48<font face="Symbol">°</font>
+</p>
+<p>                      s1: </p>
+<p>                      s2: red5</p>
+
+<p>           W1:  25<font face="Symbol">°</font>
+</p>
+<p>           s1:</p>
+
+</font></b><p align="JUSTIFY">And finally here the fifth red was transferred from wheel1 to wheel2.</p>
+<p align="JUSTIFY">The inputs are taken from the last two lines. The player can indicate which wheel to turn, then the angle of turn as many times as wished, and 0 means, that there is no more turn.</p>
+<p align="JUSTIFY"></p><li><a name="_Toc465577956"><b><font face="Arial" size="4">Conclusion</font></b></a></li><p></p><b><font face="Arial" size="4">
+</font></b><p align="JUSTIFY">We tried to analyse, design, and construct a simple system using the Unified Modelling Language and following the Unified Development Process. However we emphasised the analysis and the design. The construction lacked both the implementation level description of the methods, and  the details of the language implementation. However, we found that it is only a minor issue, and can be done easily. If the design is good enough, the implementation can not fail easily. </p>
+<p align="JUSTIFY">&nbsp;</p>
+<p align="JUSTIFY"></p><li><a name="_Toc465577957"><b><font face="Arial" size="4">Table of contents</font></b></a></li><p></p><b><font face="Arial" size="4">
+</font><font size="2"></font></b><font size="2"></font><p align="JUSTIFY"><font size="2"><b>1	Project definition	</b></font><a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577932">*</a>
+<font size="2"></font></p><p><font size="2">1.1	Introduction	</font><a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577933">*</a></p>
+<font size="2"></font><p><font size="2">1.2	Description	</font><a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577934">*</a></p>
+<font size="2"></font><p><font size="2">1.3	Glossary:	</font><a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577935">*</a></p>
+<b><font size="2"></font></b><font size="2"></font><p><font size="2"><b>2	Analysis phase I	</b></font><a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577936">*</a></p>
+<font size="2"></font><p><font size="2">2.1	Use cases	</font><a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577937">*</a></p>
+<i><font size="2"></font></i><font size="2"></font><p align="JUSTIFY"><font size="2"><i>2.1.1	Join game	</i></font><a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577938">*</a></p>
+<i><font size="2"></font></i><font size="2"></font><p align="JUSTIFY"><font size="2"><i>2.1.2	Play game	</i></font><a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577939">*</a></p>
+<font size="2"></font><p><font size="2">2.2	The Conceptual Model	</font><a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577940">*</a></p>
+<font size="2"></font><p><font size="2">2.3	The associations	</font><a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577941">*</a></p>
+<font size="2"></font><p><font size="2">2.4	The dynamic behaviour	</font><a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577942">*</a></p>
+<b><font size="2"></font></b><font size="2"></font><p><font size="2"><b>3	Design Phase I	</b></font><a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577943">*</a></p>
+<font size="2"></font><p><font size="2">3.1	Assigning operations and attributes	</font><a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577944">*</a></p>
+<font size="2"></font><p><font size="2">3.2	Dynamic behaviour	</font><a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577945">*</a></p>
+<b><font size="2"></font></b><font size="2"></font><p><font size="2"><b>4	Construction phase I	</b></font><a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577946">*</a></p>
+<font size="2"></font><p><font size="2">4.1	The skeleton model	</font><a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577947">*</a></p>
+<b><font size="2"></font></b><font size="2"></font><p><font size="2"><b>5	Analysis phase II	</b></font><a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577948">*</a></p>
+<font size="2"></font><p><font size="2">5.1	The new classes	</font><a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577949">*</a></p>
+<font size="2"></font><p><font size="2">5.2	The new associations	</font><a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577950">*</a></p>
+<font size="2"></font><p><font size="2">5.3	The dynamic behaviour	</font><a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577951">*</a></p>
+<b><font size="2"></font></b><font size="2"></font><p><font size="2"><b>6	Design phase II	</b></font><a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577952">*</a></p>
+<font size="2"></font><p><font size="2">6.1	Assigning new operations and attributes	</font><a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577953">*</a></p>
+<b><font size="2"></font></b><font size="2"></font><p><font size="2"><b>7	Construction phase II	</b></font><a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577954">*</a></p>
+<font size="2"></font><p><font size="2">7.1	The prototype model	</font><a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577955">*</a></p>
+<b><font size="2"></font></b><font size="2"></font><p><font size="2"><b>8	Conclusion	</b></font><a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577956">*</a></p>
+<b><font size="2"></font></b><font size="2"></font><p><font size="2"><b>9	Table of contents	</b></font><a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577957">*</a></p>
+<b><font size="2"></font></b><font size="2"></font><p><font size="2"><b>10	Table of figures	</b></font><a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577958">*</a></p>
+<b><font face="Arial" size="4"><p align="JUSTIFY"></p><li></li><p></p></font></b></ol><b><font face="Arial" size="4">
+<a name="_Toc465577958">Table of figures</a></font></b><font face="Arial" size="4"></font><dir><font face="Arial" size="4"><b>
+
+</b></font><p align="JUSTIFY">Figure 1: System use case diagram	<a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577959">*</a></p>
+<p align="JUSTIFY">Figure 2: Use case Join game	<a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577960">*</a></p>
+<p align="JUSTIFY">Figure 3: Use case Play game	<a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577961">*</a></p>
+<p align="JUSTIFY">Figure 4: The Conceptual Object Model	<a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577962">*</a></p>
+<p align="JUSTIFY">Figure 5: Dynamic behaviour when turning an axle	<a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577963">*</a></p>
+<p align="JUSTIFY">Figure 6: The dynamic behaviour of the wheels	<a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577964">*</a></p>
+<p align="JUSTIFY">Figure 7: The Design Class Diagram	<a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577965">*</a></p>
+<p align="JUSTIFY">Figure 8: Elaborated dynamic behaviour	<a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577966">*</a></p>
+<p align="JUSTIFY">Figure 9: A collector is the acceptor	<a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577967">*</a></p>
+<p align="JUSTIFY">Figure 10: The skeleton architecture	<a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577968">*</a></p>
+<p align="JUSTIFY">Figure 11: The first player’s turn	<a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577969">*</a></p>
+<p align="JUSTIFY">Figure 12: The second player’s turn	<a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577970">*</a></p>
+<p align="JUSTIFY">Figure 13: The ContainerView classes	<a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577971">*</a></p>
+<p align="JUSTIFY">Figure 14: Associations among models and views	<a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577972">*</a></p>
+<p align="JUSTIFY">Figure 15: The creation of the models and views	<a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577973">*</a></p>
+<p align="JUSTIFY">Figure 16: Turning a wheel with view	<a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577974">*</a></p>
+<p align="JUSTIFY">Figure 17: The model and view after an offer	<a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577975">*</a></p>
+<p align="JUSTIFY">Figure 18: Initialisation I	<a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577976">*</a></p>
+<p align="JUSTIFY">Figure 19: Initialisation II	<a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577977">*</a></p>
+<p align="JUSTIFY">Figure 20: The state chart of the Main object	<a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577978">*</a></p>
+<p align="JUSTIFY">Figure 21: The attributes and methods of the classes in package GUI	<a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577979">*</a></p>
+<p align="JUSTIFY">Figure 22: The half prototype object diagram	<a href="http://home.sch.bme.hu/~fbalazs/c64forever/example/ex/downfall.html?fbclid=IwAR0btojXvoVL4wt7WyQdvjW_pRo0I6QpGwlttnVC3GGxvH8ZuJxwcnnO9hw#_Toc465577980">*</a></p>
+<p align="JUSTIFY"></p></dir>
+<p></p>
+
+</body></html>

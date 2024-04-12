@@ -1,0 +1,10 @@
+*.zip
+*.jar
+*.class
+build/
+build.xml
+dist/
+manifest.mf
+nbproject/
+n-ary tree/
+NHF/

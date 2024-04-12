@@ -1,0 +1,300 @@
+<?xml version="1.0"?>
+<casescatalog>
+	<casenumber>18</casenumber>
+	<case1>
+		<caseid>1.1</caseid>
+		<name></name>
+		<type>1</type>
+		<shortfunc>Átlagos keresési idő</shortfunc>
+		<funcnum>1</funcnum>
+		<function>Számold ki az átlagos keresési időt!</function>
+		<description></description>
+		<blocksize>9000</blocksize>
+		<recordnumber>999999</recordnumber>
+		<keysize>480</keysize>
+		<pointersize>1016</pointersize>
+		<bucketsize>40</bucketsize>
+		<operationtime>49</operationtime>
+		<resultdifference>20</resultdifference>
+	</case1>
+	<case2>
+		<caseid>1.2</caseid>
+		<name></name>
+		<type>1</type>
+		<shortfunc>Maximális keresési idő</shortfunc>
+		<funcnum>1</funcnum>
+		<function>Számold ki a maximális keresési időt!</function>
+		<description></description>
+		<blocksize>9000</blocksize>
+		<recordnumber>999999</recordnumber>
+		<keysize>480</keysize>
+		<pointersize>1016</pointersize>
+		<bucketsize>40</bucketsize>
+		<operationtime>49</operationtime>
+		<resultdifference>20</resultdifference>
+	</case2>
+	<case3>
+		<caseid>1.3</caseid>
+		<name></name>
+		<type>1</type>
+		<shortfunc>Egy rekord megtalálási ideje</shortfunc>
+		<funcnum>2</funcnum>
+		<function1>Számold ki a(z) </function1>
+		<function2> rekord megtalálásának helyét!</function2>
+		<description></description>
+		<blocksize>9000</blocksize>
+		<recordnumber>999999</recordnumber>
+		<keysize>480</keysize>
+		<pointersize>1016</pointersize>
+		<bucketsize>40</bucketsize>
+		<operationtime>49</operationtime>
+		<resultdifference>20</resultdifference>
+	</case3>
+	<case4>
+		<caseid>1.4</caseid>
+		<name></name>
+		<type>1</type>
+		<shortfunc>Egy rekord törlési ideje</shortfunc>
+		<funcnum>2</funcnum>
+		<function1>Számold ki a(z) </function1>
+		<function2> rekord törlésének helyét!</function2>
+		<description></description>
+		<blocksize>9000</blocksize>
+		<recordnumber>999999</recordnumber>
+		<keysize>480</keysize>
+		<pointersize>1016</pointersize>
+		<bucketsize>40</bucketsize>
+		<operationtime>49</operationtime>
+		<resultdifference>20</resultdifference>
+	</case4>
+	<case5>
+		<caseid>2.1</caseid>
+		<name></name>
+		<type>2</type>
+		<shortfunc>Vödörkatalódus mérete</shortfunc>
+		<funcnum>1</funcnum>
+		<function>Számold ki a vödörkatalógus méretét!</function>
+		<description></description>
+		<blocksize>9000</blocksize>
+		<recordnumber>999999</recordnumber>
+		<keysize>480</keysize>
+		<pointersize>1016</pointersize>
+		<bucketsize>40</bucketsize>
+		<operationtime>49</operationtime>
+		<resultdifference>20</resultdifference>
+	</case5>
+	<case6>
+		<caseid>2.2</caseid>
+		<name></name>
+		<type>2</type>
+		<shortfunc>Katalógus operatív tárba</shortfunc>
+		<funcnum>1</funcnum>
+		<function>Belefér-e az operatív tárba a teljes vödörkatalógus?</function>
+		<description></description>
+		<blocksize>9000</blocksize>
+		<recordnumber>999999</recordnumber>
+		<keysize>480</keysize>
+		<pointersize>1016</pointersize>
+		<bucketsize>40</bucketsize>
+		<operationtime>49</operationtime>
+		<resultdifference>20</resultdifference>
+	</case6>
+	<case7>
+		<caseid>2.3</caseid>
+		<name></name>
+		<type>2</type>
+		<shortfunc>Rekord elérésének átlagos ideje</shortfunc>
+		<funcnum>1</funcnum>
+		<function>Számold ki a rekordok átlagos elérésének az idejét!</function>
+		<description></description>
+		<blocksize>9000</blocksize>
+		<recordnumber>999999</recordnumber>
+		<keysize>480</keysize>
+		<pointersize>1016</pointersize>
+		<bucketsize>40</bucketsize>
+		<operationtime>49</operationtime>
+		<resultdifference>20</resultdifference>
+	</case7>
+	<case8>
+		<caseid>2.4</caseid>
+		<name></name>
+		<type>2</type>
+		<shortfunc>Rekord elérésének maximális ideje</shortfunc>
+		<funcnum>1</funcnum>
+		<function>Számold ki a rekordok maximális elérésének az idejét!</function>
+		<description></description>
+		<blocksize>9000</blocksize>
+		<recordnumber>999999</recordnumber>
+		<keysize>480</keysize>
+		<pointersize>1016</pointersize>
+		<bucketsize>40</bucketsize>
+		<operationtime>49</operationtime>
+		<resultdifference>20</resultdifference>
+	</case8>
+	<case9>
+		<caseid>2.5</caseid>
+		<name></name>
+		<type>2</type>
+		<shortfunc>Rekord elérése bizonyos idő alatt</shortfunc>
+		<funcnum>2</funcnum>
+		<function1>Maximum </function1>
+		<function2>ms alatt elérjük-e bármelyik rekordot?</function2>
+		<description></description>
+		<blocksize>9000</blocksize>
+		<recordnumber>999999</recordnumber>
+		<keysize>480</keysize>
+		<pointersize>1016</pointersize>
+		<bucketsize>40</bucketsize>
+		<operationtime>49</operationtime>
+		<resultdifference>20</resultdifference>
+	</case9>
+	<case10>
+		<caseid>3.1</caseid>
+		<name></name>
+		<type>3</type>
+		<shortfunc>Teljes struktúra tárolásához szükséges blokkok</shortfunc>
+		<funcnum>1</funcnum>
+		<function>Számold ki a teljes struktúra eltárolásához szükséges blokkok számát!</function>
+		<description></description>
+		<blocksize>9000</blocksize>
+		<recordnumber>999999</recordnumber>
+		<keysize>480</keysize>
+		<pointersize>1016</pointersize>
+		<bucketsize>40</bucketsize>
+		<operationtime>49</operationtime>
+		<resultdifference>20</resultdifference>
+	</case10>
+	<case11>
+		<caseid>3.2</caseid>
+		<name></name>
+		<type>3</type>
+		<shortfunc>Rekord elérési ideje</shortfunc>
+		<funcnum>2</funcnum>
+		<function1> </function1>
+		<function2>indexállomány blokkban van az általunk keresett rekord mutatója, mennyi idő alatt érjük el ezt a blokkot?</function2>
+		<description></description>
+		<blocksize>9000</blocksize>
+		<recordnumber>999999</recordnumber>
+		<keysize>480</keysize>
+		<pointersize>1016</pointersize>
+		<bucketsize>40</bucketsize>
+		<operationtime>49</operationtime>
+		<resultdifference>20</resultdifference>
+	</case11>
+	<case12>
+		<caseid>3.3</caseid>
+		<name></name>
+		<type>3</type>
+		<shortfunc>Rekord kiolvasásának ideje</shortfunc>
+		<funcnum>1</funcnum>
+		<function>Számold ki hogy mennyi ideig tarthat legfeljebb egy rekord kiolvasása!</function>
+		<description></description>
+		<blocksize>9000</blocksize>
+		<recordnumber>999999</recordnumber>
+		<keysize>480</keysize>
+		<pointersize>1016</pointersize>
+		<bucketsize>40</bucketsize>
+		<operationtime>49</operationtime>
+		<resultdifference>20</resultdifference>
+	</case12>
+	<case13>
+		<caseid>4.1</caseid>
+		<name></name>
+		<type>4</type>
+		<shortfunc>Állomány tárolásához szükséges blokkok száma</shortfunc>
+		<funcnum>1</funcnum>
+		<function>Sűrű indexelt szervezésre épülő egyszintes ritka index segítségével szeretnénk állományt tárolni. Adj értelmes alsó becslést a szükséges blokkok számára.</function>
+		<description></description>
+		<blocksize>9000</blocksize>
+		<recordnumber>999999</recordnumber>
+		<keysize>480</keysize>
+		<pointersize>1016</pointersize>
+		<bucketsize>40</bucketsize>
+		<operationtime>49</operationtime>
+		<resultdifference>20</resultdifference>
+	</case13>
+	<case14>
+		<caseid>4.2</caseid>
+		<name></name>
+		<type>4</type>
+		<shortfunc>Állomány tárolásához szükséges tárterület</shortfunc>
+		<funcnum>1</funcnum>
+		<function>Sűrű indexelt szervezésre épülő egyszintes ritka index segítségével szeretnénk állományt tárolni. Adj értelmes alsó becslést a szükséges blokkok számára.</function>
+		<description></description>
+		<blocksize>9000</blocksize>
+		<recordnumber>999999</recordnumber>
+		<keysize>480</keysize>
+		<pointersize>1016</pointersize>
+		<bucketsize>40</bucketsize>
+		<operationtime>49</operationtime>
+		<resultdifference>20</resultdifference>
+	</case14>
+	<case15>
+		<caseid>5.1</caseid>
+		<name></name>
+		<type>5</type>
+		<shortfunc>Elem eléréséhez szükséges blokkművletek</shortfunc>
+		<funcnum>2</funcnum>
+		<function1>Egy</function1>
+		<function2>szintes B* fában átlagosan hány blokkművelettel lehet elérni egy keresett elemet?</function2>
+		<description></description>
+		<blocksize>9000</blocksize>
+		<recordnumber>999999</recordnumber>
+		<keysize>480</keysize>
+		<pointersize>1016</pointersize>
+		<bucketsize>40</bucketsize>
+		<operationtime>49</operationtime>
+		<resultdifference>20</resultdifference>
+	</case15>
+	<case16>
+		<caseid>5.2</caseid>
+		<name></name>
+		<type>5</type>
+		<shortfunc>Állomány tárolásához szükséges idő</shortfunc>
+		<funcnum>3</funcnum>
+		<function1>Egy</function1>
+		<function2> szintes B* fában legfeljebb </function2>
+		<function3> ms alatt el tudom érni bármelyik keresett elemet?</function3>
+		<description></description>
+		<blocksize>9000</blocksize>
+		<recordnumber>999999</recordnumber>
+		<keysize>480</keysize>
+		<pointersize>1016</pointersize>
+		<bucketsize>40</bucketsize>
+		<operationtime>49</operationtime>
+		
+		<resultdifference>20</resultdifference>
+	</case16>
+	<case17>
+		<caseid>5.3</caseid>
+		<name></name>
+		<type>5</type>
+		<shortfunc>B* fa blocking factorának kiszámolása</shortfunc>
+		<funcnum>1</funcnum>
+		<function>A fenti paraméterekkel szeretnénk B* szervezéssel tárolni az állományunkat. Add meg a fa blocking factorát!</function>
+		<description></description>
+		<blocksize>9000</blocksize>
+		<recordnumber>999999</recordnumber>
+		<keysize>480</keysize>
+		<pointersize>1016</pointersize>
+		<bucketsize>40</bucketsize>
+		<operationtime>49</operationtime>
+		<resultdifference>20</resultdifference>
+	</case17>
+	<case18>
+		<caseid>5.4</caseid>
+		<name></name>
+		<type>5</type>
+		<shortfunc>B* fa blocking szintjeinek számának kiszámolása</shortfunc>
+		<funcnum>1</funcnum>
+		<function>A fenti paraméterekkel szeretnénk B* szervezéssel tárolni az állományunkat. Add meg a fa szintjeinek számát!</function>
+		<description></description>
+		<blocksize>9000</blocksize>
+		<recordnumber>999999</recordnumber>
+		<keysize>480</keysize>
+		<pointersize>1016</pointersize>
+		<bucketsize>40</bucketsize>
+		<operationtime>49</operationtime>
+		<resultdifference>20</resultdifference>
+	</case18>
+</casescatalog>
