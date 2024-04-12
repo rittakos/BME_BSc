@@ -1,0 +1,60 @@
+# depslib dependency file v1.0
+1553584034 source:c:\c++\labor\lab_06-master-b021771a43088f9093a8b1de10ef2c92c3be7379\alakzatlab\alakzat.cpp
+	"alakzat.h"
+
+1553685417 c:\c++\labor\lab_06-master-b021771a43088f9093a8b1de10ef2c92c3be7379\alakzatlab\alakzat.h
+	<iostream>
+	"memtrace.h"
+	"pont.h"
+	"szin.h"
+
+1553584034 c:\c++\labor\lab_06-master-b021771a43088f9093a8b1de10ef2c92c3be7379\alakzatlab\memtrace.h
+	<new>
+	<cstdio>
+	<stdlib.h>
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<list>
+	<map>
+	<algorithm>
+	<functional>
+
+1553768016 c:\c++\labor\lab_06-master-b021771a43088f9093a8b1de10ef2c92c3be7379\alakzatlab\pont.h
+	<iostream>
+
+1553584034 c:\c++\labor\lab_06-master-b021771a43088f9093a8b1de10ef2c92c3be7379\alakzatlab\szin.h
+	<iostream>
+
+1553584034 source:c:\c++\labor\lab_06-master-b021771a43088f9093a8b1de10ef2c92c3be7379\alakzatlab\kor.cpp
+	"kor.h"
+
+1553767027 c:\c++\labor\lab_06-master-b021771a43088f9093a8b1de10ef2c92c3be7379\alakzatlab\kor.h
+	"alakzat.h"
+
+1553584034 source:c:\c++\labor\lab_06-master-b021771a43088f9093a8b1de10ef2c92c3be7379\alakzatlab\main.cpp
+	<iostream>
+	"szakasz.h"
+	"kor.h"
+
+1553584034 c:\c++\labor\lab_06-master-b021771a43088f9093a8b1de10ef2c92c3be7379\alakzatlab\szakasz.h
+	"alakzat.h"
+
+1553584034 source:c:\c++\labor\lab_06-master-b021771a43088f9093a8b1de10ef2c92c3be7379\alakzatlab\memtrace.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<ctype.h>
+	"memtrace.h"
+
+1553768016 source:c:\c++\labor\lab_06-master-b021771a43088f9093a8b1de10ef2c92c3be7379\alakzatlab\pont.cpp
+	"pont.h"
+
+1553584034 source:c:\c++\labor\lab_06-master-b021771a43088f9093a8b1de10ef2c92c3be7379\alakzatlab\szakasz.cpp
+	"szakasz.h"
+
+1553584034 source:c:\c++\labor\lab_06-master-b021771a43088f9093a8b1de10ef2c92c3be7379\alakzatlab\szin.cpp
+	"szin.h"
+

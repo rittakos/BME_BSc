@@ -1,0 +1,3 @@
+C:/C++/sz4/cmake-build-debug/CMakeFiles/sz4.dir
+C:/C++/sz4/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/C++/sz4/cmake-build-debug/CMakeFiles/rebuild_cache.dir

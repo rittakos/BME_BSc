@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1553042079 source:c:\c++\labor\cppbolt-master-ca85df38145fa8bfbc22fc3059a71d59a4e6b012\datum.cpp
+	<iostream>
+	<sstream>
+	<ctime>
+	<iomanip>
+	"memtrace.h"
+	"datum.h"
+
+1553042079 c:\c++\labor\cppbolt-master-ca85df38145fa8bfbc22fc3059a71d59a4e6b012\memtrace.h
+	<new>
+	<cstdio>
+	<stdlib.h>
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<list>
+	<map>
+	<algorithm>
+	<functional>
+
+1553042079 c:\c++\labor\cppbolt-master-ca85df38145fa8bfbc22fc3059a71d59a4e6b012\datum.h
+	<iostream>
+
+1553042079 source:c:\c++\labor\cppbolt-master-ca85df38145fa8bfbc22fc3059a71d59a4e6b012\memtrace.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<ctype.h>
+	"memtrace.h"
+

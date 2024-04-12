@@ -1,0 +1,83 @@
+# depslib dependency file v1.0
+1557185402 source:c:\users\akosr\desktop\drink\drink.cpp
+	"drink.h"
+
+1557678814 c:\users\akosr\desktop\drink\drink.h
+	"ingredient.h"
+	"array.hpp"
+	"string5.h"
+
+1557307169 c:\users\akosr\desktop\drink\ingredient.h
+	"string5.h"
+
+1557183546 c:\users\akosr\desktop\drink\string5.h
+	<iostream>
+
+1557185729 c:\users\akosr\desktop\drink\array.h
+	<cstddef>
+	<iostream>
+	"string5.h"
+
+1557304053 source:c:\users\akosr\desktop\drink\ingredient.cpp
+	"ingredient.h"
+
+1555013711 source:c:\users\akosr\desktop\drink\memtrace.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<ctype.h>
+	"memtrace.h"
+
+1555013711 c:\users\akosr\desktop\drink\memtrace.h
+	<new>
+	<cstdio>
+	<stdlib.h>
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<list>
+	<map>
+	<algorithm>
+	<functional>
+
+1557323339 source:c:\users\akosr\desktop\drink\string5.cpp
+	<iostream>
+	<cstring>
+	"memtrace.h"
+	"string5.h"
+
+1557677262 source:c:\users\akosr\desktop\drink\test.cpp
+	"test.h"
+	"array.hpp"
+	"drink.h"
+	"ingredient.h"
+	"string5.h"
+	<iostream>
+
+1556136174 c:\users\akosr\desktop\drink\test.h
+
+1557175171 source:c:\users\akosr\desktop\drink\array.cpp
+	"array.h"
+
+1557678684 source:c:\users\akosr\desktop\drink\main.cpp
+	<iostream>
+	<fstream>
+	"memtrace.h"
+	"array.hpp"
+	"drink.h"
+	"main.h"
+
+1557678796 c:\users\akosr\desktop\drink\main.h
+	"drink.h"
+	"array.hpp"
+	"ingredient.h"
+	<iostream>
+	<sstream>
+
+1557677294 c:\users\akosr\desktop\drink\array.hpp
+	<cstddef>
+	<iostream>
+	"string5.h"
+

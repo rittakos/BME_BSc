@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1554975443 source:c:\c++\labor\lab_08-master-5eb764b501a0c0eab261712e2f5b56375647318e\generikus1\generikus1_teszt.cpp
+	<iostream>
+	"integer.h"
+	"alaptipus.hpp"
+
+1554938816 c:\c++\labor\lab_08-master-5eb764b501a0c0eab261712e2f5b56375647318e\generikus1\integer.h
+
+1554975305 c:\c++\labor\lab_08-master-5eb764b501a0c0eab261712e2f5b56375647318e\generikus1\alaptipus.hpp
+

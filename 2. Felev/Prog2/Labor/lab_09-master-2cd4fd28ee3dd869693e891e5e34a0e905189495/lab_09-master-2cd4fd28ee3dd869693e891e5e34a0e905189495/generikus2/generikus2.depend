@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1556061136 source:c:\c++\labor\lab_09-master-2cd4fd28ee3dd869693e891e5e34a0e905189495\lab_09-master-2cd4fd28ee3dd869693e891e5e34a0e905189495\generikus2\generikus2_teszt.cpp
+	<iostream>
+	<string>
+	<sstream>
+	"sablonok.hpp"
+	"fancy_iterators.hpp"
+	"gtest_lite.h"
+
+1556185882 c:\c++\labor\lab_09-master-2cd4fd28ee3dd869693e891e5e34a0e905189495\lab_09-master-2cd4fd28ee3dd869693e891e5e34a0e905189495\generikus2\sablonok.hpp
+	<string>
+	<iostream>
+
+1556061136 c:\c++\labor\lab_09-master-2cd4fd28ee3dd869693e891e5e34a0e905189495\lab_09-master-2cd4fd28ee3dd869693e891e5e34a0e905189495\generikus2\fancy_iterators.hpp
+
+1556061136 c:\c++\labor\lab_09-master-2cd4fd28ee3dd869693e891e5e34a0e905189495\lab_09-master-2cd4fd28ee3dd869693e891e5e34a0e905189495\generikus2\gtest_lite.h
+	<iostream>
+	<cassert>
+	<cmath>
+	<cstring>
+	<limits>
+	<string>
+	<fstream>
+	"memtrace.h"
+

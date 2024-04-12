@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1550952297 source:c:\c++\cppellenallas-master-85c62e31df0980442ecf9362243204c341f78302\resistor_test.cpp
+	<iostream>
+	"resistor.h"
+
+1550953565 c:\c++\cppellenallas-master-85c62e31df0980442ecf9362243204c341f78302\resistor.h
+
+1550953549 source:c:\c++\cppellenallas-master-85c62e31df0980442ecf9362243204c341f78302\resistor.cpp
+	"resistor.h"
+	"iostream"
+

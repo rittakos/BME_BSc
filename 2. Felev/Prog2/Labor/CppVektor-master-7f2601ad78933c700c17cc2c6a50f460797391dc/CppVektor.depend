@@ -1,0 +1,45 @@
+# depslib dependency file v1.0
+1551478505 source:c:\c++\cppvektor-master-7f2601ad78933c700c17cc2c6a50f460797391dc\memtrace.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<ctype.h>
+	"memtrace.h"
+
+1551618963 c:\c++\cppvektor-master-7f2601ad78933c700c17cc2c6a50f460797391dc\memtrace.h
+	<new>
+	<cstdio>
+	<cstdlib>
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<list>
+	<map>
+	<algorithm>
+	<functional>
+
+1551633641 source:c:\c++\cppvektor-master-7f2601ad78933c700c17cc2c6a50f460797391dc\vektormain.cpp
+	<iostream>
+	<ctime>
+	<iomanip>
+	"vektor.h"
+	"gtest_lite.h"
+
+1551628884 c:\c++\cppvektor-master-7f2601ad78933c700c17cc2c6a50f460797391dc\vektor.h
+	"memtrace.h"
+
+1551478505 c:\c++\cppvektor-master-7f2601ad78933c700c17cc2c6a50f460797391dc\gtest_lite.h
+	<iostream>
+	<cassert>
+	<cmath>
+	<cstring>
+	<limits>
+	<string>
+	<fstream>
+	"memtrace.h"
+
+1551633641 source:c:\c++\cppvektor-master-7f2601ad78933c700c17cc2c6a50f460797391dc\vektor.cpp
+	"vektor.h"
+

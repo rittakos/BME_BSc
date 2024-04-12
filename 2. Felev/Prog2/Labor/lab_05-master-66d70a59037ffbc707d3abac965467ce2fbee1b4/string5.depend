@@ -1,0 +1,65 @@
+# depslib dependency file v1.0
+1551911059 source:c:\c++\labor\lab_05-master-66d70a59037ffbc707d3abac965467ce2fbee1b4\memtrace.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<ctype.h>
+	"memtrace.h"
+
+1551911059 c:\c++\labor\lab_05-master-66d70a59037ffbc707d3abac965467ce2fbee1b4\memtrace.h
+	<new>
+	<cstdio>
+	<stdlib.h>
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<list>
+	<map>
+	<algorithm>
+	<functional>
+
+1551911059 source:c:\c++\labor\lab_05-master-66d70a59037ffbc707d3abac965467ce2fbee1b4\rendez.cpp
+	<iostream>
+	<cstring>
+	<cstdlib>
+	<clocale>
+	<windows.h>
+	"rendez.h"
+	"rendez_u8.h"
+	"string5.h"
+
+1551911059 c:\c++\labor\lab_05-master-66d70a59037ffbc707d3abac965467ce2fbee1b4\rendez.h
+
+1551911059 c:\c++\labor\lab_05-master-66d70a59037ffbc707d3abac965467ce2fbee1b4\rendez_u8.h
+
+1551986691 c:\c++\labor\lab_05-master-66d70a59037ffbc707d3abac965467ce2fbee1b4\string5.h
+	<iostream>
+
+1551986691 source:c:\c++\labor\lab_05-master-66d70a59037ffbc707d3abac965467ce2fbee1b4\string5.cpp
+	<iostream>
+	<cstring>
+	"memtrace.h"
+	"string5.h"
+
+1551952526 source:c:\c++\labor\lab_05-master-66d70a59037ffbc707d3abac965467ce2fbee1b4\string5_test.cpp
+	<iostream>
+	<sstream>
+	<clocale>
+	<windows.h>
+	"memtrace.h"
+	"gtest_lite.h"
+	"string5.h"
+	"rendez.h"
+
+1551911059 c:\c++\labor\lab_05-master-66d70a59037ffbc707d3abac965467ce2fbee1b4\gtest_lite.h
+	<iostream>
+	<cassert>
+	<cmath>
+	<cstring>
+	<limits>
+	<string>
+	<fstream>
+	"memtrace.h"
+

@@ -1,0 +1,45 @@
+# depslib dependency file v1.0
+1550120423 source:c:\c++\lab_02-master-2eb6267777337f22692d12b9eed03e3c10144918\lab_02-master-2eb6267777337f22692d12b9eed03e3c10144918\string2_cpp\memtrace.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<ctype.h>
+	"memtrace.h"
+
+1550120423 c:\c++\lab_02-master-2eb6267777337f22692d12b9eed03e3c10144918\lab_02-master-2eb6267777337f22692d12b9eed03e3c10144918\string2_cpp\memtrace.h
+	<new>
+	<cstdio>
+	<stdlib.h>
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<algorithm>
+
+1550442352 source:c:\c++\lab_02-master-2eb6267777337f22692d12b9eed03e3c10144918\lab_02-master-2eb6267777337f22692d12b9eed03e3c10144918\string2_cpp\string2_main.cpp
+	<cstring>
+	"memtrace.h"
+	"gtest_lite.h"
+	"string2.h"
+
+1550120423 c:\c++\lab_02-master-2eb6267777337f22692d12b9eed03e3c10144918\lab_02-master-2eb6267777337f22692d12b9eed03e3c10144918\string2_cpp\gtest_lite.h
+	<iostream>
+	<cassert>
+	<cmath>
+	<cstring>
+	<limits>
+	<string>
+	<fstream>
+	"memtrace.h"
+
+1550441537 c:\c++\lab_02-master-2eb6267777337f22692d12b9eed03e3c10144918\lab_02-master-2eb6267777337f22692d12b9eed03e3c10144918\string2_cpp\string2.h
+
+1550442215 source:c:\c++\lab_02-master-2eb6267777337f22692d12b9eed03e3c10144918\lab_02-master-2eb6267777337f22692d12b9eed03e3c10144918\string2_cpp\string2.cpp
+	<iostream>
+	<cstring>
+	"string2.h"
+	"assert.h"
+	"memtrace.h"
+	"string2.h"
+

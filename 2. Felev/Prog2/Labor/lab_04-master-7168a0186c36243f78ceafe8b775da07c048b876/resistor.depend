@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1551349524 source:c:\c++\lab_04-master-7168a0186c36243f78ceafe8b775da07c048b876\resistor.cpp
+	"resistor.h"
+	"iostream"
+	"gtest_lite.h"
+
+1551349264 c:\c++\lab_04-master-7168a0186c36243f78ceafe8b775da07c048b876\resistor.h
+	<iostream>
+	"elkeszult.h"
+
+1551349694 c:\c++\lab_04-master-7168a0186c36243f78ceafe8b775da07c048b876\elkeszult.h
+
+1551347081 source:c:\c++\lab_04-master-7168a0186c36243f78ceafe8b775da07c048b876\resistor_test.cpp
+	<iostream>
+	"resistor.h"
+
+1551347330 source:c:\c++\lab_04-master-7168a0186c36243f78ceafe8b775da07c048b876\resistor_test2.cpp
+	<iostream>
+	<sstream>
+	"gtest_lite.h"
+	"resistor.h"
+
+1551241093 c:\c++\lab_04-master-7168a0186c36243f78ceafe8b775da07c048b876\gtest_lite.h
+	<iostream>
+	<cassert>
+	<cmath>
+	<cstring>
+	<limits>
+	<string>
+	<fstream>
+	"memtrace.h"
+

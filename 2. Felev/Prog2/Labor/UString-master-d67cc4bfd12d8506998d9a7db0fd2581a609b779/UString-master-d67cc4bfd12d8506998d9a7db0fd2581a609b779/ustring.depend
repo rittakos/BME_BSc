@@ -1,0 +1,54 @@
+# depslib dependency file v1.0
+1554330076 source:c:\c++\labor\ustring-master-d67cc4bfd12d8506998d9a7db0fd2581a609b779\ustring-master-d67cc4bfd12d8506998d9a7db0fd2581a609b779\memtrace.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<ctype.h>
+	"memtrace.h"
+
+1554330076 c:\c++\labor\ustring-master-d67cc4bfd12d8506998d9a7db0fd2581a609b779\ustring-master-d67cc4bfd12d8506998d9a7db0fd2581a609b779\memtrace.h
+	<new>
+	<cstdio>
+	<stdlib.h>
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<list>
+	<map>
+	<algorithm>
+	<functional>
+
+1554330076 source:c:\c++\labor\ustring-master-d67cc4bfd12d8506998d9a7db0fd2581a609b779\ustring-master-d67cc4bfd12d8506998d9a7db0fd2581a609b779\string5.cpp
+	<iostream>
+	<cstring>
+	"memtrace.h"
+	"string5.h"
+
+1554330076 c:\c++\labor\ustring-master-d67cc4bfd12d8506998d9a7db0fd2581a609b779\ustring-master-d67cc4bfd12d8506998d9a7db0fd2581a609b779\string5.h
+	<iostream>
+
+1554896660 source:c:\c++\labor\ustring-master-d67cc4bfd12d8506998d9a7db0fd2581a609b779\ustring-master-d67cc4bfd12d8506998d9a7db0fd2581a609b779\ustring_test.cpp
+	<iostream>
+	<sstream>
+	"memtrace.h"
+	"ustring.h"
+	"gtest_lite.h"
+
+1554902233 c:\c++\labor\ustring-master-d67cc4bfd12d8506998d9a7db0fd2581a609b779\ustring-master-d67cc4bfd12d8506998d9a7db0fd2581a609b779\ustring.h
+	"string5.h"
+
+1554330076 c:\c++\labor\ustring-master-d67cc4bfd12d8506998d9a7db0fd2581a609b779\ustring-master-d67cc4bfd12d8506998d9a7db0fd2581a609b779\gtest_lite.h
+	<iostream>
+	<cassert>
+	<cmath>
+	<cstring>
+	<limits>
+	<string>
+	<fstream>
+	"memtrace.h"
+
+1554896454 source:c:\c++\labor\ustring-master-d67cc4bfd12d8506998d9a7db0fd2581a609b779\ustring-master-d67cc4bfd12d8506998d9a7db0fd2581a609b779\ustring.cpp
+	"ustring.h"
+

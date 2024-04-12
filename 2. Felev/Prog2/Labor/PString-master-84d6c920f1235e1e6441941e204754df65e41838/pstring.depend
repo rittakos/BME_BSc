@@ -1,0 +1,51 @@
+# depslib dependency file v1.0
+1555013711 source:c:\c++\labor\pstring-master-84d6c920f1235e1e6441941e204754df65e41838\memtrace.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<ctype.h>
+	"memtrace.h"
+
+1555013711 c:\c++\labor\pstring-master-84d6c920f1235e1e6441941e204754df65e41838\memtrace.h
+	<new>
+	<cstdio>
+	<stdlib.h>
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<list>
+	<map>
+	<algorithm>
+	<functional>
+
+1555013711 source:c:\c++\labor\pstring-master-84d6c920f1235e1e6441941e204754df65e41838\string5.cpp
+	<iostream>
+	<cstring>
+	"memtrace.h"
+	"string5.h"
+
+1555013711 c:\c++\labor\pstring-master-84d6c920f1235e1e6441941e204754df65e41838\string5.h
+	<iostream>
+
+1555322767 source:c:\c++\labor\pstring-master-84d6c920f1235e1e6441941e204754df65e41838\pstring_test.cpp
+	<iostream>
+	<sstream>
+	"memtrace.h"
+	"pstring.h"
+	"gtest_lite.h"
+
+1555322933 c:\c++\labor\pstring-master-84d6c920f1235e1e6441941e204754df65e41838\pstring.h
+	"string5.h"
+
+1555013711 c:\c++\labor\pstring-master-84d6c920f1235e1e6441941e204754df65e41838\gtest_lite.h
+	<iostream>
+	<cassert>
+	<cmath>
+	<cstring>
+	<limits>
+	<string>
+	<fstream>
+	"memtrace.h"
+

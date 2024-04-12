@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1550493168 source:c:\c++\nem_oo-master-e11a4f925b3446b26f42b8fca814d6e4a91a1a2f\nem_oo-master-e11a4f925b3446b26f42b8fca814d6e4a91a1a2f\memtrace.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<ctype.h>
+	"memtrace.h"
+
+1550493168 c:\c++\nem_oo-master-e11a4f925b3446b26f42b8fca814d6e4a91a1a2f\nem_oo-master-e11a4f925b3446b26f42b8fca814d6e4a91a1a2f\memtrace.h
+	<new>
+	<cstdio>
+	<stdlib.h>
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<algorithm>
+
+1550614966 source:c:\c++\nem_oo-master-e11a4f925b3446b26f42b8fca814d6e4a91a1a2f\nem_oo-master-e11a4f925b3446b26f42b8fca814d6e4a91a1a2f\nem_oo.cpp
+	<cstring>
+	<cctype>
+	"nem_oo.h"
+
+1550612842 c:\c++\nem_oo-master-e11a4f925b3446b26f42b8fca814d6e4a91a1a2f\nem_oo-master-e11a4f925b3446b26f42b8fca814d6e4a91a1a2f\nem_oo.h
+	<cmath>
+	<iostream>
+	"memtrace.h"
+
+1550595187 c:\c++\nem_oo-master-e11a4f925b3446b26f42b8fca814d6e4a91a1a2f\nem_oo-master-e11a4f925b3446b26f42b8fca814d6e4a91a1a2f\max.hpp
+	"nem_oo.h"
+
+1550614660 source:c:\c++\nem_oo-master-e11a4f925b3446b26f42b8fca814d6e4a91a1a2f\nem_oo-master-e11a4f925b3446b26f42b8fca814d6e4a91a1a2f\nem_oo_teszt.cpp
+	<iostream>
+	<cstring>
+	<locale>
+	<windows.h>
+	"nem_oo.h"
+	"max.hpp"
+
