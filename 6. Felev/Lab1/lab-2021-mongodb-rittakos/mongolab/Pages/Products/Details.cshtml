@@ -1,0 +1,37 @@
+﻿@page
+@model mongolab.Pages.Products.DetailsModel
+
+@{
+    ViewData["Title"] = "Product details";
+}
+
+<h2>Product details</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Name
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Product.Name)
+        </dd>
+        <dt>
+            Price
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Product.Price)
+        </dd>
+        <dt>
+            Stock
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Product.Stock)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Buy" asp-route-id="@Model.Product.ID">Buy</a> |
+    <a asp-page="./Index">Back to list</a>
+</div>

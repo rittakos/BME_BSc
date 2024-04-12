@@ -1,0 +1,47 @@
+﻿@page
+@model mongolab.Pages.Categories.IndexModel
+@{
+    ViewData["Title"] = "Categories";
+}
+
+<h2>Categories</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                ParentCategory
+            </th>
+            <th>
+                Number of products
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Categories)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @if (string.IsNullOrEmpty(item.ParentCategoryName))
+                    {
+                        @("N/A")
+                    }
+                    else
+                    {
+                        @Html.DisplayFor(modelItem => item.ParentCategoryName)
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumberOfProducts)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

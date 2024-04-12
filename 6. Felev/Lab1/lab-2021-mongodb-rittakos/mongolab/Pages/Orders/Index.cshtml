@@ -1,0 +1,68 @@
+﻿@page
+@model mongolab.Pages.Orders.IndexModel
+
+@{
+    ViewData["Title"] = "Orders";
+}
+
+<h2>Orders</h2>
+
+<p>
+    <a asp-page="Create">Add new order</a>
+</p>
+<form class="form-inline">
+    <div class="form-group">
+        <label class="control-label">Status:</label>
+        <input asp-for="Status" class="form-control" />
+        <input type="submit" value="Filter" />
+    </div>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Date
+            </th>
+            <th>
+                Deadline
+            </th>
+            <th>
+                Status
+            </th>
+            <th>
+                Payment method
+            </th>
+            <th>
+                Total value
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Orders)
+        {
+            <tr>
+                <td>
+                    @(item.Date.HasValue ? item.Date.Value.ToString("d") : "N/A")
+                </td>
+                <td>
+                    @(item.Deadline.HasValue ? item.Deadline.Value.ToString("d") : "N/A")
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PaymentMethod)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Total)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

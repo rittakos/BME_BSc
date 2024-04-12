@@ -1,0 +1,86 @@
+# depslib dependency file v1.0
+1589917065 source:d:\dokumentumok\bme\prog\c11\drawable.cpp
+	"drawable.h"
+
+1589917065 d:\dokumentumok\bme\prog\c11\drawable.h
+	<memory>
+	<SDL2/SDL.h>
+
+1589917065 source:d:\dokumentumok\bme\prog\c11\turtle.cpp
+	"turtle.h"
+
+1589917065 d:\dokumentumok\bme\prog\c11\turtle.h
+	"drawable.h"
+	"rectangle.h"
+	"point.h"
+
+1589917065 d:\dokumentumok\bme\prog\c11\rectangle.h
+	"drawable.h"
+	<iostream>
+
+1589917065 d:\dokumentumok\bme\prog\c11\point.h
+
+1589917065 source:d:\dokumentumok\bme\prog\c11\command.cpp
+	"command.h"
+
+1589917065 d:\dokumentumok\bme\prog\c11\command.h
+	<string>
+	<SDL2/SDL_render.h>
+	<iostream>
+	"line.h"
+	"turtle.h"
+
+1589917065 d:\dokumentumok\bme\prog\c11\line.h
+	<SDL2/SDL_render.h>
+	"drawable.h"
+	<math.h>
+
+1589917065 source:d:\dokumentumok\bme\prog\c11\commandbox.cpp
+	"commandBox.h"
+
+1589919615 d:\dokumentumok\bme\prog\c11\commandbox.h
+	"command.h"
+	"page.h"
+	"exception.h"
+	<SDL2/SDL.h>
+	<SDL2/SDL_ttf.h>
+	<vector>
+	<memory>
+	<iostream>
+
+1589917065 d:\dokumentumok\bme\prog\c11\page.h
+	<vector>
+	"turtle.h"
+	"rectangle.h"
+	"line.h"
+	"exception.h"
+
+1589917065 d:\dokumentumok\bme\prog\c11\exception.h
+	<exception>
+
+1589920170 source:d:\dokumentumok\bme\prog\c11\main.cpp
+	"window.h"
+	<SDL2/SDL.h>
+	<SDL2/SDL_ttf.h>
+	<SDL2/SDL2_gfxPrimitives.h>
+
+1589922504 d:\dokumentumok\bme\prog\c11\window.h
+	<SDL2/SDL.h>
+	<vector>
+	<fstream>
+	<memory>
+	"page.h"
+	"commandBox.h"
+	<cstdio>
+	<map>
+	"SDL2/SDL_ttf.h"
+	<SDL2/SDL2_gfxPrimitives.h>
+
+1589917065 source:d:\dokumentumok\bme\prog\c11\page.cpp
+	"page.h"
+
+1589921651 source:d:\dokumentumok\bme\prog\c11\window.cpp
+	<iostream>
+	<memory>
+	"window.h"
+

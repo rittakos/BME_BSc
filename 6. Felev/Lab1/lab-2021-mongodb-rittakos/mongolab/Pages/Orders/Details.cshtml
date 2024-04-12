@@ -1,0 +1,49 @@
+﻿@page
+@model mongolab.Pages.Orders.DetailsModel
+
+@{
+    ViewData["Title"] = "Order details";
+}
+
+<h2>Order details</h2>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Date
+        </dt>
+        <dd>
+            @(Model.Order.Date.HasValue ? Model.Order.Date.Value.ToString("d") : "N/A")
+        </dd>
+        <dt>
+            Deadline
+        </dt>
+        <dd>
+            @(Model.Order.Deadline.HasValue ? Model.Order.Deadline.Value.ToString("d") : "N/A")
+        </dd>
+        <dt>
+            Status
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Order.Status)
+        </dd>
+        <dt>
+            Payment method
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Order.PaymentMethod)
+        </dd>
+        <dt>
+            Total value
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Order.Total)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Order.ID">Edit</a> |
+    <a asp-page="./Index">Back to list</a>
+</div>

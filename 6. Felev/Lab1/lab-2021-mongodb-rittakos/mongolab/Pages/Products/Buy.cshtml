@@ -1,0 +1,54 @@
+﻿@page
+@model mongolab.Pages.Products.BuyModel
+
+@{
+    ViewData["Title"] = "Buy product";
+}
+
+<h2>Buy product</h2>
+
+<h3>How many pieces would you like to buy?</h3>
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Name
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Product.Name)
+        </dd>
+        <dt>
+            Price
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Product.Price)
+        </dd>
+        <dt>
+            Stock
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Product.Stock)
+        </dd>
+    </dl>
+
+    <form method="post">
+        <div class="form-group">
+            <input type="hidden" asp-for="Product.ID" />
+            <label class="control-label">Amount</label>
+            <input asp-for="Amount" class="form-control" value="1" />
+            <span asp-validation-for="Amount" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Buy" class="btn btn-default" />
+        </div>
+    </form>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to list</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

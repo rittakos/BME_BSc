@@ -1,0 +1,59 @@
+﻿@page
+@model mongolab.Pages.Customers.IndexModel
+@{
+    ViewData["Title"] = "Customers";
+}
+
+<h2>Customers</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                City
+            </th>
+            <th>
+                Street
+            </th>
+            <th>
+                Zip code
+            </th>
+            <th>
+                Total value of orders
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Customers)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.City)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Street)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ZipCode)
+                </td>
+                <td>
+                    @if (item.TotalOrders.HasValue)
+                    {
+                        @Html.DisplayFor(modelItem => item.TotalOrders.Value)
+                    }
+                    else
+                    {
+                        @("N/A")
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

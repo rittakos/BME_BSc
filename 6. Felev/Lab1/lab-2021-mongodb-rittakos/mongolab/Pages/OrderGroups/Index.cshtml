@@ -1,0 +1,115 @@
+﻿@page
+@model mongolab.Pages.OrderGroups.IndexModel
+@{
+    ViewData["Title"] = "Group orders";
+}
+
+<h2>Group orders</h2>
+
+<form class="form-inline">
+    <div class="form-group">
+        <label class="control-label">Number of groups:</label>
+        <input asp-for="GroupCount" class="form-control" />
+        <input type="submit" value="Query" />
+    </div>
+</form>
+
+<h3>Number of items per group</h3>
+<div style="max-width: 70em;">
+    <canvas id="chartPieces"></canvas>
+</div>
+
+<h3>Total per groups</h3>
+<div style="max-width: 70em;">
+    <canvas id="chartTotals"></canvas>
+</div>
+
+@section Scripts {
+    <script src="~/lib/moment/moment.js"></script>
+    <script src="~/lib/chart/Chart.bundle.js"></script>
+    <script>
+        const thresholds = [
+            @foreach(var t in Model.Thresholds)
+            {
+                @Html.Raw($"'{t.ToString("yyyy-MM-dd")}',\n")
+            }
+        ];
+        const pieces = [
+            @foreach (var t in Model.Thresholds.SkipLast(1))
+            {
+                var pcs = Model.Groups.GetValueOrDefault(t)?.Pieces ?? 0;
+                @Html.Raw($"{pcs},\n")
+            }
+        ];
+        const totals = [
+            @foreach(var t in Model.Thresholds.SkipLast(1))
+            {
+                var ttl = Model.Groups.GetValueOrDefault(t)?.Total ?? 0;
+                @Html.Raw($"{ttl},\n")
+            }
+        ];
+
+        const options = {
+            scales: {
+                xAxes: [{
+                    display: false,
+                    barPercentage: 1.25,
+                    ticks: {
+                        max: @Html.Raw($"'{Model.Thresholds[Model.Thresholds.Count - 2].ToString("yyyy-MM-dd")}'"),
+                    }
+                },
+                {
+                    display: true,
+                    ticks: {
+                        autoSkip: false,
+                        max: @Html.Raw($"'{Model.Thresholds[Model.Thresholds.Count - 1].ToString("yyyy-MM-dd")}'"),
+                    }
+                }],
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            },
+            legend: {
+                display: false
+            },
+            tooltips: {
+                callbacks: {
+                    title: function (tooltipItem, data) {
+                        const nextLabel = data.labels[tooltipItem[0].index + 1]
+                        return `${tooltipItem[0].label} – ${nextLabel}`;
+                    },
+                }
+            }
+        };
+
+        var ctxPieces = document.getElementById('chartPieces').getContext('2d');
+        var chartPieces = new Chart(ctxPieces, {
+            type: 'bar',
+            data: {
+                labels: thresholds,
+                datasets: [{
+                    label: 'Pieces',
+                    data: pieces,
+                    backgroundColor: 'rgba(255, 99, 132, 1)',
+                }]
+            },
+            options: options
+        });
+
+        var ctxTotals = document.getElementById('chartTotals').getContext('2d');
+        var chartTotals = new Chart(ctxTotals, {
+            type: 'bar',
+            data: {
+                labels: thresholds,
+                datasets: [{
+                    label: 'Total',
+                    data: totals,
+                    backgroundColor: 'rgba(255, 99, 132, 1)',
+                }]
+            },
+            options: options
+        });
+    </script>
+}

@@ -1,0 +1,40 @@
+﻿@page
+@model mongolab.Pages.Products.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete product";
+}
+
+<h2>Delete product</h2>
+
+<h3>Are you sure that you want to delete the product?</h3>
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Name
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Product.Name)
+        </dd>
+        <dt>
+            Price
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Product.Price)
+        </dd>
+        <dt>
+            Stock
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Product.Stock)
+        </dd>
+    </dl>
+
+    <form method="post">
+        <input type="hidden" asp-for="Product.ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to list</a>
+    </form>
+</div>

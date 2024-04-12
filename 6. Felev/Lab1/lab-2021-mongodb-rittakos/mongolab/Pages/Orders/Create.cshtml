@@ -1,0 +1,59 @@
+﻿@page
+@model mongolab.Pages.Orders.CreateModel
+
+@{
+    ViewData["Title"] = "Create new order";
+}
+
+<h2>Create new order</h2>
+
+<h4>Order</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">Date</label>
+                <input asp-for="Order.Date" class="form-control" />
+                <span asp-validation-for="Order.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Deadline</label>
+                <input asp-for="Order.Deadline" class="form-control" />
+                <span asp-validation-for="Order.Deadline" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Status</label>
+                <input asp-for="Order.Status" class="form-control" />
+                <span asp-validation-for="Order.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Payment method</label>
+                <input asp-for="Order.PaymentMethod" class="form-control" />
+                <span asp-validation-for="Order.PaymentMethod" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Product</label>
+                <select asp-for="ProductID" asp-items="Model.Products" class="form-control"></select>
+                <span asp-validation-for="ProductID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Amount</label>
+                <input asp-for="Amount" class="form-control" value="1" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to list</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

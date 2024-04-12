@@ -1,0 +1,757 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\iet2\\iet2.csproj": {}
+  },
+  "projects": {
+    "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\iet2\\iet2.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\iet2\\iet2.csproj",
+        "projectName": "iet2",
+        "projectPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\iet2\\iet2.csproj",
+        "packagesPath": "C:\\Users\\akosr\\.nuget\\packages\\",
+        "outputPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\iet2\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\akosr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Data.DataTables\\dotNetRDF.Data.DataTables.csproj": {
+                "projectPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Data.DataTables\\dotNetRDF.Data.DataTables.csproj"
+              },
+              "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Data.Virtuoso\\dotNetRDF.Data.Virtuoso.csproj": {
+                "projectPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Data.Virtuoso\\dotNetRDF.Data.Virtuoso.csproj"
+              },
+              "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Query.FullText\\dotNetRDF.Query.FullText.csproj": {
+                "projectPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Query.FullText\\dotNetRDF.Query.FullText.csproj"
+              },
+              "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Query.Spin\\dotNetRDF.Query.Spin.csproj": {
+                "projectPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Query.Spin\\dotNetRDF.Query.Spin.csproj"
+              },
+              "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Web\\dotNetRDF.Web.csproj": {
+                "projectPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Web\\dotNetRDF.Web.csproj"
+              },
+              "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF\\dotNetRDF.csproj": {
+                "projectPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF\\dotNetRDF.csproj"
+              },
+              "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Testing\\dotNetRDF.MockServerTests\\dotNetRDF.MockServerTests.csproj": {
+                "projectPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Testing\\dotNetRDF.MockServerTests\\dotNetRDF.MockServerTests.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "System.Diagnostics.PerformanceCounter": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Data.DataTables\\dotNetRDF.Data.DataTables.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Data.DataTables\\dotNetRDF.Data.DataTables.csproj",
+        "projectName": "dotNetRDF.Data.DataTables",
+        "projectPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Data.DataTables\\dotNetRDF.Data.DataTables.csproj",
+        "packagesPath": "C:\\Users\\akosr\\.nuget\\packages\\",
+        "outputPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Data.DataTables\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\akosr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net40-client",
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net40-client": {
+            "targetAlias": "net40-client",
+            "projectReferences": {
+              "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF\\dotNetRDF.csproj": {
+                "projectPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF\\dotNetRDF.csproj"
+              }
+            }
+          },
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF\\dotNetRDF.csproj": {
+                "projectPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF\\dotNetRDF.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net40-client": {
+          "targetAlias": "net40-client",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        },
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "System.Data.Common": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Data.Virtuoso\\dotNetRDF.Data.Virtuoso.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Data.Virtuoso\\dotNetRDF.Data.Virtuoso.csproj",
+        "projectName": "dotNetRDF.Data.Virtuoso",
+        "projectPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Data.Virtuoso\\dotNetRDF.Data.Virtuoso.csproj",
+        "packagesPath": "C:\\Users\\akosr\\.nuget\\packages\\",
+        "outputPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Data.Virtuoso\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\akosr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net40"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net40": {
+            "targetAlias": "net40",
+            "projectReferences": {
+              "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF\\dotNetRDF.csproj": {
+                "projectPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF\\dotNetRDF.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net40": {
+          "targetAlias": "net40",
+          "dependencies": {
+            "OpenLink.Data.Virtuoso": {
+              "target": "Package",
+              "version": "[7.20.3214.1, )"
+            },
+            "StyleCop.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Query.FullText\\dotNetRDF.Query.FullText.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Query.FullText\\dotNetRDF.Query.FullText.csproj",
+        "projectName": "dotNetRDF.Query.FullText",
+        "projectPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Query.FullText\\dotNetRDF.Query.FullText.csproj",
+        "packagesPath": "C:\\Users\\akosr\\.nuget\\packages\\",
+        "outputPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Query.FullText\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\akosr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net40"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net40": {
+            "targetAlias": "net40",
+            "projectReferences": {
+              "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF\\dotNetRDF.csproj": {
+                "projectPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF\\dotNetRDF.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net40": {
+          "targetAlias": "net40",
+          "dependencies": {
+            "Lucene.Net": {
+              "target": "Package",
+              "version": "[3.0.3, )"
+            },
+            "SharpZipLib": {
+              "target": "Package",
+              "version": "[0.86.0, )"
+            },
+            "StyleCop.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Query.Spin\\dotNetRDF.Query.Spin.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Query.Spin\\dotNetRDF.Query.Spin.csproj",
+        "projectName": "dotNetRDF.Query.Spin",
+        "projectPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Query.Spin\\dotNetRDF.Query.Spin.csproj",
+        "packagesPath": "C:\\Users\\akosr\\.nuget\\packages\\",
+        "outputPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Query.Spin\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\akosr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net40",
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net40": {
+            "targetAlias": "net40",
+            "projectReferences": {
+              "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF\\dotNetRDF.csproj": {
+                "projectPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF\\dotNetRDF.csproj"
+              }
+            }
+          },
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF\\dotNetRDF.csproj": {
+                "projectPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF\\dotNetRDF.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net40": {
+          "targetAlias": "net40",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        },
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "System.Runtime": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Web\\dotNetRDF.Web.csproj": {
+      "version": "1.0.13-pre6",
+      "restore": {
+        "projectUniqueName": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Web\\dotNetRDF.Web.csproj",
+        "projectName": "dotNetRDF.Web",
+        "projectPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Web\\dotNetRDF.Web.csproj",
+        "packagesPath": "C:\\Users\\akosr\\.nuget\\packages\\",
+        "outputPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF.Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\akosr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net40"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net40": {
+            "targetAlias": "net40",
+            "projectReferences": {
+              "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF\\dotNetRDF.csproj": {
+                "projectPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF\\dotNetRDF.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net40": {
+          "targetAlias": "net40",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF\\dotNetRDF.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF\\dotNetRDF.csproj",
+        "projectName": "dotNetRDF",
+        "projectPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF\\dotNetRDF.csproj",
+        "packagesPath": "C:\\Users\\akosr\\.nuget\\packages\\",
+        "outputPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\akosr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net40",
+          "net40-client",
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net40": {
+            "targetAlias": "net40",
+            "projectReferences": {}
+          },
+          "net40-client": {
+            "targetAlias": "net40-client",
+            "projectReferences": {}
+          },
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net40": {
+          "targetAlias": "net40",
+          "dependencies": {
+            "HtmlAgilityPack": {
+              "target": "Package",
+              "version": "[1.11.31, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "StyleCop.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            },
+            "VDS.Common": {
+              "target": "Package",
+              "version": "[1.10.0, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        },
+        "net40-client": {
+          "targetAlias": "net40-client",
+          "dependencies": {
+            "HtmlAgilityPack": {
+              "target": "Package",
+              "version": "[1.11.31, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "StyleCop.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            },
+            "VDS.Common": {
+              "target": "Package",
+              "version": "[1.10.0, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        },
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "AngleSharp": {
+              "target": "Package",
+              "version": "[0.14.0, )"
+            },
+            "HtmlAgilityPack": {
+              "target": "Package",
+              "version": "[1.11.31, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "StyleCop.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            },
+            "System.Collections.Specialized": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.ComponentModel.TypeConverter": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.Globalization.Extensions": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Net.Requests": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Reflection.TypeExtensions": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Threading.Thread": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "VDS.Common": {
+              "target": "Package",
+              "version": "[1.10.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Testing\\dotNetRDF.MockServerTests\\dotNetRDF.MockServerTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Testing\\dotNetRDF.MockServerTests\\dotNetRDF.MockServerTests.csproj",
+        "projectName": "dotNetRDF.MockServerTests",
+        "projectPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Testing\\dotNetRDF.MockServerTests\\dotNetRDF.MockServerTests.csproj",
+        "packagesPath": "C:\\Users\\akosr\\.nuget\\packages\\",
+        "outputPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Testing\\dotNetRDF.MockServerTests\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\akosr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net452",
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF\\dotNetRDF.csproj": {
+                "projectPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF\\dotNetRDF.csproj"
+              }
+            }
+          },
+          "net452": {
+            "targetAlias": "net452",
+            "projectReferences": {
+              "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF\\dotNetRDF.csproj": {
+                "projectPath": "D:\\BME\\IET\\Hazi2\\iet-hf2021-ithazi5\\Libraries\\dotNetRDF\\dotNetRDF.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[5.10.3, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.9.1, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.16.1, )"
+            },
+            "WireMock.Net": {
+              "target": "Package",
+              "version": "[1.4.6, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.extensibility.execution": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        },
+        "net452": {
+          "targetAlias": "net452",
+          "dependencies": {
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[5.10.3, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.9.1, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.16.1, )"
+            },
+            "WireMock.Net": {
+              "target": "Package",
+              "version": "[1.4.6, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.extensibility.execution": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
