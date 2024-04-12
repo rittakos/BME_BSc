@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1540371192 source:c:\c\egri_csillagok\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+

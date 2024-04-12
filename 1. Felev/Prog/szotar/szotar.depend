@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1544372047 source:c:\c\szotar\main.c
+	<stdio.h>
+	<stdbool.h>
+	<string.h>
+	<stdlib.h>
+

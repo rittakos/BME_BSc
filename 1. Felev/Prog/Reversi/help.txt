@@ -1,0 +1,61 @@
+A reversi szabalyai
+
+A reversi, az othello es a forditgatos mellett meg mas neveken is ismert
+jatekot altalaban nyolcszor nyolc mezobol allo negyzetracsos tablan
+jatsszak, amelyet nem szoktak a sakktablahoz hasonloan szinezni. De
+termeszetesen valodi sakktablan is jatszhato, valamint kisebb vagy nagyobb
+negyzetracson is.
+
+########  A jatek klasszikus alapallasa szerint a ket jatekos ket-ket
+########  figurat helyez a tabla kozepere a baloldalt lathato elrendezesben,
+########  ahol o az egyik, O a masik jatekos babuja, # az ures mezo. A
+###oO###  reversit legjobb olyan korongokkal jatszani, amelyek ket oldala
+###Oo###  kulonbozo szinu (hagyomanyosan piros es kek) - igy a babuk
+########  elvetelekor megforditjuk azokat, s a masik jatekos szinet fogjak
+########  mutatni. De ugy is lehet, hogy a ketfele babut cserelgetjuk.
+########
+          A ket jatekos felvaltva lep ugy, hogy lerak egy korongot
+          valamelyik ures mezore. Csak olyan helyre rakhat, ahol meg tudja
+forditani az ellenfel legalabb egy korongjat; ez ugy lehetseges, hogy az
+ellenfel korongja az eppen letett korong es a jatekos masik korongja kozott
+van, egyenes vonalban vizszintesen, fuggolegesen vagy atlosan. Peldaul ebben
+#Oo  az elrendezesben a kis o-val jatszo jatekos az ures mezore teve
+megfordithatja a nagy O-t, mivel az az eppen letett korong es a jobb szelen
+levo sajat korong kozott van: 1. #Oo  2. oOo  3. ooo
+
+Tobb ellenseges korong is zsakmanyolhato egyenes vonalban: #OOOOOOo - ha a
+bal szelre rakunk o-val, a hat O megfordul. Minden korongot meg lehet es
+kell forditani, ami az eppen letett es a mar meglevo sajat korongok kozott
+all, akar tobb iranyban egyszerre:
+
+#####o##8  Ha ebben az allasban a kis o-val jatszo jatekos a csillaggal
+o#O#O###7  jelolt mezore rak, az osszes O babu az ove lesz, kiveve az e4-en
+#OOO####6  allot - mert nincs vele egyvonalban -, es a c6 es c7 mezokon
+oO*OOOOo5  levoket, mert nincs mogottuk, c8-on sajat babu.
+#OOOO###4  A korongok megforditasa nem kulon lepes, hanem lepesunk
+o#O#Oo##3  kovetkezmenye. A megforditott babuk ettol kezdve a sajatjaink,
+##O##O##2  felhasznalhatok az ellenfel megmaradt babuinak beszoritasara -
+##o###o#1  amig vissza nem forditjak oket. A tablan levo korongokat levenni,
+abcdefgh   mozgatni nem lehet.
+
+          Elofordul, hogy a soron levo jatekos nem tud lepni, mint a
+########  baloldalt lathato peldaban az o, mert nincs olyan ures mezo,
+########  ahova rakva megfordithatja ellenfele legalabb egy korongjat. Ez
+###ooooo  nem jelenti a jatek veget. A lepni nem tudo jatekos passzol, s
+###oOOOO  ellenfele lep. Akarhanyszor lehet passzolni sorozatban is, ha az
+###ooOOO  ellenfelnek sikerul ugy megforditgatni korongjainkat, hogy nekunk
+####ooOO  ne adjon lepeslehetoseget. A baloldali allasban peldaul o passza
+######oO  utan O legjobb lepese a *-gal jelolt mezo, amivel egy babut
+######*O  zsakmanyolva ujabb passzra kenyszeriti o-t. Passzolni azonban csak
+          akkor szabad (es kell), ha nem tudunk lepni. Ha tudunk, akkor
+          lepnunk kell.
+
+  A jatek a kovetkezo esetekben er veget:
+
+- ha betelt a tabla;
+- ha az egyik jatekosnak elfogytak a korongjai (hiszen a szabalyos lepeshez
+  egy mar tablan levo korong is kell);
+- ha egyik jatekos sem tud lepni.
+
+  Mindegyik esetben az gyoz, akinek tobb korongja van a tablan; ha egyenlo
+  szamuak, az eredmeny dontetlen.
