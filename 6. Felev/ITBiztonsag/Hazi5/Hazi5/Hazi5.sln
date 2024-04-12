@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31019.35
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hazi5", "Hazi5\Hazi5.vcxproj", "{D287655D-2291-40A6-90ED-FBEA7D049FFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D287655D-2291-40A6-90ED-FBEA7D049FFE}.Debug|x64.ActiveCfg = Debug|x64
+		{D287655D-2291-40A6-90ED-FBEA7D049FFE}.Debug|x64.Build.0 = Debug|x64
+		{D287655D-2291-40A6-90ED-FBEA7D049FFE}.Debug|x86.ActiveCfg = Debug|Win32
+		{D287655D-2291-40A6-90ED-FBEA7D049FFE}.Debug|x86.Build.0 = Debug|Win32
+		{D287655D-2291-40A6-90ED-FBEA7D049FFE}.Release|x64.ActiveCfg = Release|x64
+		{D287655D-2291-40A6-90ED-FBEA7D049FFE}.Release|x64.Build.0 = Release|x64
+		{D287655D-2291-40A6-90ED-FBEA7D049FFE}.Release|x86.ActiveCfg = Release|Win32
+		{D287655D-2291-40A6-90ED-FBEA7D049FFE}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DAC4EF71-CAC5-434D-A57A-8980A359AB32}
+	EndGlobalSection
+EndGlobal

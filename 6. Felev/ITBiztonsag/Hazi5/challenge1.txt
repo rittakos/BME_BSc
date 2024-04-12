@@ -1,0 +1,7 @@
+b_min: 1649
+x_min: 114
+x_max: 41310
+x_size: 1000
+A_min_covered: 2
+A_most_covered: 993
+A_avg_covered: 134

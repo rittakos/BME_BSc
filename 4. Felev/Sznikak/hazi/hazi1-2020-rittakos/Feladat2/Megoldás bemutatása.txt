@@ -1,0 +1,20 @@
+A TextArea osztály leszármazik a TextBox osztályból és a konstruktora, az ősosztály konstruktorát használja. Ezenkívül van egy függvénye
+ami visszaadja a tipusát és egy ami átalakítja stringé a kívánt formátumban. Továbbá egy függvénye ami kiszámolja a területét az oldalméretek alapján.
+
+A IDrawable interfacenek van egy területszámoló, egy stringgé alakító és egy típust visszaadó függvénye. Ezt az interfacet megvalósítja a
+Shape és a TexTArea.
+
+A Shape osztály egy abstract osztály és van az x és y koordináta privát paraméterként. A konstruktorában meg lehet adni a koordinátákat.
+Van egy területszámoló és egy tipuslekérdező függvény, amik absztraktak és a leszármazottak valósítják meg. Van egy stringgé alakító függvénye
+ami a függvények alapján visszaadja a kívánt formátumot.
+
+A Circle osztály leszármazik a Shape osztályból. Van egy privát paramétere ami a kör sugarát tárolja. Az ősosztály virtuális függvényei megvalósításra
+kerülnek.
+
+A Square osztály leszármazik a Shape osztályból. Van egy privát paramétere ami a négyzet oldalát tárolja. Az ősosztály virtuális függvényei megvalósításra
+kerülnek.
+
+A ShapeContainer az alakzatok tárolásáért felel. Ennek van egy privát ArrayList típusú tárolója amiben lehet tárolni az alakzatokat. Az osztálynak van
+kiíró, hozzáadó és eltávolító függvénye.
+
+Az osztályokban használtam properties-ket.

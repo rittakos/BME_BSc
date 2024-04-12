@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="Dictionary.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Dictionary"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBox Grid.Row="0" TextWrapping="Wrap" AcceptsReturn="True" x:Name="WordTextBox" Text="Word" />
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" Orientation="Horizontal" Padding="0,10,0,0">
+            <Button  Click="TranslateButton_Click" Margin="0,0,10,0" >
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Translate from " VerticalAlignment="Center" Padding="0,0,5,0"/>
+                    <ComboBox Name="cmbfrom" ItemsSource="{Binding from}" SelectionChanged="selectionFromChanged"></ComboBox>
+                    <TextBlock Text="to " VerticalAlignment="Center" Padding="5,0,5,0"/>
+                    <ComboBox Name="cmbto" ItemsSource="{Binding to}" SelectionChanged="selectionToChanged"></ComboBox>
+                </StackPanel>
+            </Button>
+            <Button Click="SynonymeButton_Click" AutomationProperties.HelpText="" Padding="8,4,8,5">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Synonym in " VerticalAlignment="Center" Padding="0,0,5,0"/>
+                    <ComboBox Name="cmbsyn" ItemsSource="{Binding synonymLanguages}" SelectionChanged="selectionSynChanged"></ComboBox>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,10,0,0">
+            <TextBlock Text="Result: " VerticalAlignment="Center"/>
+        </StackPanel>
+        <ListView Grid.Row="3" ItemsSource="{Binding result}" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="{Binding text}" FontSize="14" FontWeight="Bold" />
+                        <TextBlock Text="{Binding pos}" FontSize="10" FontStyle="Italic" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </Grid>
+</Page>

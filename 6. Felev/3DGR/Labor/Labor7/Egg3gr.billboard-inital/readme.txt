@@ -1,0 +1,1 @@
+Elvégeztem az összes feladatot.

@@ -1,0 +1,126 @@
+Prefix(:=<http://www.semanticweb.org/cloud/ontologies/2021/2/untitled-ontology-20#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/cloud/ontologies/2021/2/untitled-ontology-20>
+
+Declaration(Class(:Ember))
+Declaration(Class(:Ferfi))
+Declaration(Class(:Nagykoru))
+Declaration(Class(:Nagymama))
+Declaration(Class(:No))
+Declaration(ObjectProperty(:anyja))
+Declaration(ObjectProperty(:apja))
+Declaration(ObjectProperty(:gyereke))
+Declaration(ObjectProperty(:szuloje))
+Declaration(DataProperty(:eletkora))
+Declaration(NamedIndividual(:Bela))
+Declaration(NamedIndividual(:Julia))
+Declaration(NamedIndividual(:Margit))
+Declaration(NamedIndividual(:Maria))
+############################
+#   Object Properties
+############################
+
+# Object Property: :anyja (:anyja)
+
+SubObjectPropertyOf(:anyja :szuloje)
+FunctionalObjectProperty(:anyja)
+ObjectPropertyDomain(:anyja :Ember)
+ObjectPropertyRange(:anyja :No)
+
+# Object Property: :apja (:apja)
+
+SubObjectPropertyOf(:apja :szuloje)
+FunctionalObjectProperty(:apja)
+ObjectPropertyDomain(:apja :Ember)
+ObjectPropertyRange(:apja :Ferfi)
+
+# Object Property: :gyereke (:gyereke)
+
+InverseObjectProperties(:gyereke :szuloje)
+FunctionalObjectProperty(:gyereke)
+ObjectPropertyDomain(:gyereke :Ember)
+ObjectPropertyRange(:gyereke :Ember)
+
+# Object Property: :szuloje (:szuloje)
+
+ObjectPropertyDomain(:szuloje :Ember)
+ObjectPropertyRange(:szuloje :Ember)
+
+# Object Property: owl:topObjectProperty (owl:topObjectProperty)
+
+ObjectPropertyDomain(owl:topObjectProperty :Ember)
+ObjectPropertyRange(owl:topObjectProperty :Ember)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: :eletkora (:eletkora)
+
+SubDataPropertyOf(:eletkora owl:topDataProperty)
+DataPropertyRange(:eletkora xsd:integer)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :Ember (:Ember)
+
+EquivalentClasses(:Ember ObjectIntersectionOf(:Ember DataSomeValuesFrom(:eletkora xsd:integer)))
+
+# Class: :Ferfi (:Ferfi)
+
+SubClassOf(:Ferfi :Ember)
+DisjointClasses(:Ferfi :No)
+
+# Class: :Nagykoru (:Nagykoru)
+
+EquivalentClasses(:Nagykoru ObjectIntersectionOf(:Ember DataSomeValuesFrom(:eletkora DatatypeRestriction(xsd:integer xsd:minInclusive "18"^^xsd:integer))))
+
+# Class: :Nagymama (:Nagymama)
+
+EquivalentClasses(:Nagymama ObjectIntersectionOf(:No ObjectSomeValuesFrom(:gyereke ObjectSomeValuesFrom(:gyereke :Ember))))
+
+# Class: :No (:No)
+
+SubClassOf(:No :Ember)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :Bela (:Bela)
+
+ClassAssertion(:Ferfi :Bela)
+DataPropertyAssertion(:eletkora :Bela "40"^^xsd:integer)
+
+# Individual: :Julia (:Julia)
+
+ClassAssertion(:No :Julia)
+ObjectPropertyAssertion(:anyja :Julia :Maria)
+ObjectPropertyAssertion(:apja :Julia :Bela)
+DataPropertyAssertion(:eletkora :Julia "10"^^xsd:integer)
+
+# Individual: :Margit (:Margit)
+
+ClassAssertion(:No :Margit)
+DataPropertyAssertion(:eletkora :Margit "70"^^xsd:integer)
+
+# Individual: :Maria (:Maria)
+
+ClassAssertion(:No :Maria)
+ObjectPropertyAssertion(:anyja :Maria :Margit)
+DataPropertyAssertion(:eletkora :Maria "35"^^xsd:integer)
+
+
+)

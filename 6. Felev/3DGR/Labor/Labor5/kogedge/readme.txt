@@ -1,0 +1,1 @@
+Megoldottam a feladatokat a laborútmutató alapján.
