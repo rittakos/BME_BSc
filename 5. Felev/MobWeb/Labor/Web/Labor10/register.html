@@ -1,0 +1,128 @@
+<html lang="en">
+    <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>MyBlog</title>
+	
+		<!-- Bootstrap linkelése CDN-ről -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+		<!-- Font awesome 5 CDN-ről (solid, regular és brand is) -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
+		<!-- Google font (Muli) letöltése -->
+		<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+		<!-- Saját CSS -->
+		<link rel="stylesheet" href="assets/css/site.css">
+	</head>
+    
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class = "navbar-brand" href="#">
+                    <img src="/assets/img/logo-bme-aut.png" alt="BME AUT">
+                </a>
+
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-toggler" aria-controls="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>	
+
+                <div class="collapse navbar-collapse" id="navbar-toggler">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="register.html">Registration</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+		</header>
+		
+        
+        <section id="main">
+            <div class = "container">
+                <h1>Registration</h1>
+
+				<form action="postform.html" method="POST">
+
+				<div class="row row-cols-sm-1 row-cols-md-2">
+					<div class="col form-group">
+						<label for="email">Email</label>
+						<input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
+					</div>
+					<div class="col form-group">
+						<label for="password">Password</label>
+						<input type="password" class="form-control" id="password" placeholder="Password">
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col form-group">
+						<label for="adress">Adress</label>
+						<input type="text" class="form-control" id="adress" placeholder="Adress">
+					</div>
+				</div>
+				
+
+				<div class="row">
+					<div class = "col-sm-6">
+						<div class="form-group">
+							<label for="city">City</label>
+							<input type="text" class="form-control" id="city" placeholder="City">
+						</div>
+					</div>
+					<div class="col-sm-4 form-group">
+						<label for="state">State</label>
+						<select class="custom-select" id="validatedInputGroupSelect" required>
+							<option value="">Choose...</option>
+							<option value="1">State1</option>
+							<option value="2">State2</option>
+							<option value="3">State3</option>
+						  </select>
+					</div>
+					<div class="col-sm-2 form-group">
+						<label for="zip">ZIP</label>
+						<input type="number" class="form-control" id="zip" placeholder="0000">
+					</div>
+				</div>
+
+				<div class="form-group form-check">
+					<input type="checkbox" class="form-check-input" id="exampleCheck1">
+					<label class="form-check-label" for="exampleCheck1">Accetp terms</label>
+				</div>
+
+
+					<button type="submit" class="btn btn-primary">Sign in</button>
+				</form>
+				
+            </div>
+        </section>
+
+
+        <footer>
+            <div class = "d-flex my-auto" >
+				<div class = "p-4">
+					<p>© 2020 BME AUT, All right reserved, Designed by <a href="#">BME AUT</a></p>
+				</div>
+                <div class = "ml-auto p-4">
+					<div class="row ">
+						<div class="col pr-2"><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+						<div class="col pr-2"><a href="#"><i class="fab fa-twitter"></i></a></div>
+						<div class="col pr-2"><a href="#"><i class="fab fa-linkedin-in"></i></a></div>
+						<div class="col pr-5"><a href="#"><i class="fab fa-google-plus-g"></i></a></div>
+					  </div> 
+                </div>
+            </div>
+        </footer>
+        
+        <!-- jQuery, hogy a Bootstrap-es hamburger menü működjön -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <!-- Bootstrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    </body>
+</html>

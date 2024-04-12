@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AndroidWallet</string>
+    <string name="action_delete_all">Delete All</string>
+    <string name="expense">EXPENSE</string>
+    <string name="income">INCOME</string>
+    <string name="save">Save</string>
+    <string name="warn_message">Hiányzó adatok!</string>
+    <string name="sum">Sum</string>
+</resources>

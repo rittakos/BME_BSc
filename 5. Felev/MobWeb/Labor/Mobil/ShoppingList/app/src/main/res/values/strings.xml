@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">ToDo</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="bought">Bought</string>
+
+    <string name="new_shopping_item">New task</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="name">Name</string>
+    <string name="description">Description</string>
+    <string name="category">Category</string>
+    <string name="important">Important</string>
+    <string name="done">Done</string>
+    <string name="deadline">Deadline</string>
+    <string name="task">Task</string>
+
+    <string-array name="category_items">
+        <item>Task</item>
+    </string-array>
+</resources>
